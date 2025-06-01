@@ -1,0 +1,8 @@
+Modes mapping file for the SPC with id 0
+
+Switches in this SPC are:
+
+
+Modes values in relation to switches positions are:
+
+Mode mode has the index 0

@@ -1,0 +1,608 @@
+// generated using template: cop_main.template---------------------------------------------
+/******************************************************************************************
+**
+**  Module Name: cop_main.c
+**  NOTE: Automatically generated file. DO NOT MODIFY!
+**  Description:
+**            Main file
+**
+******************************************************************************************/
+// generated using template: arm/custom_include.template-----------------------------------
+
+
+#ifdef __cplusplus
+#include <limits>
+
+extern "C" {
+#endif
+
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <math.h>
+#include <stdint.h>
+#include <complex.h>
+
+// x86 libraries:
+#include "../include/sp_functions_dev0.h"
+
+
+#ifdef __cplusplus
+}
+#endif
+
+
+// ----------------------------------------------------------------------------------------                // generated using template:generic_macros.template-----------------------------------------
+/*********************** Macros (Inline Functions) Definitions ***************************/
+
+// ----------------------------------------------------------------------------------------
+
+#ifndef MAX
+#define MAX(value, limit) (((value) > (limit)) ? (value) : (limit))
+#endif
+#ifndef MIN
+#define MIN(value, limit) (((value) < (limit)) ? (value) : (limit))
+#endif
+
+// generated using template: VirtualHIL/custom_defines.template----------------------------
+
+typedef unsigned char X_UnInt8;
+typedef char X_Int8;
+typedef signed short X_Int16;
+typedef unsigned short X_UnInt16;
+typedef int X_Int32;
+typedef unsigned int X_UnInt32;
+typedef unsigned int uint;
+typedef double real;
+
+// ----------------------------------------------------------------------------------------                
+// generated using template: custom_consts.template----------------------------------------
+
+// arithmetic constants
+#define C_SQRT_2                    1.4142135623730950488016887242097f
+#define C_SQRT_3                    1.7320508075688772935274463415059f
+#define C_PI                        3.1415926535897932384626433832795f
+#define C_E                         2.7182818284590452353602874713527f
+#define C_2PI                       6.283185307179586476925286766559f
+
+//@cmp.def.start
+//component defines
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//@cmp.def.end
+
+
+//-----------------------------------------------------------------------------------------                 
+// generated using template: common_variables.template-------------------------------------
+// true global variables
+
+
+
+
+
+// const variables
+
+//@cmp.var.start
+// variables
+         double _constant1__out = 0.5;
+         double _constant17__out = 180.0;
+         double _constant18__out = 1.0;
+         double _constant2__out = 0.5;
+         double _constant3__out = 0.0;
+         double _constant4__out = 1.0;
+    double _iout_ia2__out;
+    double _iref__out;
+        double _low_pass_filter1__out;
+        double _low_pass_filter1__previous_filtered_value;        double _step1__out;
+        double _step2__out;
+    double _vin_va1__out;
+    double _vout_va1__out;
+    double _sum21__out;
+double _product1__out;
+    double _sum19__out;
+double _deg2rad2__out;    double _pid_controller3__out;
+    double _pid_controller3__pi_reg_out_int;
+double _rad2deg__out;    double _limit3__out;
+double _gain10__out;    double _sum20__out;
+    X_UnInt32 _dual_active_bridge1_dc_dc_converter1_pwm_modulator__channels[4] = {0, 1, 2, 3};
+    double _dual_active_bridge1_dc_dc_converter1_pwm_modulator__limited_in[4];
+        X_UnInt32 _dual_active_bridge1_dc_dc_converter1_pwm_modulator__sig_dir[4];
+        double _dual_active_bridge1_dc_dc_converter1_pwm_modulator__carr_ph_offset[4];
+        X_UnInt32 _dual_active_bridge1_dc_dc_converter1_pwm_modulator__carr_ph_offset_int[4];
+
+//@cmp.var.end
+
+//@cmp.svar.start
+// state variables
+        double _low_pass_filter1__filtered_value;
+        double _low_pass_filter1__previous_in;    double _step1__state;
+    double _step2__state;
+    double _pid_controller3__integrator_state;
+        X_Int32 _pid_controller3__av_active;
+    double _pid_controller3__filter_state;double _pid_controller3__reset_state;//@cmp.svar.end
+
+//
+// Tunable parameters
+//
+static struct Tunable_params {
+} __attribute__((__packed__)) tunable_params;
+
+void *tunable_params_dev0_cpu0_ptr = &tunable_params;
+
+// Dll function pointers
+#if defined(_WIN64)
+#else
+    // Define handles for loading dlls
+#endif
+
+
+
+
+
+
+
+              
+// generated using template: virtual_hil/custom_functions.template---------------------------------
+void ReInit_user_sp_cpu0_dev0(){
+
+#if DEBUG_MODE
+    printf("\n\rReInitTimer");
+#endif
+
+
+    //@cmp.init.block.start
+    
+    
+    
+    
+    
+    
+    
+    
+            
+
+            _low_pass_filter1__filtered_value = 0.0 / (1 - 6.283185307179586 * 500.0 * 5e-05 );
+        _low_pass_filter1__previous_in = 0x0;
+
+        _step1__state = 0x0;
+
+        _step2__state = 0x0;
+
+    
+    
+    
+
+      HIL_OutAO(0x4000, 0.0f);
+
+    
+
+      HIL_OutAO(0x4003, 0.0f);
+
+    
+    
+    
+
+      HIL_OutAO(0x4001, 0.0f);
+
+    
+    
+        _pid_controller3__integrator_state =  0.0;
+    _pid_controller3__filter_state =  0.0;
+
+    
+    
+    
+
+      HIL_OutAO(0x4002, 0.0f);
+
+    
+    
+                HIL_OutInt32(0x2000080 + _dual_active_bridge1_dc_dc_converter1_pwm_modulator__channels[0], 1400);
+        HIL_OutInt32(0x20000c0 + _dual_active_bridge1_dc_dc_converter1_pwm_modulator__channels[0], 0);
+            HIL_OutInt32(0x2000080 + _dual_active_bridge1_dc_dc_converter1_pwm_modulator__channels[1], 1400);
+        HIL_OutInt32(0x20000c0 + _dual_active_bridge1_dc_dc_converter1_pwm_modulator__channels[1], 0);
+            HIL_OutInt32(0x2000080 + _dual_active_bridge1_dc_dc_converter1_pwm_modulator__channels[2], 1400);
+        HIL_OutInt32(0x20000c0 + _dual_active_bridge1_dc_dc_converter1_pwm_modulator__channels[2], 0);
+            HIL_OutInt32(0x2000080 + _dual_active_bridge1_dc_dc_converter1_pwm_modulator__channels[3], 1400);
+        HIL_OutInt32(0x20000c0 + _dual_active_bridge1_dc_dc_converter1_pwm_modulator__channels[3], 0);
+                HIL_OutInt32(0x20001c0 + _dual_active_bridge1_dc_dc_converter1_pwm_modulator__channels[0], 0);
+                    HIL_OutInt32(0x2000200 + _dual_active_bridge1_dc_dc_converter1_pwm_modulator__channels[0], 0);
+                HIL_OutInt32(0x20001c0 + _dual_active_bridge1_dc_dc_converter1_pwm_modulator__channels[1], 0);
+                    HIL_OutInt32(0x2000200 + _dual_active_bridge1_dc_dc_converter1_pwm_modulator__channels[1], 0);
+                HIL_OutInt32(0x20001c0 + _dual_active_bridge1_dc_dc_converter1_pwm_modulator__channels[2], 0);
+                    HIL_OutInt32(0x2000200 + _dual_active_bridge1_dc_dc_converter1_pwm_modulator__channels[2], 0);
+                HIL_OutInt32(0x20001c0 + _dual_active_bridge1_dc_dc_converter1_pwm_modulator__channels[3], 0);
+                    HIL_OutInt32(0x2000200 + _dual_active_bridge1_dc_dc_converter1_pwm_modulator__channels[3], 0);
+        HIL_OutInt32(0x2000240 + _dual_active_bridge1_dc_dc_converter1_pwm_modulator__channels[0], 0);
+        HIL_OutInt32(0x2000240 + _dual_active_bridge1_dc_dc_converter1_pwm_modulator__channels[1], 0);
+        HIL_OutInt32(0x2000240 + _dual_active_bridge1_dc_dc_converter1_pwm_modulator__channels[2], 0);
+        HIL_OutInt32(0x2000240 + _dual_active_bridge1_dc_dc_converter1_pwm_modulator__channels[3], 0);
+        HIL_OutInt32(0x2000300 + _dual_active_bridge1_dc_dc_converter1_pwm_modulator__channels[0], 1);
+        HIL_OutInt32(0x2000300 + _dual_active_bridge1_dc_dc_converter1_pwm_modulator__channels[1], 1);
+        HIL_OutInt32(0x2000300 + _dual_active_bridge1_dc_dc_converter1_pwm_modulator__channels[2], 1);
+        HIL_OutInt32(0x2000300 + _dual_active_bridge1_dc_dc_converter1_pwm_modulator__channels[3], 1);
+            HIL_OutInt32(0x2000340 + _dual_active_bridge1_dc_dc_converter1_pwm_modulator__channels[0], 0);
+            HIL_OutInt32(0x2000340 + _dual_active_bridge1_dc_dc_converter1_pwm_modulator__channels[1], 0);
+            HIL_OutInt32(0x2000340 + _dual_active_bridge1_dc_dc_converter1_pwm_modulator__channels[2], 0);
+            HIL_OutInt32(0x2000340 + _dual_active_bridge1_dc_dc_converter1_pwm_modulator__channels[3], 0);
+            HIL_OutInt32(0x2000140, 0xf);
+
+    //@cmp.init.block.end
+}
+
+
+// Dll function pointers and dll reload function
+#if defined(_WIN64)
+    // Define method for reloading dll functions
+    void ReloadDllFunctions_user_sp_cpu0_dev0(void) {
+        // Load each library and setup function pointers
+    }
+
+    void FreeDllFunctions_user_sp_cpu0_dev0(void) {
+    }
+
+#else
+    // Define method for reloading dll functions
+    void ReloadDllFunctions_user_sp_cpu0_dev0(void) {
+        // Load each library and setup function pointers
+    }
+
+    void FreeDllFunctions_user_sp_cpu0_dev0(void) {
+    }
+#endif
+
+void load_fmi_libraries_user_sp_cpu0_dev0(void) {
+    #if defined(_WIN64)
+    #else
+    #endif
+}
+
+
+void ReInit_sp_scope_user_sp_cpu0_dev0(){
+    // initialise SP Scope buffer pointer
+}              
+// generated using template: virtual_hil/common_timer_counter_handler.template-------------------------
+
+/*****************************************************************************************/
+/**
+* This function is the handler which performs processing for the timer counter.
+* It is called from an interrupt context such that the amount of processing
+* performed should be minimized.  It is called when the timer counter expires
+* if interrupts are enabled.
+*
+*
+* @param    None
+*
+* @return   None
+*
+* @note     None
+*
+*****************************************************************************************/
+
+void TimerCounterHandler_0_user_sp_cpu0_dev0() {
+
+#if DEBUG_MODE
+    printf("\n\rTimerCounterHandler_0");
+#endif
+
+    //////////////////////////////////////////////////////////////////////////
+    // Set tunable parameters
+    //////////////////////////////////////////////////////////////////////////
+             // Generated from the component: Constant1
+            
+
+
+             // Generated from the component: Constant17
+            
+
+
+             // Generated from the component: Constant18
+            
+
+
+             // Generated from the component: Constant2
+            
+
+
+             // Generated from the component: Constant3
+            
+
+
+             // Generated from the component: Constant4
+            
+
+
+//////////////////////////////////////////////////////////////////////////
+    // Output block
+    //////////////////////////////////////////////////////////////////////////
+    //@cmp.out.block.start
+         // Generated from the component: Iout.Ia2
+            _iout_ia2__out = (HIL_InFloat(0xc80000+0x1b));
+
+         // Generated from the component: Iref
+                    _iref__out = XIo_InFloat(0x2f800000);
+
+         // Generated from the component: Low-Pass Filter1
+                
+
+        _low_pass_filter1__previous_filtered_value = _low_pass_filter1__filtered_value;
+            _low_pass_filter1__filtered_value = _low_pass_filter1__previous_in * (6.283185307179586 * 500.0 * 5e-05) + _low_pass_filter1__previous_filtered_value * (1 - 6.283185307179586 * 500.0 * 5e-05 );
+        _low_pass_filter1__out = _low_pass_filter1__filtered_value;
+
+
+         // Generated from the component: Step1
+                if (_step1__state < 0.005) {
+            _step1__out = 0.0;
+        } else {
+            _step1__out = 50.0;
+        }
+
+         // Generated from the component: Step2
+                if (_step2__state < 0.015) {
+            _step2__out = 0.0;
+        } else {
+            _step2__out = -50.0;
+        }
+
+         // Generated from the component: Vin.Va1
+            _vin_va1__out = (HIL_InFloat(0xc80000+0x13));
+
+         // Generated from the component: Vout.Va1
+            _vout_va1__out = (HIL_InFloat(0xc80000+0x14));
+
+         // Generated from the component: Iout_sample
+        
+
+    HIL_OutAO(0x4000, (float)_iout_ia2__out);
+
+         // Generated from the component: Pmeas
+        
+
+    HIL_OutAO(0x4003, (float)_low_pass_filter1__out);
+
+         // Generated from the component: Sum21
+        _sum21__out = _step1__out+_step2__out+_iref__out;    
+
+         // Generated from the component: Product1
+        _product1__out = (_iout_ia2__out * _vout_va1__out);
+
+         // Generated from the component: Iref_meas
+        
+
+    HIL_OutAO(0x4001, (float)_sum21__out);
+
+         // Generated from the component: Sum19
+        _sum19__out = _sum21__out-_iout_ia2__out;    
+
+         // Generated from the component: deg2rad2
+                    _deg2rad2__out = 0.001 * _product1__out;
+
+         // Generated from the component: PID controller3
+        
+
+
+        _pid_controller3__pi_reg_out_int = _pid_controller3__integrator_state + 0.001404962946208145 * _sum19__out;
+
+
+        if (_pid_controller3__pi_reg_out_int < -1.5707963267948966)
+            _pid_controller3__av_active = -1;
+        else if (_pid_controller3__pi_reg_out_int > 1.5707963267948966)
+            _pid_controller3__av_active = 1;
+        else
+            _pid_controller3__av_active = 0;
+
+        _pid_controller3__out = MIN(MAX(_pid_controller3__pi_reg_out_int, -1.5707963267948966), 1.5707963267948966);
+
+         // Generated from the component: rad2deg
+                    _rad2deg__out = 57.29577951308232 * _pid_controller3__out;
+
+         // Generated from the component: Limit3
+              _limit3__out = MIN(MAX(_rad2deg__out, -90.0), 90.0);
+
+         // Generated from the component: PI_out
+        
+
+    HIL_OutAO(0x4002, (float)_rad2deg__out);
+
+         // Generated from the component: Gain10
+                    _gain10__out = -1.0 * _limit3__out;
+
+         // Generated from the component: Sum20
+        _sum20__out = _constant17__out+_gain10__out;    
+
+         // Generated from the component: Dual Active Bridge1.DC-DC Converter1.PWM_Modulator
+                    _dual_active_bridge1_dc_dc_converter1_pwm_modulator__limited_in[0] = MIN(MAX(_constant1__out, 0.0), 1.0);
+
+                HIL_OutInt32(0x2000040 + _dual_active_bridge1_dc_dc_converter1_pwm_modulator__channels[0], ((X_UnInt32)((_dual_active_bridge1_dc_dc_converter1_pwm_modulator__limited_in[0]-(0.0)) * 1400.0)));
+
+                _dual_active_bridge1_dc_dc_converter1_pwm_modulator__carr_ph_offset[0] = fmod(_constant3__out, 360.0f);
+            if (_dual_active_bridge1_dc_dc_converter1_pwm_modulator__carr_ph_offset[0] < 0.0f){
+                _dual_active_bridge1_dc_dc_converter1_pwm_modulator__carr_ph_offset[0] += 360.0f;
+            }
+                if (_dual_active_bridge1_dc_dc_converter1_pwm_modulator__carr_ph_offset[0] < 180.0f){
+                    _dual_active_bridge1_dc_dc_converter1_pwm_modulator__sig_dir[0] = 0; //count up
+                    _dual_active_bridge1_dc_dc_converter1_pwm_modulator__carr_ph_offset[0] = _dual_active_bridge1_dc_dc_converter1_pwm_modulator__carr_ph_offset[0]/180.0f * 1400;
+                }
+                else{
+                    _dual_active_bridge1_dc_dc_converter1_pwm_modulator__sig_dir[0] = 1; //count down
+                    _dual_active_bridge1_dc_dc_converter1_pwm_modulator__carr_ph_offset[0] = 1400 - (_dual_active_bridge1_dc_dc_converter1_pwm_modulator__carr_ph_offset[0] - 180.0f)/180.0f * 1400;
+                    if (fmod(_dual_active_bridge1_dc_dc_converter1_pwm_modulator__carr_ph_offset[0], 2.0f)){
+                        _dual_active_bridge1_dc_dc_converter1_pwm_modulator__carr_ph_offset[0] -= 1;
+                    }
+                }
+            _dual_active_bridge1_dc_dc_converter1_pwm_modulator__carr_ph_offset_int[0] = (X_UnInt32) _dual_active_bridge1_dc_dc_converter1_pwm_modulator__carr_ph_offset[0];
+
+
+            if (_dual_active_bridge1_dc_dc_converter1_pwm_modulator__carr_ph_offset_int[0] >= 0){
+                HIL_OutInt32(0x20001c0 + _dual_active_bridge1_dc_dc_converter1_pwm_modulator__channels[0], _dual_active_bridge1_dc_dc_converter1_pwm_modulator__carr_ph_offset_int[0]);
+                    HIL_OutInt32(0x2000200 + _dual_active_bridge1_dc_dc_converter1_pwm_modulator__channels[0], _dual_active_bridge1_dc_dc_converter1_pwm_modulator__sig_dir[0]);
+                HIL_OutInt32(0x20002c0 + _dual_active_bridge1_dc_dc_converter1_pwm_modulator__channels[0], 1);
+            }
+            _dual_active_bridge1_dc_dc_converter1_pwm_modulator__limited_in[1] = MIN(MAX(_constant1__out, 0.0), 1.0);
+
+                HIL_OutInt32(0x2000040 + _dual_active_bridge1_dc_dc_converter1_pwm_modulator__channels[1], ((X_UnInt32)((_dual_active_bridge1_dc_dc_converter1_pwm_modulator__limited_in[1]-(0.0)) * 1400.0)));
+
+                _dual_active_bridge1_dc_dc_converter1_pwm_modulator__carr_ph_offset[1] = fmod(_constant17__out, 360.0f);
+            if (_dual_active_bridge1_dc_dc_converter1_pwm_modulator__carr_ph_offset[1] < 0.0f){
+                _dual_active_bridge1_dc_dc_converter1_pwm_modulator__carr_ph_offset[1] += 360.0f;
+            }
+                if (_dual_active_bridge1_dc_dc_converter1_pwm_modulator__carr_ph_offset[1] < 180.0f){
+                    _dual_active_bridge1_dc_dc_converter1_pwm_modulator__sig_dir[1] = 0; //count up
+                    _dual_active_bridge1_dc_dc_converter1_pwm_modulator__carr_ph_offset[1] = _dual_active_bridge1_dc_dc_converter1_pwm_modulator__carr_ph_offset[1]/180.0f * 1400;
+                }
+                else{
+                    _dual_active_bridge1_dc_dc_converter1_pwm_modulator__sig_dir[1] = 1; //count down
+                    _dual_active_bridge1_dc_dc_converter1_pwm_modulator__carr_ph_offset[1] = 1400 - (_dual_active_bridge1_dc_dc_converter1_pwm_modulator__carr_ph_offset[1] - 180.0f)/180.0f * 1400;
+                    if (fmod(_dual_active_bridge1_dc_dc_converter1_pwm_modulator__carr_ph_offset[1], 2.0f)){
+                        _dual_active_bridge1_dc_dc_converter1_pwm_modulator__carr_ph_offset[1] -= 1;
+                    }
+                }
+            _dual_active_bridge1_dc_dc_converter1_pwm_modulator__carr_ph_offset_int[1] = (X_UnInt32) _dual_active_bridge1_dc_dc_converter1_pwm_modulator__carr_ph_offset[1];
+
+
+            if (_dual_active_bridge1_dc_dc_converter1_pwm_modulator__carr_ph_offset_int[1] >= 0){
+                HIL_OutInt32(0x20001c0 + _dual_active_bridge1_dc_dc_converter1_pwm_modulator__channels[1], _dual_active_bridge1_dc_dc_converter1_pwm_modulator__carr_ph_offset_int[1]);
+                    HIL_OutInt32(0x2000200 + _dual_active_bridge1_dc_dc_converter1_pwm_modulator__channels[1], _dual_active_bridge1_dc_dc_converter1_pwm_modulator__sig_dir[1]);
+                HIL_OutInt32(0x20002c0 + _dual_active_bridge1_dc_dc_converter1_pwm_modulator__channels[1], 1);
+            }
+            _dual_active_bridge1_dc_dc_converter1_pwm_modulator__limited_in[2] = MIN(MAX(_constant2__out, 0.0), 1.0);
+
+                HIL_OutInt32(0x2000040 + _dual_active_bridge1_dc_dc_converter1_pwm_modulator__channels[2], ((X_UnInt32)((_dual_active_bridge1_dc_dc_converter1_pwm_modulator__limited_in[2]-(0.0)) * 1400.0)));
+
+                _dual_active_bridge1_dc_dc_converter1_pwm_modulator__carr_ph_offset[2] = fmod(_gain10__out, 360.0f);
+            if (_dual_active_bridge1_dc_dc_converter1_pwm_modulator__carr_ph_offset[2] < 0.0f){
+                _dual_active_bridge1_dc_dc_converter1_pwm_modulator__carr_ph_offset[2] += 360.0f;
+            }
+                if (_dual_active_bridge1_dc_dc_converter1_pwm_modulator__carr_ph_offset[2] < 180.0f){
+                    _dual_active_bridge1_dc_dc_converter1_pwm_modulator__sig_dir[2] = 0; //count up
+                    _dual_active_bridge1_dc_dc_converter1_pwm_modulator__carr_ph_offset[2] = _dual_active_bridge1_dc_dc_converter1_pwm_modulator__carr_ph_offset[2]/180.0f * 1400;
+                }
+                else{
+                    _dual_active_bridge1_dc_dc_converter1_pwm_modulator__sig_dir[2] = 1; //count down
+                    _dual_active_bridge1_dc_dc_converter1_pwm_modulator__carr_ph_offset[2] = 1400 - (_dual_active_bridge1_dc_dc_converter1_pwm_modulator__carr_ph_offset[2] - 180.0f)/180.0f * 1400;
+                    if (fmod(_dual_active_bridge1_dc_dc_converter1_pwm_modulator__carr_ph_offset[2], 2.0f)){
+                        _dual_active_bridge1_dc_dc_converter1_pwm_modulator__carr_ph_offset[2] -= 1;
+                    }
+                }
+            _dual_active_bridge1_dc_dc_converter1_pwm_modulator__carr_ph_offset_int[2] = (X_UnInt32) _dual_active_bridge1_dc_dc_converter1_pwm_modulator__carr_ph_offset[2];
+
+
+            if (_dual_active_bridge1_dc_dc_converter1_pwm_modulator__carr_ph_offset_int[2] >= 0){
+                HIL_OutInt32(0x20001c0 + _dual_active_bridge1_dc_dc_converter1_pwm_modulator__channels[2], _dual_active_bridge1_dc_dc_converter1_pwm_modulator__carr_ph_offset_int[2]);
+                    HIL_OutInt32(0x2000200 + _dual_active_bridge1_dc_dc_converter1_pwm_modulator__channels[2], _dual_active_bridge1_dc_dc_converter1_pwm_modulator__sig_dir[2]);
+                HIL_OutInt32(0x20002c0 + _dual_active_bridge1_dc_dc_converter1_pwm_modulator__channels[2], 1);
+            }
+            _dual_active_bridge1_dc_dc_converter1_pwm_modulator__limited_in[3] = MIN(MAX(_constant2__out, 0.0), 1.0);
+
+                HIL_OutInt32(0x2000040 + _dual_active_bridge1_dc_dc_converter1_pwm_modulator__channels[3], ((X_UnInt32)((_dual_active_bridge1_dc_dc_converter1_pwm_modulator__limited_in[3]-(0.0)) * 1400.0)));
+
+                _dual_active_bridge1_dc_dc_converter1_pwm_modulator__carr_ph_offset[3] = fmod(_sum20__out, 360.0f);
+            if (_dual_active_bridge1_dc_dc_converter1_pwm_modulator__carr_ph_offset[3] < 0.0f){
+                _dual_active_bridge1_dc_dc_converter1_pwm_modulator__carr_ph_offset[3] += 360.0f;
+            }
+                if (_dual_active_bridge1_dc_dc_converter1_pwm_modulator__carr_ph_offset[3] < 180.0f){
+                    _dual_active_bridge1_dc_dc_converter1_pwm_modulator__sig_dir[3] = 0; //count up
+                    _dual_active_bridge1_dc_dc_converter1_pwm_modulator__carr_ph_offset[3] = _dual_active_bridge1_dc_dc_converter1_pwm_modulator__carr_ph_offset[3]/180.0f * 1400;
+                }
+                else{
+                    _dual_active_bridge1_dc_dc_converter1_pwm_modulator__sig_dir[3] = 1; //count down
+                    _dual_active_bridge1_dc_dc_converter1_pwm_modulator__carr_ph_offset[3] = 1400 - (_dual_active_bridge1_dc_dc_converter1_pwm_modulator__carr_ph_offset[3] - 180.0f)/180.0f * 1400;
+                    if (fmod(_dual_active_bridge1_dc_dc_converter1_pwm_modulator__carr_ph_offset[3], 2.0f)){
+                        _dual_active_bridge1_dc_dc_converter1_pwm_modulator__carr_ph_offset[3] -= 1;
+                    }
+                }
+            _dual_active_bridge1_dc_dc_converter1_pwm_modulator__carr_ph_offset_int[3] = (X_UnInt32) _dual_active_bridge1_dc_dc_converter1_pwm_modulator__carr_ph_offset[3];
+
+
+            if (_dual_active_bridge1_dc_dc_converter1_pwm_modulator__carr_ph_offset_int[3] >= 0){
+                HIL_OutInt32(0x20001c0 + _dual_active_bridge1_dc_dc_converter1_pwm_modulator__channels[3], _dual_active_bridge1_dc_dc_converter1_pwm_modulator__carr_ph_offset_int[3]);
+                    HIL_OutInt32(0x2000200 + _dual_active_bridge1_dc_dc_converter1_pwm_modulator__channels[3], _dual_active_bridge1_dc_dc_converter1_pwm_modulator__sig_dir[3]);
+                HIL_OutInt32(0x20002c0 + _dual_active_bridge1_dc_dc_converter1_pwm_modulator__channels[3], 1);
+            }
+
+    if (_constant4__out == 0x0) {
+        // pwm_modulator_en
+            HIL_OutInt32(0x2000000 + _dual_active_bridge1_dc_dc_converter1_pwm_modulator__channels[0], 0x0);
+            HIL_OutInt32(0x2000000 + _dual_active_bridge1_dc_dc_converter1_pwm_modulator__channels[1], 0x0);
+            HIL_OutInt32(0x2000000 + _dual_active_bridge1_dc_dc_converter1_pwm_modulator__channels[2], 0x0);
+            HIL_OutInt32(0x2000000 + _dual_active_bridge1_dc_dc_converter1_pwm_modulator__channels[3], 0x0);
+    }
+    else {
+        // pwm_modulator_en
+            HIL_OutInt32(0x2000000 + _dual_active_bridge1_dc_dc_converter1_pwm_modulator__channels[0], 0x1);
+            HIL_OutInt32(0x2000000 + _dual_active_bridge1_dc_dc_converter1_pwm_modulator__channels[1], 0x1);
+            HIL_OutInt32(0x2000000 + _dual_active_bridge1_dc_dc_converter1_pwm_modulator__channels[2], 0x1);
+            HIL_OutInt32(0x2000000 + _dual_active_bridge1_dc_dc_converter1_pwm_modulator__channels[3], 0x1);
+    }
+    // 4
+            HIL_OutInt32(0x2000140, 0xf);
+    
+
+
+//@cmp.out.block.end
+
+
+    //////////////////////////////////////////////////////////////////////////
+    // Update block
+    //////////////////////////////////////////////////////////////////////////
+    //@cmp.update.block.start
+         // Generated from the component: Low-Pass Filter1
+                
+
+        _low_pass_filter1__previous_in = _deg2rad2__out;
+
+         // Generated from the component: Step1
+            if (_step1__state <= 0.005)
+        _step1__state += 5e-05;
+
+         // Generated from the component: Step2
+            if (_step2__state <= 0.015)
+        _step2__state += 5e-05;
+
+         // Generated from the component: PID controller3
+        if (((_constant18__out > 0.0) && (_pid_controller3__reset_state <= 0)) || ((_constant18__out <= 0.0) && (_pid_controller3__reset_state == 1))) {_pid_controller3__integrator_state = 0.0;
+            _pid_controller3__filter_state = 0.0;
+
+            }
+
+                if (!_pid_controller3__av_active || ((_pid_controller3__av_active < 0 && _sum19__out > 0 ) || (_pid_controller3__av_active > 0 && _sum19__out < 0 ))) {
+                    _pid_controller3__integrator_state += 30.90918481657919 * _sum19__out * 5e-05;
+                }
+
+
+        if (_constant18__out > 0)
+            _pid_controller3__reset_state = 1.0;
+        else if (_constant18__out < 0)
+            _pid_controller3__reset_state = -1.0;
+        else
+            _pid_controller3__reset_state = 0.0;
+
+    //@cmp.update.block.end
+}
+// ----------------------------------------------------------------------------------------
+  //-----------------------------------------------------------------------------------------

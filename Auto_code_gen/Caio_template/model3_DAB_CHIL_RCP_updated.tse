@@ -1,0 +1,1203 @@
+version = 4.2
+
+//
+// Saved by sw version: 2025.1 SP1
+//
+
+model "model3_dab_chil_rcp_updated" {
+    configuration {
+        hil_device = "HIL101"
+        hil_configuration_id = 1
+        simulation_method = exact
+        simulation_time_step = auto
+        simulation_discret_scaling = 1.0
+        dsp_timer_periods = 100e-6, 50e-3
+        ss_calc_method = "systematic elimination"
+        enb_pole_shift = True
+        enb_gds_oversampling = True
+        show_modes = True
+        device_ao_limit_enable = False
+        reset_analog_outputs_on_sim_stop = True
+        reset_analog_outputs_on_sim_stop_mode = Offset values
+        reset_digital_outputs_on_sim_stop = True
+        vhil_adio_loopback = False
+        cpl_stb = False
+        enb_dep_sw_detect = False
+        code_section = "internal memory"
+        data_section = "internal memory"
+        sys_sp_rate_1 = 0.0001
+        sys_sp_rate_2 = 0.05
+        sys_real_type_precision = "default"
+        user_real_type_precision = "default"
+        sys_cpu_optimization = "high"
+        user_cpu_optimization = "high"
+        user_cpu_part_option = "default"
+        matrix_based_reduction = True
+        cpl_dynamics_analysis = False
+        export_ss_to_pickle = False
+        ground_scope_core = False
+        dss_num_tol = 1e-15
+        cce_platform = "launchxl-f28379d"
+        cce_use_relative_names = False
+        cce_type_mapping_real = "double"
+        cce_type_mapping_uint = "unsigned int"
+        cce_type_mapping_int = "int"
+        cce_platform = "launchxl-f28379d"
+        cce_use_relative_names = False
+        cce_type_mapping_real = "double"
+        cce_type_mapping_uint = "unsigned int"
+        cce_type_mapping_int = "int"
+        cce_term_var_location = "local"
+        cce_directory = ""
+        cce_custom_type_int = ""
+        cce_custom_type_uint = ""
+        cce_custom_type_real = ""
+        tunable_params = "component defined"
+        sp_compiler_type = "C compiler"
+        sig_stim = "off"
+        export_resource_list = ""
+        export_dependency_list = ""
+        excluded_resource_list = ""
+        excluded_component_from_locking_list = ""
+        export_out_file = ""
+        export_lock_top_level = True
+        export_encrypt_library = True
+        export_encrypt_resources = True
+        solver_type = "DAE"
+        integration_method = "BDF"
+        max_sim_step = 1e-4
+        simulation_time = 1.0
+        abs_tol = 1e-3
+        rel_tol = 1e-3
+        init_sim_step = 1e-6
+        r_on_sw = 1e-3
+        v_on_diode = 0.2
+        data_sampling_rate = 0
+        feedthrough_validation_error_level = warning
+    }
+
+    component Subsystem Root {
+        component "core/Voltage Measurement" Vout {
+            execution_rate = "Ts"
+            frequency = "fs/10"
+            sig_output = "True"
+        }
+        [
+            position = 9672, 8800
+            rotation = right
+            size = 64, 32
+        ]
+
+        component "core/Voltage Measurement" Vin {
+            execution_rate = "Ts"
+            sig_output = "True"
+        }
+        [
+            position = 8616, 8792
+            rotation = right
+            size = 64, 32
+        ]
+
+        component "core/Current Measurement" Iout {
+            bw_limit = "True"
+            execution_rate = "Ts"
+            feed_forward = "true"
+            frequency = "f_lpf"
+            sig_output = "True"
+        }
+        [
+            position = 9368, 8704
+            size = 64, 32
+        ]
+
+        component "core/Product" Product1 {
+        }
+        [
+            position = 8928, 9016
+            hide_name = True
+        ]
+
+        component "core/Probe" Pmeas {
+            signal_type = "active power"
+        }
+        [
+            position = 9232, 9016
+        ]
+
+        component "core/Gain" deg2rad2 {
+            gain = "1e-3"
+        }
+        [
+            position = 9032, 9016
+            hide_name = True
+        ]
+
+        component "core/Battery" Battery2 {
+            Kdisc_I = "20.0"
+            Ke_exp = "103.0"
+            Ke_full = "116.0"
+            Kq_exp = "85.0"
+            Kq_nom = "93.5"
+            R_series = "0.020000000000000018"
+            battery_type = "Lithium-Ion"
+            capacity = "500"
+            initial_soc = "50"
+            nominal_voltage = "400"
+        }
+        [
+            position = 9576, 8800
+            rotation = right
+            size = 64, 48
+        ]
+
+        component "core/Battery" Battery1 {
+            Kdisc_I = "20.0"
+            Ke_exp = "103.0"
+            Ke_full = "116.0"
+            Kq_exp = "85.0"
+            Kq_nom = "93.5"
+            R_series = "0.08000000000000007"
+            battery_type = "Lithium-Ion"
+            capacity = "250"
+            initial_soc = "50"
+            nominal_voltage = "800"
+        }
+        [
+            position = 8368, 8800
+            rotation = right
+            size = 64, 48
+        ]
+
+        component "core/Core Marker" "Core Marker1" {
+        }
+        [
+            position = 8616, 8656
+            hide_name = True
+        ]
+
+        component "core/Core Marker" "Core Marker2" {
+        }
+        [
+            position = 9576, 8664
+            hide_name = True
+        ]
+
+        component "core/Inductor" Lout {
+            inductance = "Lf"
+        }
+        [
+            position = 9480, 8704
+        ]
+
+        component "core/Output Settings" "Output Settings1" {
+            analog_outputs = "[\'AO1;..Iout.Mask@top.current2;100;1.5;True;0;3\']"
+            digital_outputs = "[\'DO1;..sim_running.value;False;False;0\']"
+        }
+        [
+            position = 9240, 8528
+        ]
+
+        component "core/Low-Pass Filter" "Low-Pass Filter1" {
+            frequency = "fs/200"
+        }
+        [
+            position = 9128, 9016
+        ]
+
+        component "core/Dual Active Bridge" "Dual Active Bridge1" {
+            L = "L"
+            R_series = "R1"
+            SB_3 = "9"
+            SB_4 = "10"
+            carrier_freq = "fs"
+            d_time = "tdt*0"
+            n = "N2/N1"
+            ref_sig_min_max = "[0.0, 1.0]"
+            signal_access = "Inherit"
+        }
+        [
+            position = 9032, 8800
+            size = 528, 253
+        ]
+
+        component "core/Constant" Constant1 {
+            execution_rate = "Ts"
+        }
+        [
+            position = 9344, 8528
+            hide_name = True
+        ]
+
+        component "TI C2000 Toolbox/TI C2000 Setup" "TI RCP Setup1" {
+            build_and_deploy_action = "False"
+            c2000ware_root_path = "C:\ti\c2000\C2000Ware_5_04_00_00"
+            ccs_project_name = "ti_dab"
+            ccs_project_path = "c:\workspace\typhoon\auto_code_gen\caio_template"
+            ccs_root_path = "C:\ti\ccs1271"
+            exp_subsys_name = "ti_exp"
+        }
+        [
+            position = 8744, 8528
+            size = 64, 64
+        ]
+
+        component Subsystem ti_exp {
+            layout = dynamic
+            component "core/Constant" Constant17 {
+                execution_rate = "Ts"
+                value = "180"
+            }
+            [
+                position = 7844, 7952
+                hide_name = True
+            ]
+
+            component "core/Sum" Sum20 {
+            }
+            [
+                position = 7948, 7984
+                hide_name = True
+            ]
+
+            component "core/Gain" Gain10 {
+                gain = "-1"
+            }
+            [
+                position = 7844, 8016
+                hide_name = True
+            ]
+
+            component "core/Sum" Sum19 {
+                signs = "+-"
+            }
+            [
+                position = 7168, 8008
+                hide_name = True
+            ]
+
+            component "core/PID controller" "PID controller3" {
+                controller_type = "PI"
+                enb_anti_windup_out = "True"
+                enb_output_limit_out = "True"
+                ki = "Ki"
+                kp = "Kp"
+                lower_sat_lim = "-np.pi/2"
+                show_reset = "either"
+                upper_sat_lim = "np.pi/2"
+            }
+            [
+                position = 7320, 8016
+                hide_name = True
+            ]
+
+            component "core/Gain" rad2deg {
+                gain = "180/np.pi"
+            }
+            [
+                position = 7464, 8016
+            ]
+
+            component "core/Limit" Limit3 {
+                lower_limit = "-90"
+                upper_limit = "90"
+            }
+            [
+                position = 7584, 8016
+                hide_name = True
+            ]
+
+            component "TI C2000 Toolbox/SCI Setup (Generic)" "SCI Setup1" {
+                execution_rate = "Tslow"
+            }
+            [
+                position = 7108, 7540
+                size = 127, 63
+            ]
+
+            component "TI C2000 Toolbox/SCI Receive (Generic)" "SCI Receive1" {
+                execution_rate = "Ts"
+                timeout = "0"
+                var_names = "Iref"
+            }
+            [
+                position = 6816, 7536
+                size = 127, 144
+            ]
+
+            component "TI C2000 Toolbox/GPIO DI (Generic)" "GPIO - HIL DO1" {
+                execution_rate = "Ts"
+            }
+            [
+                position = 6824, 8200
+                size = 127, 63
+            ]
+
+            component "TI C2000 Toolbox/SCI Send (Generic)" "SCI Send1" {
+                var_names = "Imeas, phase_shift"
+                vct_size = "2"
+            }
+            [
+                position = 7484, 7528
+                size = 127, 144
+            ]
+
+            component "core/Rate Transition" "Rate Transition1" {
+                execution_rate = "Tslow"
+            }
+            [
+                position = 7144, 7808
+                hide_name = True
+                size = 32, 32
+            ]
+
+            component "core/Rate Transition" "Rate Transition2" {
+                execution_rate = "Tslow"
+            }
+            [
+                position = 7112, 8064
+                hide_name = True
+                size = 32, 32
+            ]
+
+            component "core/Rate Transition" "Rate Transition3" {
+                execution_rate = "Tslow"
+            }
+            [
+                position = 7716, 8120
+                hide_name = True
+                size = 32, 32
+            ]
+
+            component "core/Constant" Constant18 {
+                execution_rate = "Ts"
+                value = "0.5"
+            }
+            [
+                position = 8076, 7888
+                hide_name = True
+            ]
+
+            component "TI C2000 Toolbox/ePWM (Generic)" "ePWM (Generic)1" {
+                dead_time = "tdt"
+                frequency = "fs"
+                hil_di_nr = "1-3-5-9"
+                hil_di_nr_b = "2-4-6-10"
+                nr_of_channels = "4"
+                phase_op_mode = "Variable carrier phase offset"
+            }
+            [
+                position = 8372, 7936
+                size = 127, 128
+            ]
+
+            component "TI C2000 Toolbox/ADC (Generic)" "ADC (Generic)1" {
+                execution_rate = "Ts"
+                offset = "1.5"
+                scaling = "i_max_sample/1.5"
+            }
+            [
+                position = 6820, 8016
+                size = 127, 63
+            ]
+
+            tag Goto13 {
+                value = "pi_out"
+                scope = local
+                kind = sp
+                direction = in
+            }
+            [
+                position = 7780, 8120
+                hide_name = True
+                size = 60, 20
+            ]
+
+            tag Goto14 {
+                value = "Iref"
+                scope = local
+                kind = sp
+                direction = in
+            }
+            [
+                position = 7208, 7808
+                hide_name = True
+                size = 60, 20
+            ]
+
+            tag From22 {
+                value = "pi_out"
+                scope = local
+                kind = sp
+                direction = out
+            }
+            [
+                position = 7272, 7536
+                hide_name = True
+                size = 58, 20
+            ]
+
+            tag Goto15 {
+                value = "Imeas"
+                scope = local
+                kind = sp
+                direction = in
+            }
+            [
+                position = 7184, 8064
+                hide_name = True
+                size = 60, 20
+            ]
+
+            tag From24 {
+                value = "Imeas"
+                scope = local
+                kind = sp
+                direction = out
+            }
+            [
+                position = 7340, 7520
+                hide_name = True
+                size = 58, 20
+            ]
+
+            junction Junction170 sp
+            [
+                position = 7668, 8016
+            ]
+
+            junction Junction173 sp
+            [
+                position = 7104, 7808
+            ]
+
+            junction Junction174 sp
+            [
+                position = 8248, 7888
+            ]
+
+            junction Junction175 sp
+            [
+                position = 8248, 7920
+            ]
+
+            junction Junction176 sp
+            [
+                position = 8248, 7904
+            ]
+
+            junction Junction177 sp
+            [
+                position = 7040, 8016
+            ]
+
+            junction Junction178 sp
+            [
+                position = 7900, 7952
+            ]
+
+            junction Junction179 sp
+            [
+                position = 7908, 8016
+            ]
+
+            scheme_area Area2 {
+                title = <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd"><html><head><meta name="qrichtext" content="1" /><style type="text/css">p, li { white-space: pre-wrap; }</style></head><body style=" font-family:'Tahoma'; font-size:14pt; font-weight:0; font-style:normal;"><p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Control code</p></body></html>
+            }
+            [
+                position = 7572, 7992
+                size = 1184, 572
+                background_color = #0eff0000
+            ]
+
+            scheme_area Area3 {
+                title = <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd"><html><head><meta name="qrichtext" content="1" /><style type="text/css">p, li { white-space: pre-wrap; }</style></head><body style=" font-family:'Tahoma'; font-size:14pt; font-weight:0; font-style:normal;"><p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Serial Communication</p></body></html>
+            }
+            [
+                position = 7156, 7528
+                size = 888, 268
+            ]
+
+            scheme_area Area4 {
+                title = <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd"><html><head><meta name="qrichtext" content="1" /><style type="text/css">p, li { white-space: pre-wrap; }</style></head><body style=" font-family:'Tahoma'; font-size:14pt; font-weight:0; font-style:normal;"><p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Peripherals</p></body></html>
+            }
+            [
+                position = 6828, 8092
+                size = 212, 372
+            ]
+
+            scheme_area Area5 {
+                title = <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd"><html><head><meta name="qrichtext" content="1" /><style type="text/css">p, li { white-space: pre-wrap; }</style></head><body style=" font-family:'Tahoma'; font-size:14pt; font-weight:0; font-style:normal;"><p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Peripherals</p></body></html>
+            }
+            [
+                position = 8344, 8028
+                size = 268, 500
+            ]
+
+            connect rad2deg.in "PID controller3.out" as Connection1438
+            connect "PID controller3.in" Sum19.out as Connection1440
+            connect "GPIO - HIL DO1.Out" "PID controller3.reset" as Connection7479
+            connect Limit3.out Junction170 as Connection7483
+            connect Junction170 Gain10.in as Connection7484
+            connect "SCI Receive1.var1" Junction173 as Connection7503
+            [
+                breakpoints = 6940, 7536; 6940, 7808
+            ]
+            connect Junction173 "Rate Transition1.in" as Connection7504
+            connect "Rate Transition1.out" Goto14 as Connection7505
+            connect Goto15 "Rate Transition2.out" as Connection7506
+            connect Goto13 "Rate Transition3.out" as Connection7508
+            connect "Rate Transition3.in" Junction170 as Connection7509
+            connect "ePWM (Generic)1.In1" Junction174 as Connection7519
+            connect Junction174 Constant18.out as Connection7520
+            connect "ePWM (Generic)1.In4" Junction175 as Connection7522
+            connect "ePWM (Generic)1.In3" Junction175 as Connection7524
+            connect Junction175 Junction176 as Connection7525
+            connect Junction176 Junction174 as Connection7526
+            connect "ePWM (Generic)1.In2" Junction176 as Connection7527
+            connect "SCI Send1.var1" From24 as Connection7531
+            connect "SCI Send1.var2" From22 as Connection7532
+            connect Sum19.in1 Junction177 as Connection7539
+            connect "ADC (Generic)1.Out" Junction177 as Connection7541
+            connect Junction177 "Rate Transition2.in" as Connection7546
+            [
+                breakpoints = 7040, 8064; 7072, 8064
+            ]
+            connect Sum19.in Junction173 as Connection7547
+            [
+                breakpoints = 7104, 7984; 7104, 7984
+            ]
+            connect rad2deg.out Limit3.in as Connection7548
+            connect Sum20.in Junction178 as Connection7554
+            connect Junction178 Constant17.out as Connection7555
+            [
+                breakpoints = 7900, 7952
+            ]
+            connect "ePWM (Generic)1.offset2" Junction178 as Connection7556
+            connect Gain10.out Junction179 as Connection7558
+            connect Junction179 Sum20.in1 as Connection7559
+            [
+                breakpoints = 7908, 8016
+            ]
+            connect "ePWM (Generic)1.offset3" Junction179 as Connection7560
+            [
+                breakpoints = 8248, 7968; 8248, 8016
+            ]
+            connect Sum20.out "ePWM (Generic)1.offset4" as Connection7561
+        }
+        [
+            position = 8960, 8528
+            size = 232, 72
+        ]
+
+        component "core/Digital Probe" sim_running {
+        }
+        [
+            position = 9472, 8528
+        ]
+
+        component "core/Capacitor" Cout {
+            capacitance = "C"
+            signal_access = "Inherit"
+        }
+        [
+            position = 9416, 8800
+            rotation = right
+        ]
+
+        component "core/Inductor" Lin {
+            inductance = "Lf"
+            signal_access = "Inherit"
+        }
+        [
+            position = 8440, 8704
+        ]
+
+        component "core/Capacitor" Cin {
+            capacitance = "C"
+            signal_access = "Inherit"
+        }
+        [
+            position = 8528, 8792
+            rotation = right
+        ]
+
+        tag Goto5 {
+            value = "Vout"
+            scope = local
+            kind = sp
+            direction = in
+        }
+        [
+            position = 9744, 8800
+            hide_name = True
+            size = 60, 20
+        ]
+
+        tag Goto6 {
+            value = "Vin"
+            scope = local
+            kind = sp
+            direction = in
+        }
+        [
+            position = 8704, 8792
+            hide_name = True
+            size = 60, 20
+        ]
+
+        tag From14 {
+            value = "Iout"
+            scope = local
+            kind = sp
+            direction = out
+        }
+        [
+            position = 8832, 9000
+            hide_name = True
+            size = 60, 20
+        ]
+
+        tag From15 {
+            value = "Vout"
+            scope = local
+            kind = sp
+            direction = out
+        }
+        [
+            position = 8832, 9032
+            hide_name = True
+            size = 60, 20
+        ]
+
+        tag Goto7 {
+            value = "Iout"
+            scope = local
+            kind = sp
+            direction = in
+        }
+        [
+            position = 9424, 8656
+            hide_name = True
+            size = 60, 20
+        ]
+
+        junction Junction80 pe
+        [
+            position = 9576, 8704
+        ]
+
+        junction Junction81 pe
+        [
+            position = 9576, 8896
+        ]
+
+        junction Junction86 pe
+        [
+            position = 8616, 8704
+        ]
+
+        junction Junction93 pe
+        [
+            position = 9576, 8704
+        ]
+
+        junction Junction104 pe
+        [
+            position = 8616, 8704
+        ]
+
+        junction Junction105 pe
+        [
+            position = 8616, 8896
+        ]
+
+        junction Junction106 pe
+        [
+            position = 9416, 8896
+        ]
+
+        junction Junction107 pe
+        [
+            position = 9416, 8704
+        ]
+
+        junction Junction108 pe
+        [
+            position = 8528, 8704
+        ]
+
+        junction Junction109 pe
+        [
+            position = 8528, 8896
+        ]
+
+        connect Goto5 Vout.out as Connection427
+        connect Product1.out deg2rad2.in as Connection434
+        connect Battery2.p_node Junction80 as Connection567
+        connect Battery2.n_node Junction81 as Connection570
+        connect From15 Product1.in1 as Connection578
+        connect From14 Product1.in as Connection579
+        connect Vin.p_node Junction86 as Connection598
+        connect "Core Marker2.node" Junction93 as Connection644
+        connect Junction93 Junction80 as Connection645
+        connect Lout.n_node Junction93 as Connection646
+        connect Junction81 Vout.n_node as Connection650
+        [
+            breakpoints = 9672, 8896; 9672, 8896
+        ]
+        connect Junction80 Vout.p_node as Connection651
+        [
+            breakpoints = 9576, 8704; 9672, 8704
+        ]
+        connect Goto7 Iout.out as Connection671
+        connect deg2rad2.out "Low-Pass Filter1.in" as Connection698
+        connect "Low-Pass Filter1.out" Pmeas.in as Connection699
+        connect Iout.p_node "Dual Active Bridge1.B+" as Connection703
+        connect Junction86 Junction104 as Connection707
+        connect Junction104 "Core Marker1.node" as Connection708
+        [
+            breakpoints = 8616, 8704; 8616, 8704; 8616, 8704
+        ]
+        connect "Dual Active Bridge1.A+" Junction104 as Connection709
+        connect Vin.n_node Junction105 as Connection710
+        connect Junction105 "Dual Active Bridge1.A-" as Connection712
+        connect Constant1.out sim_running.in as Connection7432
+        connect Junction106 Cout.n_node as Connection7443
+        connect Junction106 "Dual Active Bridge1.B-" as Connection7444
+        connect Junction106 Junction81 as Connection7445
+        connect Junction107 Cout.p_node as Connection7446
+        connect Junction107 Iout.n_node as Connection7447
+        connect Junction107 Lout.p_node as Connection7448
+        connect Vin.out Goto6 as Connection7449
+        connect Battery1.p_node Lin.p_node as Connection7450
+        connect Lin.n_node Junction108 as Connection7452
+        connect Junction108 Junction86 as Connection7453
+        connect Cin.p_node Junction108 as Connection7454
+        connect Battery1.n_node Junction109 as Connection7459
+        connect Junction109 Junction105 as Connection7460
+        [
+            breakpoints = 8528, 8896; 8536, 8896; 8616, 8896
+        ]
+        connect Cin.n_node Junction109 as Connection7461
+    }
+
+    logically_deleted {
+    }
+
+    default {
+        "core/Capacitor" {
+            signal_access = "inherit"
+            capacitance = "1e-6"
+            initial_voltage = "0"
+            pole_shift_ignore = "False"
+            visible = "True"
+        }
+
+        "core/Constant" {
+            value = "1"
+            signal_type = "real"
+            execution_rate = "100e-6"
+            _tunable = "False"
+        }
+
+        "core/Core Marker" {
+            marker_id = "id0"
+        }
+
+        "core/Digital Probe" {
+            signal_access = "inherit"
+            override_signal_name = "False"
+            signal_name = ""
+            streaming_en = "False"
+            addr = "0"
+            streaming_er_idx = "0"
+            execution_rate = "inherit"
+        }
+
+        "core/Gain" {
+            gain = "1"
+            multiplication = "Element-wise(K.*u)"
+            _tunable = "False"
+            execution_rate = "inherit"
+        }
+
+        "core/Inductor" {
+            signal_access = "inherit"
+            inductance = "1e-3"
+            initial_current = "0.0"
+            pole_shift_ignore = "False"
+            visible = "True"
+        }
+
+        "core/Limit" {
+            upper_limit = "[\'inf\']"
+            lower_limit = "[\'-inf\']"
+            execution_rate = "inherit"
+        }
+
+        "core/Low-Pass Filter" {
+            frequency = "500"
+            init_out = "0"
+            unit = "Hz"
+            execution_rate = "inherit"
+            _tunable = "False"
+        }
+
+        "core/Output Settings" {
+            analog_outputs = "[]"
+            digital_outputs = "[]"
+            hil_id = "0"
+            signal = ""
+        }
+
+        "core/PID controller" {
+            controller_type = "PID"
+            kp = "1"
+            kp_source = "internal"
+            ki = "1"
+            ki_source = "internal"
+            kd = "0"
+            kd_source = "internal"
+            filt_coef = "100"
+            int_init_value = "0"
+            filt_init_value = "0"
+            enb_output_limit_out = "False"
+            show_reset = "none"
+            upper_sat_lim = "1"
+            upper_sat_lim_source = "internal"
+            lower_sat_lim = "-1"
+            lower_sat_lim_source = "internal"
+            enb_anti_windup_out = "False"
+            signal_out_type = "inherit"
+            _tunable = "False"
+            execution_rate = "inherit"
+        }
+
+        "core/Probe" {
+            signal_access = "inherit"
+            addr = "0"
+            override_signal_name = "False"
+            signal_name = ""
+            signal_type = "generic"
+            streaming_en = "False"
+            streaming_er_idx = "0"
+            execution_rate = "inherit"
+        }
+
+        "core/Product" {
+            signs = "2"
+            execution_rate = "inherit"
+        }
+
+        "core/Sum" {
+            signs = "2"
+            execution_rate = "inherit"
+        }
+
+        "TI C2000 Toolbox/ADC (Generic)" {
+            hil_ao_nr = "1"
+            interface_type = "HIL TI Launchpad Interface"
+            controller_index = "1"
+            scaling = "1"
+            offset = "0"
+            execution_rate = "100e-6"
+            conv_trigger = "Software Only"
+            inten = "False"
+        }
+
+        "core/Battery" {
+            signal_access = "inherit"
+            sig_output = "False"
+            lut = "False"
+            battery_type = "Lead-Acid"
+            nominal_voltage = "12.0"
+            capacity = "1.2"
+            initial_soc = "100.0"
+            execution_rate = "100e-6"
+            Ke_full = "108.0"
+            Kdisc_I = "5.0"
+            R_series = "0.25"
+            Kq_nom = "50.0"
+            Kq_exp = "0.9"
+            Ke_exp = "102.5"
+            preview = "Preview SOC Curve"
+        }
+
+        "core/Current Measurement" {
+            signal_access = "inherit"
+            bw_limit = "False"
+            frequency = "10e3"
+            comparator_enable = "False"
+            operator = "greater"
+            threshold = "0"
+            cmp_abs_value = "False"
+            feed_forward = "false"
+            sig_output = "False"
+            sig_output_filt_and_full_bw = "False"
+            execution_rate = "100e-6"
+            addr = "0"
+            nd_msr_estimation = "false"
+            dev_cpl_msr = "false"
+            host_device = "0"
+            output_to_device = "0"
+            dev_cpl_index = "0"
+            dev_cpl_var_nb = "0"
+            visible = "True"
+            override_signal_name = "False"
+            signal_name = ""
+        }
+
+        "core/Dual Active Bridge" {
+            en_series_capacitor = "False"
+            L = "1e-6"
+            C = "1e-6"
+            R_series = "1e-3"
+            n = "1"
+            ctrl_src = "Digital inputs"
+            op_mode = "Fixed carrier frequency"
+            carrier_freq = "10000.0"
+            d_time = "5e-6"
+            ref_sig_min_max = "[-1.0, 1.0]"
+            load_mode = "on min"
+            execution_rate = "inherit"
+            SA_1 = "1"
+            SA_1_logic = "active high"
+            SA_2 = "2"
+            SA_2_logic = "active high"
+            SA_3 = "3"
+            SA_3_logic = "active high"
+            SA_4 = "4"
+            SA_4_logic = "active high"
+            SB_1 = "5"
+            SB_1_logic = "active high"
+            SB_2 = "6"
+            SB_2_logic = "active high"
+            SB_3 = "7"
+            SB_3_logic = "active high"
+            SB_4 = "8"
+            SB_4_logic = "active high"
+            _control_property = "all high"
+            pwm_enabling_a = "False"
+            pwm_enable_di_a = "9"
+            pwm_enable_inv_a = "active high"
+            pwm_enabling_b = "False"
+            pwm_enable_di_b = "10"
+            pwm_enable_inv_b = "active high"
+            R_dc_a = "1e-3"
+            R_dc_b = "1e-3"
+            reserved_parameter = "1"
+            signal_access = "inherit"
+        }
+
+        "TI C2000 Toolbox/GPIO DI (Generic)" {
+            hil_do_nr = "1"
+            interface_type = "HIL TI Launchpad Interface"
+            controller_index = "1"
+            execution_rate = "100e-6"
+        }
+
+        "core/Rate Transition" {
+            init_value = "0.0"
+            execution_rate = "100e-6"
+            _supported_platforms = "[\'generic\']"
+        }
+
+        "TI C2000 Toolbox/SCI Receive (Generic)" {
+            vct_size = "1"
+            var_names = "var1"
+            var1 = ""
+            var2 = ""
+            var3 = ""
+            var4 = ""
+            execution_rate = "1e-3"
+            timeout = "0.1"
+            change_names = "False"
+        }
+
+        "TI C2000 Toolbox/SCI Send (Generic)" {
+            vct_size = "1"
+            var_names = "var1"
+            var1 = ""
+            var2 = ""
+            var3 = ""
+            var4 = ""
+            sending_prd = "on ping"
+            change_names = "False"
+        }
+
+        "TI C2000 Toolbox/SCI Setup (Generic)" {
+            sci_module = "a"
+            lspclkdiv = "1"
+            lspclk = "1"
+            baudrate = "460800"
+            scihbaud = "0"
+            scilbaud = "12"
+            probe_connection = "True"
+            ti_tx_gpio = "42"
+            ti_rx_gpio = "43"
+            parityena = "False"
+            parity = "Odd"
+            stopbits = "1"
+            scichar = "7"
+            sciffena = "1"
+            scirst = "1"
+            swreset = "1"
+            rxena = "1"
+            txena = "1"
+            rxfiforeset = "1"
+            txfiforeset = "1"
+            txfifoxreset = "1"
+            execution_rate = "1e-3"
+        }
+
+        "TI C2000 Toolbox/TI C2000 Setup" {
+            build_and_deploy = "Build and deploy"
+            build_and_deploy_action = "0"
+            create_ccs_project = "Create CCS Project"
+            create_ccs_project_action = "False"
+            export = "Export code"
+            export_action = "False"
+            build = "Build"
+            build_action = "False"
+            flash = "Flash target"
+            flash_action = "False"
+            ex_rate_test = "Perform execution rate test"
+            ex_rate_test_action = "False"
+            exp_subsys_name = ""
+            ccs_project_name = ""
+            model_path_en = "True"
+            ccs_project_path = "c:\git\t_mdl\010_ti_rcp_lib\ti_rcp_lib_v1"
+            target_platform = "LAUNCHXL-F28379D"
+            execution_rate = "100e-6"
+            ccs_root_path = "C:\User Programs\ti"
+            c2000ware_root_path = "C:\ti\C2000Ware_5_02_00_00"
+            write_settings = "Write settings"
+            scheduling = "CPU Timer Based Scheduler"
+        }
+
+        "core/Voltage Measurement" {
+            signal_access = "inherit"
+            bw_limit = "False"
+            frequency = "10e3"
+            comparator_enable = "False"
+            operator = "greater"
+            threshold = "0"
+            cmp_abs_value = "False"
+            feed_forward = "false"
+            sig_output = "False"
+            sig_output_filt_and_full_bw = "False"
+            execution_rate = "100e-6"
+            addr = "0"
+            nd_msr_estimation = "false"
+            dev_cpl_msr = "false"
+            host_device = "0"
+            output_to_device = "0"
+            dev_cpl_index = "0"
+            dev_cpl_var_nb = "0"
+            visible = "True"
+            override_signal_name = "False"
+            signal_name = ""
+        }
+
+        "TI C2000 Toolbox/ePWM (Generic)" {
+            hil_di_nr = "1"
+            hil_di_nr_b = "2"
+            interface_type = "HIL TI Launchpad Interface"
+            controller_index = "1"
+            nr_of_channels = "1"
+            freq_op_mode = "Fixed carrier frequency"
+            frequency = "10e3"
+            phase_op_mode = "Fixed carrier phase offset"
+            carr_ph_offset = "0"
+            dead_time = "5e-7"
+            load_mode = "on min"
+            clock_time_ti = "5e-9"
+            clock_time_emulator = "5e-9"
+            soc_en = "False"
+            soc_timing = "Counter equals zero"
+            soc_period = "Every event"
+            int_en = "False"
+            int_timing = "Counter equals zero"
+            int_period = "Every event"
+        }
+    }
+
+    CODE model_init
+        # Numpy module is imported as 'np'
+        # Scipy module is imported as 'sp'
+        # The Schematic API is imported as 'mdl'
+        # To get the model file path, use 'mdl.get_model_file_path()'
+        # To print information to the console, use info()
+        Ts = 50e-6
+        Tslow = 1e-3
+        
+        fdiv = 5
+        fs = 500e3/fdiv
+        tdt = 0.05e-6
+        L = 0.02e-3*fdiv
+        
+        # TI RCP ADC config for HIL TI Launchpad Interface board + F28379D
+        i_max_sample = 150
+        scaling = i_max_sample / 1.5
+        offset = 1.5
+        
+        # DAB Control *****************
+        Vin = 800
+        Vout = 400
+        N2 = 1
+        n = Vout/Vin
+        N1 = 1/n*N2
+        
+        Pmax = 50e3   # Power maximum at rated voltage
+        Pn = Pmax * 0.8
+        L = Vin*Vout/8/n/fs/Pmax
+        
+        # Output filter design
+        f_LC = fs/20
+        Imax = Pmax/Vout
+        deltaVmax = Vout/20
+        C = 1e-4*fdiv
+        Lf = 1/(4*f_LC**2*np.pi**2*C)
+        
+        
+        
+        Rload = Vout**2/Pn
+        
+        R1 = L*2*fs*np.pi/25  #0.1
+        
+        k = Vin*Vout/(2*np.pi**2*n*L*fs)
+        
+        fi_n = (np.pi-np.sqrt(np.pi**2-4*Pn/k))/2
+        fi_n_deg = fi_n/np.pi*180
+        
+        kg = Vin*Vout/(2*np.pi**2*n*L*fs)*(np.pi-2*fi_n)    # Gain from angle in radians to power
+        
+        Wg = kg*2/C          # Total gain of open loop TF without regulator
+        
+        
+        # Current regulator calculation
+        tr = 20 * Ts
+        wc = 2.2/tr
+        Ki = wc*Vout/kg
+        Kp = Ki/10/wc
+        
+        f_lpf = fs/50
+        ws = 2*np.pi*fs
+        w_lpf = 2*np.pi*f_lpf
+        
+        
+        a1 = kg*Kp/Vout
+        a0 = kg*Ki/Vout
+        num = [a1, a0]
+        den = [1/w_lpf, 1, 0]
+        
+        den_cl = [1/w_lpf, 1 + a1, a0]
+        
+        tf_ol = sp.signal.TransferFunction(num, den)
+        tf_cl = sp.signal.TransferFunction(num, den_cl)
+        
+        w, mag, phase = sp.signal.bode(tf_cl, w=range(100, 10*int(fs), 200))
+        
+            
+    ENDCODE
+}

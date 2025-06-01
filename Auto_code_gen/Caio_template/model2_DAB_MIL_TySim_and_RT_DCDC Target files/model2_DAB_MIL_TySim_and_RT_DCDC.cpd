@@ -1,0 +1,834 @@
+
+<model_description>
+    <sw_version>2025.1 SP1</sw_version>
+    <hw_properties>
+        <revision>3</revision>
+        <product_id>HIL404</product_id>
+        <configuration_id>5</configuration_id>
+        <device_ao_limit_enable>False</device_ao_limit_enable>
+        <device_id>0</device_id>
+        <spc_out_mem_size>512</spc_out_mem_size>
+        <fw_support_limit>132710918</fw_support_limit>
+        <vhil_adio_loopback>False</vhil_adio_loopback>
+    </hw_properties>
+    <sim_setup>
+        <sim_time_step>2e-07</sim_time_step>
+    </sim_setup>
+    <pesb>
+        <cell>
+            <name>Dual Active Bridge1</name>
+            <type>conv_solver</type>
+            <scm_comp_type>DAB</scm_comp_type>
+            <site>0</site>
+            <switches>
+                <cell>
+                    <name>SA_1</name>
+                    <weights>[7]</weights>
+                </cell>
+                <cell>
+                    <name>SA_2</name>
+                    <weights>[6]</weights>
+                </cell>
+                <cell>
+                    <name>SA_3</name>
+                    <weights>[5]</weights>
+                </cell>
+                <cell>
+                    <name>SA_4</name>
+                    <weights>[4]</weights>
+                </cell>
+                <cell>
+                    <name>SB_1</name>
+                    <weights>[3]</weights>
+                </cell>
+                <cell>
+                    <name>SB_2</name>
+                    <weights>[2]</weights>
+                </cell>
+                <cell>
+                    <name>SB_3</name>
+                    <weights>[1]</weights>
+                </cell>
+                <cell>
+                    <name>SB_4</name>
+                    <weights>[0]</weights>
+                </cell>
+            </switches>
+        </cell>
+    </pesb>
+    <analog_variables>
+        <cell>
+            <name>Battery2.Csoc</name>
+            <address>1</address>
+            <type>voltage</type>
+            <initial_condition>50000000.0</initial_condition>
+            <visible>False</visible>
+        </cell>
+        <cell>
+            <name>Battery1.Csoc</name>
+            <address>0</address>
+            <type>voltage</type>
+            <initial_condition>50000000.0</initial_condition>
+            <visible>False</visible>
+        </cell>
+        <cell>
+            <name>Lin</name>
+            <address>5</address>
+            <type>current</type>
+            <initial_condition>0.0</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>Lout</name>
+            <address>6</address>
+            <type>current</type>
+            <initial_condition>0.0</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>Cin</name>
+            <address>2</address>
+            <type>voltage</type>
+            <initial_condition>0.0</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>Cout</name>
+            <address>3</address>
+            <type>voltage</type>
+            <initial_condition>0.0</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>Dual Active Bridge1.DC-DC Converter1.V_SCALED_PREDICTION_A</name>
+            <address>13</address>
+            <type>voltage</type>
+            <initial_condition>None</initial_condition>
+            <visible>False</visible>
+            <previous_names>
+            </previous_names>
+        </cell>
+        <cell>
+            <name>Dual Active Bridge1.DC-DC Converter1.V_IN2</name>
+            <address>12</address>
+            <type>voltage</type>
+            <initial_condition>None</initial_condition>
+            <visible>False</visible>
+            <previous_names>
+            </previous_names>
+        </cell>
+        <cell>
+            <name>Iout.full_bandwidth</name>
+            <address>26</address>
+            <type>current</type>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+            <previous_names>
+                <previous_name>Iout_full_bandwidth</previous_name>
+            </previous_names>
+        </cell>
+        <cell>
+            <name>Iout_full_bandwidth</name>
+            <address>26</address>
+            <type>current</type>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>Dual Active Bridge1.v_ac_A</name>
+            <address>17</address>
+            <type>voltage</type>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+            <previous_names>
+            </previous_names>
+        </cell>
+        <cell>
+            <name>Dual Active Bridge1.DC-DC Converter1.v1_meas</name>
+            <address>15</address>
+            <type>voltage</type>
+            <initial_condition>None</initial_condition>
+            <visible>False</visible>
+            <previous_names>
+            </previous_names>
+        </cell>
+        <cell>
+            <name>Vin</name>
+            <address>19</address>
+            <type>voltage</type>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+            <previous_names>
+            </previous_names>
+        </cell>
+        <cell>
+            <name>Vout</name>
+            <address>20</address>
+            <type>voltage</type>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+            <previous_names>
+            </previous_names>
+        </cell>
+        <cell>
+            <name>Battery2.SOC</name>
+            <address>9</address>
+            <type>voltage</type>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+            <previous_names>
+            </previous_names>
+        </cell>
+        <cell>
+            <name>Iout</name>
+            <address>27</address>
+            <type>current</type>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+            <previous_names>
+            </previous_names>
+        </cell>
+        <cell>
+            <name>Battery1.voltage</name>
+            <address>8</address>
+            <type>voltage</type>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+            <previous_names>
+                <previous_name>Battery1</previous_name>
+            </previous_names>
+        </cell>
+        <cell>
+            <name>Battery1</name>
+            <address>8</address>
+            <type>voltage</type>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>Dual Active Bridge1.v_ac_B</name>
+            <address>18</address>
+            <type>voltage</type>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+            <previous_names>
+            </previous_names>
+        </cell>
+        <cell>
+            <name>Dual Active Bridge1.DC-DC Converter1.I_SC_B</name>
+            <address>24</address>
+            <type>current</type>
+            <initial_condition>None</initial_condition>
+            <visible>False</visible>
+            <previous_names>
+            </previous_names>
+        </cell>
+        <cell>
+            <name>Dual Active Bridge1.DC-DC Converter1.V_IN1</name>
+            <address>11</address>
+            <type>voltage</type>
+            <initial_condition>None</initial_condition>
+            <visible>False</visible>
+            <previous_names>
+            </previous_names>
+        </cell>
+        <cell>
+            <name>Dual Active Bridge1.DC-DC Converter1.I_SC_A</name>
+            <address>23</address>
+            <type>current</type>
+            <initial_condition>None</initial_condition>
+            <visible>False</visible>
+            <previous_names>
+            </previous_names>
+        </cell>
+        <cell>
+            <name>Battery1.current</name>
+            <address>21</address>
+            <type>current</type>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+            <previous_names>
+                <previous_name>Battery1.Ia1</previous_name>
+            </previous_names>
+        </cell>
+        <cell>
+            <name>Battery1.Ia1</name>
+            <address>21</address>
+            <type>current</type>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>Dual Active Bridge1.DC-DC Converter1.V_SCALED_PREDICTION_B</name>
+            <address>14</address>
+            <type>voltage</type>
+            <initial_condition>None</initial_condition>
+            <visible>False</visible>
+            <previous_names>
+            </previous_names>
+        </cell>
+        <cell>
+            <name>Battery2.voltage</name>
+            <address>10</address>
+            <type>voltage</type>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+            <previous_names>
+                <previous_name>Battery2</previous_name>
+            </previous_names>
+        </cell>
+        <cell>
+            <name>Battery2</name>
+            <address>10</address>
+            <type>voltage</type>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>Battery1.SOC</name>
+            <address>7</address>
+            <type>voltage</type>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+            <previous_names>
+            </previous_names>
+        </cell>
+        <cell>
+            <name>Dual Active Bridge1.DC-DC Converter1.v2_meas</name>
+            <address>16</address>
+            <type>voltage</type>
+            <initial_condition>None</initial_condition>
+            <visible>False</visible>
+            <previous_names>
+            </previous_names>
+        </cell>
+        <cell>
+            <name>Battery2.current</name>
+            <address>22</address>
+            <type>current</type>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+            <previous_names>
+                <previous_name>Battery2.Ia1</previous_name>
+            </previous_names>
+        </cell>
+        <cell>
+            <name>Battery2.Ia1</name>
+            <address>22</address>
+            <type>current</type>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>Dual Active Bridge1.i_L</name>
+            <address>25</address>
+            <type>current</type>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+            <previous_names>
+            </previous_names>
+        </cell>
+        <cell>
+            <name>const_0V</name>
+            <address>34304</address>
+            <type>voltage</type>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>HIL0 analog input 1</name>
+            <address>34816</address>
+            <type>voltage</type>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>HIL0 analog input 2</name>
+            <address>34817</address>
+            <type>voltage</type>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>HIL0 analog input 3</name>
+            <address>34818</address>
+            <type>voltage</type>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>HIL0 analog input 4</name>
+            <address>34819</address>
+            <type>voltage</type>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>HIL0 analog input 5</name>
+            <address>34820</address>
+            <type>voltage</type>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>HIL0 analog input 6</name>
+            <address>34821</address>
+            <type>voltage</type>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>HIL0 analog input 7</name>
+            <address>34822</address>
+            <type>voltage</type>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>HIL0 analog input 8</name>
+            <address>34823</address>
+            <type>voltage</type>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>HIL0 analog input 9</name>
+            <address>34824</address>
+            <type>voltage</type>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>HIL0 analog input 10</name>
+            <address>34825</address>
+            <type>voltage</type>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>HIL0 analog input 11</name>
+            <address>34826</address>
+            <type>voltage</type>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>HIL0 analog input 12</name>
+            <address>34827</address>
+            <type>voltage</type>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>HIL0 analog input 13</name>
+            <address>34828</address>
+            <type>voltage</type>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>HIL0 analog input 14</name>
+            <address>34829</address>
+            <type>voltage</type>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>HIL0 analog input 15</name>
+            <address>34830</address>
+            <type>voltage</type>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>HIL0 analog input 16</name>
+            <address>34831</address>
+            <type>voltage</type>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+    </analog_variables>
+    <digital_variables>
+        <cell>
+            <name>const_0</name>
+            <address>1</address>
+            </cell>
+        <cell>
+            <name>HIL0 AO flag</name>
+            <address>8</address>
+            </cell>
+        <cell>
+            <name>HIL0 DTV flag</name>
+            <address>9</address>
+            </cell>
+        <cell>
+            <name>HIL0 Capture or Scope Trigger</name>
+            <address>16</address>
+                <previous_names>
+                        <previous_name>HIL0 Capture/Scope Trigger</previous_name>
+                    </previous_names>
+            </cell>
+        <cell>
+            <name>HIL0 Capture/Scope Trigger</name>
+            <address>16</address>
+            </cell>
+        <cell>
+            <name>HIL0 GPIO 1</name>
+            <address>64</address>
+            </cell>
+        <cell>
+            <name>HIL0 GPIO 2</name>
+            <address>65</address>
+            </cell>
+        <cell>
+            <name>HIL0 GPIO 3</name>
+            <address>66</address>
+            </cell>
+        <cell>
+            <name>HIL0 GPIO 4</name>
+            <address>67</address>
+            </cell>
+        <cell>
+            <name>HIL0 GPIO 5</name>
+            <address>68</address>
+            </cell>
+        <cell>
+            <name>HIL0 GPIO 6</name>
+            <address>69</address>
+            </cell>
+        <cell>
+            <name>HIL0 GPIO 7</name>
+            <address>70</address>
+            </cell>
+        <cell>
+            <name>HIL0 GPIO 8</name>
+            <address>71</address>
+            </cell>
+        <cell>
+            <name>HIL0 GPIO 9</name>
+            <address>72</address>
+            </cell>
+        <cell>
+            <name>HIL0 GPIO 10</name>
+            <address>73</address>
+            </cell>
+        <cell>
+            <name>HIL0 GPIO 11</name>
+            <address>74</address>
+            </cell>
+        <cell>
+            <name>HIL0 GPIO 12</name>
+            <address>75</address>
+            </cell>
+        <cell>
+            <name>HIL0 digital input 1</name>
+            <address>128</address>
+            </cell>
+        <cell>
+            <name>HIL0 digital input 2</name>
+            <address>129</address>
+            </cell>
+        <cell>
+            <name>HIL0 digital input 3</name>
+            <address>130</address>
+            </cell>
+        <cell>
+            <name>HIL0 digital input 4</name>
+            <address>131</address>
+            </cell>
+        <cell>
+            <name>HIL0 digital input 5</name>
+            <address>132</address>
+            </cell>
+        <cell>
+            <name>HIL0 digital input 6</name>
+            <address>133</address>
+            </cell>
+        <cell>
+            <name>HIL0 digital input 7</name>
+            <address>134</address>
+            </cell>
+        <cell>
+            <name>HIL0 digital input 8</name>
+            <address>135</address>
+            </cell>
+        <cell>
+            <name>HIL0 digital input 9</name>
+            <address>136</address>
+            </cell>
+        <cell>
+            <name>HIL0 digital input 10</name>
+            <address>137</address>
+            </cell>
+        <cell>
+            <name>HIL0 digital input 11</name>
+            <address>138</address>
+            </cell>
+        <cell>
+            <name>HIL0 digital input 12</name>
+            <address>139</address>
+            </cell>
+        <cell>
+            <name>HIL0 digital input 13</name>
+            <address>140</address>
+            </cell>
+        <cell>
+            <name>HIL0 digital input 14</name>
+            <address>141</address>
+            </cell>
+        <cell>
+            <name>HIL0 digital input 15</name>
+            <address>142</address>
+            </cell>
+        <cell>
+            <name>HIL0 digital input 16</name>
+            <address>143</address>
+            </cell>
+        <cell>
+            <name>HIL0 digital input 17</name>
+            <address>144</address>
+            </cell>
+        <cell>
+            <name>HIL0 digital input 18</name>
+            <address>145</address>
+            </cell>
+        <cell>
+            <name>HIL0 digital input 19</name>
+            <address>146</address>
+            </cell>
+        <cell>
+            <name>HIL0 digital input 20</name>
+            <address>147</address>
+            </cell>
+        <cell>
+            <name>HIL0 digital input 21</name>
+            <address>148</address>
+            </cell>
+        <cell>
+            <name>HIL0 digital input 22</name>
+            <address>149</address>
+            </cell>
+        <cell>
+            <name>HIL0 digital input 23</name>
+            <address>150</address>
+            </cell>
+        <cell>
+            <name>HIL0 digital input 24</name>
+            <address>151</address>
+            </cell>
+        <cell>
+            <name>HIL0 digital input 25</name>
+            <address>152</address>
+            </cell>
+        <cell>
+            <name>HIL0 digital input 26</name>
+            <address>153</address>
+            </cell>
+        <cell>
+            <name>HIL0 digital input 27</name>
+            <address>154</address>
+            </cell>
+        <cell>
+            <name>HIL0 digital input 28</name>
+            <address>155</address>
+            </cell>
+        <cell>
+            <name>HIL0 digital input 29</name>
+            <address>156</address>
+            </cell>
+        <cell>
+            <name>HIL0 digital input 30</name>
+            <address>157</address>
+            </cell>
+        <cell>
+            <name>HIL0 digital input 31</name>
+            <address>158</address>
+            </cell>
+        <cell>
+            <name>HIL0 digital input 32</name>
+            <address>159</address>
+            </cell>
+        <cell>
+            <name>Dual Active Bridge1.i_L_cmp_out</name>
+            <address>597</address>
+            </cell>
+        <cell>
+            <name>Dual Active Bridge1.PWM_Modulator.BOT_1</name>
+            <address>513</address>
+                <previous_names>
+                    </previous_names>
+            </cell>
+        <cell>
+            <name>Dual Active Bridge1.PWM_Modulator.TOP_2</name>
+            <address>514</address>
+                <previous_names>
+                    </previous_names>
+            </cell>
+        <cell>
+            <name>Dual Active Bridge1.PWM_Modulator.TOP_4</name>
+            <address>518</address>
+                <previous_names>
+                    </previous_names>
+            </cell>
+        <cell>
+            <name>Dual Active Bridge1.PWM_Modulator.TOP_1</name>
+            <address>512</address>
+                <previous_names>
+                    </previous_names>
+            </cell>
+        <cell>
+            <name>Dual Active Bridge1.PWM_Modulator.TOP_3</name>
+            <address>516</address>
+                <previous_names>
+                    </previous_names>
+            </cell>
+        <cell>
+            <name>Dual Active Bridge1.PWM_Modulator.BOT_4</name>
+            <address>519</address>
+                <previous_names>
+                    </previous_names>
+            </cell>
+        <cell>
+            <name>Dual Active Bridge1.PWM_Modulator.BOT_3</name>
+            <address>517</address>
+                <previous_names>
+                    </previous_names>
+            </cell>
+        <cell>
+            <name>Dual Active Bridge1.PWM_Modulator.BOT_2</name>
+            <address>515</address>
+                <previous_names>
+                    </previous_names>
+            </cell>
+    </digital_variables>
+    <sources>
+    </sources>
+    <machines>
+    </machines>
+    <pv_panels>
+    </pv_panels>
+    <batteries>
+        <cell>
+            <name>Battery1</name>
+            <address>0</address>
+            <file_name>Lithium-Ion_800.0V_250.0Ah.ibt</file_name>
+            <v_sig_name>Battery1.Cf</v_sig_name>
+            <q_sig_name>Battery1.Csoc</q_sig_name>
+            <default_soc>50.0</default_soc>
+            <e_nom>800.0</e_nom>
+            <q_full>250.0</q_full>
+            <q_scale>2.5e-06</q_scale>
+        </cell>
+        <cell>
+            <name>Battery2</name>
+            <address>1</address>
+            <file_name>Lithium-Ion_400.0V_500.0Ah.ibt</file_name>
+            <v_sig_name>Battery2.Cf</v_sig_name>
+            <q_sig_name>Battery2.Csoc</q_sig_name>
+            <default_soc>50.0</default_soc>
+            <e_nom>400.0</e_nom>
+            <q_full>500.0</q_full>
+            <q_scale>5e-06</q_scale>
+        </cell>
+    </batteries>
+    <contactors>
+    </contactors>
+    <dtsms>
+        </dtsms>
+    <analog_output_settings>
+    </analog_output_settings>
+    <digital_output_settings>
+    </digital_output_settings>
+    <dtv>
+        <spc_dtv>
+        </spc_dtv>
+        <par_dtv>
+        </par_dtv>
+    </dtv>
+
+<!-- ******* SP DATA ******** -->
+
+    <model_properties>
+        <execution_rates>[[[5e-05], [], []]]</execution_rates>
+        <sys_real_type_precision>double</sys_real_type_precision>
+        <user_real_type_precision>double</user_real_type_precision>
+        <sig_stim>off</sig_stim>
+        <update_device_time>True</update_device_time>
+    </model_properties>
+
+    <analog_variables>
+        <cell>
+            <name>Iout_sample</name>
+            <type>active power</type>
+            <address>16384</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>Pmeas</name>
+            <type>active power</type>
+            <address>16387</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>PI_out</name>
+            <type>generic</type>
+            <address>16386</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>Iref_meas</name>
+            <type>generic</type>
+            <address>16385</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+    </analog_variables>
+
+<digital_variables>
+    </digital_variables>
+
+    <tunable_params>
+        <tunable_param>
+            <name>Iref</name>
+            <addr>[796917760]</addr>
+            <min>-200.0</min>
+            <max>200.0</max>
+            <def_value>0.0</def_value>
+            <unit></unit>
+            <widget_type>float</widget_type>
+            <format>real</format>
+            <size>1</size>
+            <param_type>scada input</param_type>
+            <cpu_type>user_sp_cpu</cpu_type>
+            <cpu_idx>0</cpu_idx>
+            <execution_rate>5e-05</execution_rate>
+            <visible>True</visible>
+        </tunable_param>
+    </tunable_params>
+
+
+    <dsp_monitors>
+        <monitor>
+            <type>user</type>
+            <cpu_idx>0</cpu_idx>
+            <execution_rates>[5e-05]</execution_rates>
+            <execution_rate_labels>['ER0 (5e-05)']</execution_rate_labels>
+            <timer_counters>[13999]</timer_counters>
+
+            
+        </monitor>
+    </dsp_monitors>
+
+    <sp_compiler_type>gcc</sp_compiler_type>
+
+    <streaming>
+
+
+
+     </streaming>
+
+
+</model_description>
