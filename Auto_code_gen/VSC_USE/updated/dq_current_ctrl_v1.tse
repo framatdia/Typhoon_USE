@@ -6,8 +6,8 @@ version = 4.2
 
 model "dq_current_ctrl_v1" {
     configuration {
-        hil_device = "HIL101"
-        hil_configuration_id = 1
+        hil_device = "HIL404"
+        hil_configuration_id = 5
         simulation_method = exact
         simulation_time_step = auto
         simulation_discret_scaling = 1.0
@@ -394,7 +394,9 @@ c= cos(theta +2.0/3.0*M_PI)*dq[0] - sin(theta+2.0/3.0*M_PI)*dq[1];
             ]
 
             component "TI C2000 Toolbox/SCI Setup (Generic)" "SCI Setup1" {
+                baudrate = "115200"
                 execution_rate = "Tslow"
+                scilbaud = "53"
             }
             [
                 position = 7972, 7516
@@ -417,7 +419,7 @@ c= cos(theta +2.0/3.0*M_PI)*dq[0] - sin(theta+2.0/3.0*M_PI)*dq[1];
                 vct_size = "4"
             }
             [
-                position = 8300, 7508
+                position = 8296, 7508
                 size = 127, 144
             ]
 
@@ -1678,7 +1680,7 @@ c= cos(theta +2.0/3.0*M_PI)*dq[0] - sin(theta+2.0/3.0*M_PI)*dq[1];
             build_and_deploy_action = "False"
             c2000ware_root_path = "C:\ti\c2000\C2000Ware_5_04_00_00"
             ccs_project_name = "dq_current_ctrl_acg"
-            ccs_project_path = "C:/workspace/Typhoon/Auto_code_gen/VSC_USE/updated"
+            ccs_project_path = "c:\workspace\typhoon_use\auto_code_gen\vsc_use\updated"
             ccs_root_path = "C:\ti\ccs1271"
             exp_subsys_name = "dq_current_ctrl"
         }
@@ -1686,11 +1688,6 @@ c= cos(theta +2.0/3.0*M_PI)*dq[0] - sin(theta+2.0/3.0*M_PI)*dq[1];
             position = 9752, 8172
             size = 64, 64
         ]
-    }
-
-    logically_deleted {
-        "dq_current_ctrl"
-        "TI RCP Setup1"
     }
 
     default {
@@ -2071,7 +2068,7 @@ c= cos(theta +2.0/3.0*M_PI)*dq[0] - sin(theta+2.0/3.0*M_PI)*dq[1];
         AO_offset = 1.5
         I_scale = 90/3 #105 max volta - (-150) min voltage. 3 max voltage DSP
         V_scale = 720/3 #360 max volta - (-360) min voltage. 3 max voltage DSP
-        Tslow = 1e-3
+        Tslow = 100e-3
         Ts_Control = 50e-6
         
         #PLL control gains

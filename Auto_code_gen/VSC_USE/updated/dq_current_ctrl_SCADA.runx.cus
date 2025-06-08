@@ -373,7 +373,7 @@ displayValue = 0.0
         <component_data>
                 <id>070c04ca365b11f0961800090faa0001</id>
                 <type>Group</type>
-                <name><![CDATA[SCI Setup]]></name>
+                <name><![CDATA[SCI Setup1]]></name>
                 <description><![CDATA[SCI Setup widget is used for configuring parameters required for serial communication with a TI MCU. Specify COM port, baud rate, parity, stop bits and timeout. Widget parameters must be the same as the ones implemented in generated MCU code.]]></description>
                 <collapsed>False</collapsed>
                 <library_settings>
@@ -383,20 +383,20 @@ displayValue = 0.0
                         </linked_model_components>
                 </library_settings>
                 <widget_settings>
-                    <x>56</x>
-                    <y>32</y>
-                    <width>320</width>
-                    <height>88</height>
+                    <x>432</x>
+                    <y>176</y>
+                    <width>312</width>
+                    <height>272</height>
                     <appearance><![CDATA[Flat]]></appearance>
                     <hierarchy_position><![CDATA[1]]></hierarchy_position>
                     <is_background><![CDATA[False]]></is_background>
-                    <label><![CDATA[SCI Setup]]></label>
+                    <label><![CDATA[SCI Setup1]]></label>
                     <use_label>True</use_label>
                 </widget_settings>
                 <child_components_data>
                     <child_data>
                         <relative_fqn><![CDATA[Baudrate]]></relative_fqn>
-                        <value><![CDATA[460800]]></value>
+                        <value><![CDATA[115200]]></value>
                     </child_data>
                     <child_data>
                         <relative_fqn><![CDATA[Parity]]></relative_fqn>
@@ -438,7 +438,7 @@ displayValue = 0.0
                 <child_components_data>
                     <child_data>
                         <relative_fqn><![CDATA[Variable 1]]></relative_fqn>
-                        <value><![CDATA[10.0]]></value>
+                        <value><![CDATA[0.0]]></value>
                     </child_data>
                     <child_data>
                         <relative_fqn><![CDATA[Index]]></relative_fqn>
@@ -472,7 +472,7 @@ displayValue = 0.0
                 <child_components_data>
                     <child_data>
                         <relative_fqn><![CDATA[Variable 1]]></relative_fqn>
-                        <value><![CDATA[-10.0]]></value>
+                        <value><![CDATA[0.0]]></value>
                     </child_data>
                     <child_data>
                         <relative_fqn><![CDATA[Index]]></relative_fqn>
@@ -506,7 +506,7 @@ displayValue = 0.0
                 <child_components_data>
                     <child_data>
                         <relative_fqn><![CDATA[Variable 1]]></relative_fqn>
-                        <value><![CDATA[1.0]]></value>
+                        <value><![CDATA[0.0]]></value>
                     </child_data>
                     <child_data>
                         <relative_fqn><![CDATA[Index]]></relative_fqn>
@@ -540,7 +540,7 @@ displayValue = 0.0
                 <child_components_data>
                     <child_data>
                         <relative_fqn><![CDATA[Variable 1]]></relative_fqn>
-                        <value><![CDATA[1.0]]></value>
+                        <value><![CDATA[0.0]]></value>
                     </child_data>
                     <child_data>
                         <relative_fqn><![CDATA[Index]]></relative_fqn>

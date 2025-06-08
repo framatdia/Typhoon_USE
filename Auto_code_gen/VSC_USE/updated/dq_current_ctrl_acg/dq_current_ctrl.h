@@ -9,7 +9,7 @@
 * Subsystem selected for code generation: 'dq_current_ctrl'.
 *
 * Schematic Editor version              : 2025.1 SP1
-* C source code generated on            : 28-May-2025 @ 01:33:06 PM
+* C source code generated on            : 06-Jun-2025 @ 08:56:23 PM
 *
 */
 
@@ -169,6 +169,6 @@ extern dq_current_ctrl_ModelData dq_current_ctrl_m_Data;
 // Execution rate: 5e-05
 extern void dq_current_ctrl_init0(dq_current_ctrl_ModelData *p_m_Data);
 extern void dq_current_ctrl_step0(dq_current_ctrl_ModelData *p_m_Data);
-// Execution rate: 0.001
+// Execution rate: 0.1
 extern void dq_current_ctrl_init1(dq_current_ctrl_ModelData *p_m_Data);
 extern void dq_current_ctrl_step1(dq_current_ctrl_ModelData *p_m_Data);

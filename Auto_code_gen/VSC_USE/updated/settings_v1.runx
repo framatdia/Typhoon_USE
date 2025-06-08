@@ -3,9 +3,9 @@
     <number_of_devices>1</number_of_devices>
     <ao_limiting_forced>False</ao_limiting_forced>
     <hw_properties>
-        <product_id>101</product_id>
+        <product_id>404</product_id>
         <hardware_id>3</hardware_id>
-        <configuration_id>1</configuration_id>
+        <configuration_id>5</configuration_id>
         <fw_release_date>132710918</fw_release_date>
     </hw_properties>
     <components>
@@ -139,14 +139,14 @@
             <analog_channel>
                 <number>7</number>
                 <device>0</device>
-                <scale>45.0</scale>
+                <scale>30.0</scale>
                 <offset>0.0</offset>
                 <locked>False</locked>
                 <ao_limiting_enabled>False</ao_limiting_enabled>
                 <ao_lower_limit>-10.0</ao_lower_limit>
                 <ao_upper_limit>10.0</ao_upper_limit>
                 <analog_signal>
-                	<name>HIL0 analog input 12</name>
+                	<name>Plant.Ing</name>
                 	<show>True</show>
                 	<device>0</device>
                 </analog_signal>
@@ -738,6 +738,29 @@
                         <name>S_top</name>
                         <device>0</device>
                         <weight>[13]</weight>
+                        <software_control>False</software_control>
+                        <software_value>0</software_value>
+                    </switch>
+                </switches>
+            </switching_block>
+            <switching_block>
+                <name>Plant.IGBT Leg4</name>
+                <type>regular_conv</type>
+                <scm_comp_type>igbt_leg</scm_comp_type>
+                <device>0</device>
+                <site>0</site>
+                <switches>
+                    <switch>
+                        <name>S_bot</name>
+                        <device>0</device>
+                        <weight>[18]</weight>
+                        <software_control>False</software_control>
+                        <software_value>0</software_value>
+                    </switch>
+                    <switch>
+                        <name>S_top</name>
+                        <device>0</device>
+                        <weight>[19]</weight>
                         <software_control>False</software_control>
                         <software_value>0</software_value>
                     </switch>
