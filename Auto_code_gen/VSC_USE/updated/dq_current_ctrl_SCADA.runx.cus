@@ -438,7 +438,7 @@ displayValue = 0.0
                 <child_components_data>
                     <child_data>
                         <relative_fqn><![CDATA[Variable 1]]></relative_fqn>
-                        <value><![CDATA[10.0]]></value>
+                        <value><![CDATA[0.0]]></value>
                     </child_data>
                     <child_data>
                         <relative_fqn><![CDATA[Index]]></relative_fqn>
@@ -472,7 +472,7 @@ displayValue = 0.0
                 <child_components_data>
                     <child_data>
                         <relative_fqn><![CDATA[Variable 1]]></relative_fqn>
-                        <value><![CDATA[-10.0]]></value>
+                        <value><![CDATA[0.0]]></value>
                     </child_data>
                     <child_data>
                         <relative_fqn><![CDATA[Index]]></relative_fqn>

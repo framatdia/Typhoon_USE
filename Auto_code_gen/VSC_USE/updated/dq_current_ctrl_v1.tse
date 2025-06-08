@@ -6,8 +6,8 @@ version = 4.2
 
 model "dq_current_ctrl_v1" {
     configuration {
-        hil_device = "HIL101"
-        hil_configuration_id = 1
+        hil_device = "HIL404"
+        hil_configuration_id = 5
         simulation_method = exact
         simulation_time_step = auto
         simulation_discret_scaling = 1.0
@@ -1678,8 +1678,8 @@ c= cos(theta +2.0/3.0*M_PI)*dq[0] - sin(theta+2.0/3.0*M_PI)*dq[1];
             build_and_deploy_action = "False"
             c2000ware_root_path = "C:\ti\c2000\C2000Ware_5_04_00_00"
             ccs_project_name = "dq_current_ctrl_acg"
-            ccs_project_path = "C:/workspace/Typhoon/Auto_code_gen/VSC_USE/updated"
-            ccs_root_path = "C:\ti\ccs1271"
+            ccs_project_path = "c:\workspace\typhoon_use\auto_code_gen\vsc_use\updated"
+            ccs_root_path = "C:\ti\ccs1230"
             exp_subsys_name = "dq_current_ctrl"
         }
         [
