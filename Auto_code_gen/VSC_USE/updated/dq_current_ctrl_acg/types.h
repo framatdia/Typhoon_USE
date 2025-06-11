@@ -9,7 +9,11 @@
 * Subsystem selected for code generation: 'dq_current_ctrl'.
 *
 * Schematic Editor version              : 2025.1 SP1
+<<<<<<< HEAD
 * C source code generated on            : 06-Jun-2025 @ 08:56:23 PM
+=======
+* C source code generated on            : 07-Jun-2025 @ 12:22:07 PM
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
 *
 */
 

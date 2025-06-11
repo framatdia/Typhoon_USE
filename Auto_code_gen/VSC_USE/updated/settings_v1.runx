@@ -140,7 +140,11 @@
                 <number>7</number>
                 <device>0</device>
                 <scale>30.0</scale>
+<<<<<<< HEAD
                 <offset>0.0</offset>
+=======
+                <offset>1.5</offset>
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
                 <locked>False</locked>
                 <ao_limiting_enabled>False</ao_limiting_enabled>
                 <ao_lower_limit>-10.0</ao_lower_limit>

@@ -1681,7 +1681,11 @@ c= cos(theta +2.0/3.0*M_PI)*dq[0] - sin(theta+2.0/3.0*M_PI)*dq[1];
             c2000ware_root_path = "C:\ti\c2000\C2000Ware_5_04_00_00"
             ccs_project_name = "dq_current_ctrl_acg"
             ccs_project_path = "c:\workspace\typhoon_use\auto_code_gen\vsc_use\updated"
+<<<<<<< HEAD
             ccs_root_path = "C:\ti\ccs1271"
+=======
+            ccs_root_path = "C:\ti\ccs1230"
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
             exp_subsys_name = "dq_current_ctrl"
         }
         [

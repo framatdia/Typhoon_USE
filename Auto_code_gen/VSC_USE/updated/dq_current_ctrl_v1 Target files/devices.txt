@@ -1,6 +1,10 @@
 JSX5WiA5yZxwHYBBPhQLwmc9v6SFrq9/Gs2Cfe95xc6vNKdLiahzJMxoWevla8tXR0tGfCaDZzuw057DKrHQ6A==
 {
+<<<<<<< HEAD
   "compilation_timestamp": "2025-06-06 20:52:47",
+=======
+  "compilation_timestamp": "2025-06-07 12:25:05",
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
   "sw_version": "2025.1 SP1",
   "devices": [
     {
@@ -94,5 +98,9 @@ JSX5WiA5yZxwHYBBPhQLwmc9v6SFrq9/Gs2Cfe95xc6vNKdLiahzJMxoWevla8tXR0tGfCaDZzuw057D
   ]
 }
 -----BEGIN SIGNATURE-----
+<<<<<<< HEAD
 blREE6AYy94nPLKy4yHrRDsRsNAU7GvExCnSv8PQ+YCSSLMbrARx0d5EHpqvMpyLzA1X/KEZ2DNMiT2EKN/VGSv5ruLgDaZHbFur8MBAyk9LF/IjUoDg8Rl+AFe+JByGjgG9N1HQr4N3bDjh+jUpfYY6dP+Rix2iCzADDLj6/m9H061+RVswg15bbcWIT3hWnA7SPFgT2juAuzjLegqrtl3a0Ki7fPQHfHd4xLrDyFZ4UXQoBrCBreWEFPbKlUOrKkhLtB0JEp4hc56CnO+FQ6G9Z7i9v/Shx0Xa0w5eoS3sm1ADGCQCP96h6xf/P7jA5vFA6vnFw1IbKi0fqwbAkg==
+=======
+DSucanb55jqFfCXHKt6eqElGdpEMuQvysVNMsTAITC4BnBlIrzMySFESBwUV3Y7pgkIYOepXcVFhXBcHqFssuwrtpKiOsRIpPD5CArofpNmvYhUQKSJEPlDqrM0/4mK9PUZPqG4triEwJjIwuXjRvGjmMR/l8UMtBPaRYt5U4pRF1Qos94FAQss0lqQ2gOE/WYTxRjvGBCKk/UntTrD9NkJ+xzGrHIA1Ck5xbhIhwsMeaP9G6a+h7CJMdIAvFAZsps+cqXeGOCc0Vt4diyZ+P2j9i2JjznA898yJr3Z1Earrttm0iO2Ji1R0/6C4BKC1pyXSMxb9JDkr8grLRs8MPA==
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
 -----END SIGNATURE-----

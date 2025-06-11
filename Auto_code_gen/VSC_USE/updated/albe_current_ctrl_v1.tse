@@ -157,6 +157,7 @@ model "albe_current_ctrl_v1" {
             ]
 
             component "TI C2000 Toolbox/ePWM (Generic)" "ePWM (Generic)1" {
+<<<<<<< HEAD
                 hil_di_nr = "1-3-5"
                 hil_di_nr_b = "2-4-6"
                 nr_of_channels = "3"
@@ -164,6 +165,15 @@ model "albe_current_ctrl_v1" {
             [
                 position = 10384, 7284
                 size = 127, 63
+=======
+                hil_di_nr = "1-3-5-9"
+                hil_di_nr_b = "2-4-6-10"
+                nr_of_channels = "4"
+            }
+            [
+                position = 10384, 7284
+                size = 127, 79
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
             ]
 
             component "core/Sum" Sum1 {
@@ -462,6 +472,21 @@ model "albe_current_ctrl_v1" {
                     position = 9360, 7840
                 ]
 
+<<<<<<< HEAD
+=======
+                component "core/Termination" Termination7 {
+                }
+                [
+                    position = 7796, 8236
+                ]
+
+                component "core/Termination" Termination8 {
+                }
+                [
+                    position = 7840, 8164
+                ]
+
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
                 port is_a {
                     position = left:1
                     kind = sp
@@ -628,7 +653,11 @@ model "albe_current_ctrl_v1" {
                     }
                 }
                 [
+<<<<<<< HEAD
                     position = 6824, 7900
+=======
+                    position = 7728, 8152
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
                 ]
 
                 port omega_rads_b {
@@ -641,7 +670,11 @@ model "albe_current_ctrl_v1" {
                     }
                 }
                 [
+<<<<<<< HEAD
                     position = 7812, 8216
+=======
+                    position = 7716, 8216
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
                 ]
 
                 port omega_rads_c {
@@ -780,6 +813,14 @@ model "albe_current_ctrl_v1" {
                 ]
                 connect is_c_albe "Bus Join24.out" as Connection1249
                 connect vs_c_albe "Bus Join25.out" as Connection1250
+<<<<<<< HEAD
+=======
+                connect Termination7.in omega_rads_b as Connection1251
+                connect Termination8.in omega_rads_a as Connection1252
+                [
+                    breakpoints = 7752, 8148
+                ]
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
             }
             [
                 position = 6692, 7412
@@ -825,6 +866,10 @@ c= cos(theta +2.0/3.0*M_PI)*dq[0] - sin(theta+2.0/3.0*M_PI)*dq[1];
             ]
 
             component "core/Product" Product1 {
+<<<<<<< HEAD
+=======
+                execution_rate = "Ts_Control"
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
             }
             [
                 position = 8616, 7236
@@ -882,7 +927,11 @@ q = 2.0/3.0*(-sin(theta)*abc[0] - sin(theta - 2.0/3.0*M_PI)*abc[1]  - sin(theta 
                     output_terminals_show_labels = "True;True"
                 }
                 [
+<<<<<<< HEAD
                     position = 7132, 8040
+=======
+                    position = 7128, 8172
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
                     size = 88, 104
                 ]
 
@@ -905,7 +954,11 @@ q = 2.0/3.0*(-sin(theta)*abc[0] - sin(theta - 2.0/3.0*M_PI)*abc[1]  - sin(theta 
                     output_terminals_show_labels = "True;True"
                 }
                 [
+<<<<<<< HEAD
                     position = 7128, 8216
+=======
+                    position = 7128, 8372
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
                     size = 88, 104
                 ]
 
@@ -914,7 +967,11 @@ q = 2.0/3.0*(-sin(theta)*abc[0] - sin(theta - 2.0/3.0*M_PI)*abc[1]  - sin(theta 
                     value = "0"
                 }
                 [
+<<<<<<< HEAD
                     position = 7004, 8076
+=======
+                    position = 7000, 8208
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
                 ]
 
                 component "core/Constant" Constant3 {
@@ -922,7 +979,11 @@ q = 2.0/3.0*(-sin(theta)*abc[0] - sin(theta - 2.0/3.0*M_PI)*abc[1]  - sin(theta 
                     value = "0"
                 }
                 [
+<<<<<<< HEAD
                     position = 7004, 8252
+=======
+                    position = 7004, 8408
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
                 ]
 
                 component "core/Sum" Sum1 {
@@ -1185,6 +1246,10 @@ if (theta<0.0){
                     ]
 
                     component "core/Integrator" Integrator1 {
+<<<<<<< HEAD
+=======
+                        reset_type = "synchronous"
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
                         show_reset = "rising"
                     }
                     [
@@ -1314,6 +1379,10 @@ if (theta<0.0){
                     ]
 
                     component "core/Integrator" Integrator1 {
+<<<<<<< HEAD
+=======
+                        reset_type = "synchronous"
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
                         show_reset = "rising"
                     }
                     [
@@ -1442,6 +1511,10 @@ if (theta<0.0){
                     ]
 
                     component "core/Integrator" Integrator1 {
+<<<<<<< HEAD
+=======
+                        reset_type = "synchronous"
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
                         show_reset = "rising"
                     }
                     [
@@ -1534,10 +1607,64 @@ if (theta<0.0){
 
                 component "core/Constant" Constant4 {
                     execution_rate = "Ts_Control"
+<<<<<<< HEAD
                     value = "0"
                 }
                 [
                     position = 8448, 8104
+=======
+                    value = "omega"
+                }
+                [
+                    position = 7512, 7876
+                ]
+
+                component "core/Constant" Constant5 {
+                    execution_rate = "Ts_Control"
+                    value = "omega"
+                }
+                [
+                    position = 7544, 8112
+                ]
+
+                component "core/Constant" Constant6 {
+                    execution_rate = "Ts_Control"
+                    value = "omega"
+                }
+                [
+                    position = 7548, 8400
+                ]
+
+                component "core/Sum" Sum10 {
+                    execution_rate = "Ts_Control"
+                    signs = "---"
+                }
+                [
+                    position = 7160, 8016
+                ]
+
+                component "core/Bus Split" "Bus Split2" {
+                    execution_rate = "Ts_Control"
+                    outputs = "3"
+                }
+                [
+                    position = 7072, 8016
+                ]
+
+                component "core/Product" Product5 {
+                    execution_rate = "Ts_Control"
+                    signs = "**"
+                }
+                [
+                    position = 8460, 8344
+                ]
+
+                component "core/Constant" Constant7 {
+                    execution_rate = "Ts_Control"
+                }
+                [
+                    position = 8340, 8432
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
                 ]
 
                 port is_abc_ref {
@@ -1576,7 +1703,11 @@ if (theta<0.0){
                     }
                 }
                 [
+<<<<<<< HEAD
                     position = 6960, 8004
+=======
+                    position = 6956, 8136
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
                 ]
 
                 port vs_abc {
@@ -1589,7 +1720,11 @@ if (theta<0.0){
                     }
                 }
                 [
+<<<<<<< HEAD
                     position = 6716, 8180
+=======
+                    position = 6716, 8336
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
                 ]
 
                 port eta_n {
@@ -1615,7 +1750,11 @@ if (theta<0.0){
                     }
                 }
                 [
+<<<<<<< HEAD
                     position = 7432, 8344
+=======
+                    position = 7060, 8504
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
                 ]
 
                 port theta {
@@ -1654,7 +1793,11 @@ if (theta<0.0){
                     }
                 }
                 [
+<<<<<<< HEAD
                     position = 6732, 8332
+=======
+                    position = 6732, 8488
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
                 ]
 
                 port v_dc {
@@ -1667,7 +1810,50 @@ if (theta<0.0){
                     }
                 }
                 [
+<<<<<<< HEAD
                     position = 6688, 8428
+=======
+                    position = 6688, 8584
+                ]
+
+                port is_al_ref {
+                    position = right:5
+                    kind = sp
+                    direction =  in
+                    sp_type {
+                        default = inherit
+                        readonly = True
+                    }
+                }
+                [
+                    position = 8788, 8232
+                ]
+
+                port is_be_ref {
+                    position = right:6
+                    kind = sp
+                    direction =  in
+                    sp_type {
+                        default = inherit
+                        readonly = True
+                    }
+                }
+                [
+                    position = 8772, 8356
+                ]
+
+                port is_n_ref {
+                    position = right:7
+                    kind = sp
+                    direction =  in
+                    sp_type {
+                        default = inherit
+                        readonly = True
+                    }
+                }
+                [
+                    position = 8768, 8448
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
                 ]
 
                 tag Goto46 {
@@ -1713,7 +1899,11 @@ if (theta<0.0){
                     direction = in
                 }
                 [
+<<<<<<< HEAD
                     position = 7240, 8004
+=======
+                    position = 7236, 8136
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
                     hide_name = True
                     size = 60, 20
                 ]
@@ -1725,7 +1915,11 @@ if (theta<0.0){
                     direction = in
                 }
                 [
+<<<<<<< HEAD
                     position = 7236, 8076
+=======
+                    position = 7232, 8208
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
                     hide_name = True
                     size = 60, 20
                 ]
@@ -1737,7 +1931,11 @@ if (theta<0.0){
                     direction = in
                 }
                 [
+<<<<<<< HEAD
                     position = 7236, 8180
+=======
+                    position = 7236, 8336
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
                     hide_name = True
                     size = 60, 20
                 ]
@@ -1749,7 +1947,11 @@ if (theta<0.0){
                     direction = in
                 }
                 [
+<<<<<<< HEAD
                     position = 7232, 8252
+=======
+                    position = 7232, 8408
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
                     hide_name = True
                     size = 60, 20
                 ]
@@ -1761,7 +1963,11 @@ if (theta<0.0){
                     direction = out
                 }
                 [
+<<<<<<< HEAD
                     position = 7404, 7772
+=======
+                    position = 7400, 7772
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
                     rotation = down
                     hide_name = True
                     scale = -1, 1
@@ -1801,7 +2007,11 @@ if (theta<0.0){
                     direction = out
                 }
                 [
+<<<<<<< HEAD
                     position = 7580, 7876
+=======
+                    position = 7432, 7948
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
                     rotation = down
                     hide_name = True
                     scale = -1, 1
@@ -1843,7 +2053,11 @@ if (theta<0.0){
                     direction = in
                 }
                 [
+<<<<<<< HEAD
                     position = 8576, 8064
+=======
+                    position = 8428, 7812
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
                     hide_name = True
                     size = 60, 20
                 ]
@@ -1883,7 +2097,11 @@ if (theta<0.0){
                     direction = out
                 }
                 [
+<<<<<<< HEAD
                     position = 7532, 8120
+=======
+                    position = 7420, 8124
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
                     rotation = down
                     hide_name = True
                     scale = -1, 1
@@ -1925,7 +2143,11 @@ if (theta<0.0){
                     direction = in
                 }
                 [
+<<<<<<< HEAD
                     position = 8572, 8104
+=======
+                    position = 8444, 8080
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
                     hide_name = True
                     size = 60, 20
                 ]
@@ -1951,7 +2173,11 @@ if (theta<0.0){
                     direction = out
                 }
                 [
+<<<<<<< HEAD
                     position = 7576, 8396
+=======
+                    position = 7464, 8396
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
                     rotation = down
                     hide_name = True
                     scale = -1, 1
@@ -1979,7 +2205,11 @@ if (theta<0.0){
                     direction = in
                 }
                 [
+<<<<<<< HEAD
                     position = 8568, 8144
+=======
+                    position = 8552, 8356
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
                     hide_name = True
                     size = 60, 20
                 ]
@@ -2073,7 +2303,11 @@ if (theta<0.0){
                     direction = in
                 }
                 [
+<<<<<<< HEAD
                     position = 6844, 8332
+=======
+                    position = 6844, 8488
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
                     hide_name = True
                     size = 60, 20
                 ]
@@ -2127,11 +2361,86 @@ if (theta<0.0){
                     direction = in
                 }
                 [
+<<<<<<< HEAD
                     position = 6800, 8428
+=======
+                    position = 6800, 8584
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
                     hide_name = True
                     size = 60, 20
                 ]
 
+<<<<<<< HEAD
+=======
+                tag From156 {
+                    value = "is_al_ref"
+                    scope = local
+                    kind = sp
+                    direction = out
+                }
+                [
+                    position = 8684, 8232
+                    rotation = down
+                    hide_name = True
+                    scale = -1, 1
+                    size = 60, 20
+                ]
+
+                tag From157 {
+                    value = "is_be_ref"
+                    scope = local
+                    kind = sp
+                    direction = out
+                }
+                [
+                    position = 8676, 8356
+                    rotation = down
+                    hide_name = True
+                    scale = -1, 1
+                    size = 60, 20
+                ]
+
+                tag From158 {
+                    value = "is_n_ref"
+                    scope = local
+                    kind = sp
+                    direction = out
+                }
+                [
+                    position = 8668, 8448
+                    rotation = down
+                    hide_name = True
+                    scale = -1, 1
+                    size = 60, 20
+                ]
+
+                tag Goto59 {
+                    value = "is_n"
+                    scope = local
+                    kind = sp
+                    direction = in
+                }
+                [
+                    position = 7160, 8504
+                    hide_name = True
+                    size = 60, 20
+                ]
+
+                tag From159 {
+                    value = "is_n"
+                    scope = local
+                    kind = sp
+                    direction = out
+                }
+                [
+                    position = 7432, 8328
+                    rotation = down
+                    hide_name = True
+                    scale = -1, 1
+                    size = 60, 20
+                ]
+
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
                 junction Junction1 sp
                 [
                     position = 7004, 7816
@@ -2139,7 +2448,11 @@ if (theta<0.0){
 
                 junction Junction188 sp
                 [
+<<<<<<< HEAD
                     position = 6800, 8180
+=======
+                    position = 6800, 8336
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
                 ]
 
                 junction Junction194 sp
@@ -2159,11 +2472,18 @@ if (theta<0.0){
 
                 junction Junction197 sp
                 [
+<<<<<<< HEAD
                     position = 8520, 8104
                 ]
 
                 connect Constant1.out "C function abc to dq.theta" as Connection2
                 connect is_abc "C function abc to dq1.abc" as Connection3
+=======
+                    position = 6992, 8136
+                ]
+
+                connect Constant1.out "C function abc to dq.theta" as Connection2
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
                 connect Constant2.out "C function abc to dq1.theta" as Connection5
                 connect Constant3.out "C function abc to dq2.theta" as Connection6
                 connect "Bus Split1.out" Sum1.in as Connection7
@@ -2210,11 +2530,17 @@ if (theta<0.0){
                 connect From149 "Bus Join1.in1" as Connection865
                 connect eta_albe "Bus Join1.out" as Connection866
                 connect From150 eta_n as Connection867
+<<<<<<< HEAD
                 connect is_n Sum8.in1 as Connection868
                 connect "C function PLL.theta_pll" Goto56 as Connection881
                 connect From151 theta as Connection882
                 connect Subsystem6.Out1 Sum3.in1 as Connection893
                 connect From136 Subsystem6.omega as Connection894
+=======
+                connect "C function PLL.theta_pll" Goto56 as Connection881
+                connect From151 theta as Connection882
+                connect Subsystem6.Out1 Sum3.in1 as Connection893
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
                 connect Sum2.out Junction194 as Connection895
                 connect Junction194 Gain1.in as Connection896
                 [
@@ -2235,19 +2561,46 @@ if (theta<0.0){
                     breakpoints = 7596, 8308
                 ]
                 connect Subsystem8.error Junction196 as Connection908
+<<<<<<< HEAD
                 connect From145 Subsystem8.omega as Connection909
                 connect From152 omega as Connection910
                 connect reset_int Goto57 as Connection911
                 connect From140 Subsystem7.omega as Connection912
+=======
+                connect From152 omega as Connection910
+                connect reset_int Goto57 as Connection911
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
                 connect From153 Subsystem7.reset_int as Connection913
                 connect From154 Subsystem6.reset_int as Connection914
                 connect From155 Subsystem8.reset_int as Connection915
                 connect v_dc Goto58 as Connection916
                 connect Sum1.out Goto46 as Connection917
+<<<<<<< HEAD
                 connect Constant4.out Junction197 as Connection919
                 connect Junction197 Goto53 as Connection920
                 connect Goto54 Junction197 as Connection921
                 connect Goto55 Junction197 as Connection922
+=======
+                connect Goto53 Product2.out as Connection918
+                connect Goto54 Product3.out as Connection919
+                connect Constant4.out Subsystem6.omega as Connection921
+                connect Constant5.out Subsystem7.omega as Connection922
+                connect Constant6.out Subsystem8.omega as Connection923
+                connect From156 is_al_ref as Connection924
+                connect From157 is_be_ref as Connection925
+                connect is_n_ref From158 as Connection926
+                connect "Bus Split2.out" Sum10.in as Connection928
+                connect "Bus Split2.out1" Sum10.in1 as Connection929
+                connect "Bus Split2.out2" Sum10.in2 as Connection930
+                connect is_abc Junction197 as Connection931
+                connect Junction197 "C function abc to dq1.abc" as Connection932
+                connect "Bus Split2.in" Junction197 as Connection933
+                connect From159 Sum8.in1 as Connection935
+                connect Product5.in Product4.out as Connection936
+                connect Goto55 Product5.out as Connection937
+                connect is_n Goto59 as Connection939
+                connect Constant7.out Product5.in1 as Connection940
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
             }
             [
                 position = 9152, 7408
@@ -2304,7 +2657,11 @@ c= cos(theta +2.0/3.0*M_PI)*dq[0] - sin(theta+2.0/3.0*M_PI)*dq[1];
 /*End code section*/"
             }
             [
+<<<<<<< HEAD
                 position = 9512, 7264
+=======
+                position = 9560, 7264
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
                 size = 176, 152
             ]
 
@@ -2313,7 +2670,11 @@ c= cos(theta +2.0/3.0*M_PI)*dq[0] - sin(theta+2.0/3.0*M_PI)*dq[1];
                 value = "0"
             }
             [
+<<<<<<< HEAD
                 position = 9360, 7324
+=======
+                position = 9408, 7324
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
             ]
 
             component "core/Bus Join" "Bus Join14" {
@@ -2321,7 +2682,11 @@ c= cos(theta +2.0/3.0*M_PI)*dq[0] - sin(theta+2.0/3.0*M_PI)*dq[1];
                 inputs = "3"
             }
             [
+<<<<<<< HEAD
                 position = 9700, 7264
+=======
+                position = 9748, 7264
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
             ]
 
             component "TI C2000 Toolbox/SCI Setup (Generic)" "SCI Setup1" {
@@ -2344,7 +2709,12 @@ c= cos(theta +2.0/3.0*M_PI)*dq[0] - sin(theta+2.0/3.0*M_PI)*dq[1];
             ]
 
             component "TI C2000 Toolbox/SCI Send (Generic)" "SCI Send1" {
+<<<<<<< HEAD
                 var_names = "omega"
+=======
+                var_names = "ia_rms_ref,ib_rms_ref,ic_rms_ref,omega"
+                vct_size = "4"
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
             }
             [
                 position = 7880, 7264
@@ -2367,6 +2737,7 @@ c= cos(theta +2.0/3.0*M_PI)*dq[0] - sin(theta+2.0/3.0*M_PI)*dq[1];
                 size = 127, 63
             ]
 
+<<<<<<< HEAD
             component "TI C2000 Toolbox/ePWM (Generic)" "ePWM (Generic)3" {
                 hil_di_nr = "9"
                 hil_di_nr_b = "10"
@@ -2376,6 +2747,8 @@ c= cos(theta +2.0/3.0*M_PI)*dq[0] - sin(theta+2.0/3.0*M_PI)*dq[1];
                 size = 127, 63
             ]
 
+=======
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
             component "core/Sum" Sum3 {
                 execution_rate = "Ts_Control"
             }
@@ -2436,7 +2809,35 @@ c= cos(theta +2.0/3.0*M_PI)*dq[0] - sin(theta+2.0/3.0*M_PI)*dq[1];
                 value = "800"
             }
             [
+<<<<<<< HEAD
                 position = 8936, 7608
+=======
+                position = 8932, 7636
+            ]
+
+            component "core/RMS value" "RMS value1" {
+                execution_rate = "Ts_Control"
+                op_mode = "Fixed frequency"
+            }
+            [
+                position = 8540, 7536
+            ]
+
+            component "core/RMS value" "RMS value2" {
+                execution_rate = "Ts_Control"
+                op_mode = "Fixed frequency"
+            }
+            [
+                position = 8540, 7616
+            ]
+
+            component "core/RMS value" "RMS value3" {
+                execution_rate = "Ts_Control"
+                op_mode = "Fixed frequency"
+            }
+            [
+                position = 8544, 7708
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
             ]
 
             tag From74 {
@@ -2918,7 +3319,11 @@ c= cos(theta +2.0/3.0*M_PI)*dq[0] - sin(theta+2.0/3.0*M_PI)*dq[1];
                 direction = out
             }
             [
+<<<<<<< HEAD
                 position = 8912, 7464
+=======
+                position = 8952, 7464
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
                 rotation = down
                 hide_name = True
                 scale = -1, 1
@@ -2932,7 +3337,11 @@ c= cos(theta +2.0/3.0*M_PI)*dq[0] - sin(theta+2.0/3.0*M_PI)*dq[1];
                 direction = in
             }
             [
+<<<<<<< HEAD
                 position = 9344, 7476
+=======
+                position = 9316, 7344
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
                 hide_name = True
                 size = 60, 20
             ]
@@ -2944,7 +3353,11 @@ c= cos(theta +2.0/3.0*M_PI)*dq[0] - sin(theta+2.0/3.0*M_PI)*dq[1];
                 direction = in
             }
             [
+<<<<<<< HEAD
                 position = 9348, 7612
+=======
+                position = 9324, 7408
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
                 hide_name = True
                 size = 60, 20
             ]
@@ -2956,7 +3369,11 @@ c= cos(theta +2.0/3.0*M_PI)*dq[0] - sin(theta+2.0/3.0*M_PI)*dq[1];
                 direction = in
             }
             [
+<<<<<<< HEAD
                 position = 9816, 7264
+=======
+                position = 9864, 7264
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
                 hide_name = True
                 size = 60, 20
             ]
@@ -2968,7 +3385,11 @@ c= cos(theta +2.0/3.0*M_PI)*dq[0] - sin(theta+2.0/3.0*M_PI)*dq[1];
                 direction = in
             }
             [
+<<<<<<< HEAD
                 position = 9348, 7380
+=======
+                position = 9352, 7280
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
                 hide_name = True
                 size = 60, 20
             ]
@@ -2992,7 +3413,11 @@ c= cos(theta +2.0/3.0*M_PI)*dq[0] - sin(theta+2.0/3.0*M_PI)*dq[1];
                 direction = out
             }
             [
+<<<<<<< HEAD
                 position = 7744, 7264
+=======
+                position = 7736, 7352
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
                 hide_name = True
                 size = 58, 20
             ]
@@ -3024,7 +3449,11 @@ c= cos(theta +2.0/3.0*M_PI)*dq[0] - sin(theta+2.0/3.0*M_PI)*dq[1];
             ]
 
             tag From83 {
+<<<<<<< HEAD
                 value = "is_d"
+=======
+                value = "is_a_rms_ref"
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
                 scope = local
                 kind = sp
                 direction = out
@@ -3036,7 +3465,11 @@ c= cos(theta +2.0/3.0*M_PI)*dq[0] - sin(theta+2.0/3.0*M_PI)*dq[1];
             ]
 
             tag From84 {
+<<<<<<< HEAD
                 value = "is_q"
+=======
+                value = "is_b_rms_ref"
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
                 scope = local
                 kind = sp
                 direction = out
@@ -3048,13 +3481,21 @@ c= cos(theta +2.0/3.0*M_PI)*dq[0] - sin(theta+2.0/3.0*M_PI)*dq[1];
             ]
 
             tag From85 {
+<<<<<<< HEAD
                 value = "vs_d"
+=======
+                value = "is_c_rms_ref"
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
                 scope = local
                 kind = sp
                 direction = out
             }
             [
+<<<<<<< HEAD
                 position = 7688, 7312
+=======
+                position = 7704, 7272
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
                 hide_name = True
                 size = 58, 20
             ]
@@ -3066,7 +3507,11 @@ c= cos(theta +2.0/3.0*M_PI)*dq[0] - sin(theta+2.0/3.0*M_PI)*dq[1];
                 direction = out
             }
             [
+<<<<<<< HEAD
                 position = 8932, 7528
+=======
+                position = 8944, 7508
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
                 rotation = down
                 hide_name = True
                 scale = -1, 1
@@ -3099,6 +3544,147 @@ c= cos(theta +2.0/3.0*M_PI)*dq[0] - sin(theta+2.0/3.0*M_PI)*dq[1];
                 size = 60, 20
             ]
 
+<<<<<<< HEAD
+=======
+            tag From157 {
+                value = "eta_a"
+                scope = local
+                kind = sp
+                direction = out
+            }
+            [
+                position = 8440, 7536
+                rotation = down
+                hide_name = True
+                scale = -1, 1
+                size = 60, 20
+            ]
+
+            tag From158 {
+                value = "eta_b"
+                scope = local
+                kind = sp
+                direction = out
+            }
+            [
+                position = 8440, 7616
+                rotation = down
+                hide_name = True
+                scale = -1, 1
+                size = 60, 20
+            ]
+
+            tag From159 {
+                value = "eta_n"
+                scope = local
+                kind = sp
+                direction = out
+            }
+            [
+                position = 8444, 7708
+                rotation = down
+                hide_name = True
+                scale = -1, 1
+                size = 60, 20
+            ]
+
+            tag Goto75 {
+                value = "is_a_rms_ref"
+                scope = local
+                kind = sp
+                direction = in
+            }
+            [
+                position = 8664, 7536
+                hide_name = True
+                size = 84, 20
+            ]
+
+            tag Goto76 {
+                value = "is_b_rms_ref"
+                scope = local
+                kind = sp
+                direction = in
+            }
+            [
+                position = 8656, 7616
+                hide_name = True
+                size = 84, 20
+            ]
+
+            tag Goto77 {
+                value = "is_c_rms_ref"
+                scope = local
+                kind = sp
+                direction = in
+            }
+            [
+                position = 8648, 7708
+                hide_name = True
+                size = 84, 20
+            ]
+
+            tag Goto78 {
+                value = "is_al_ref"
+                scope = local
+                kind = sp
+                direction = in
+            }
+            [
+                position = 9324, 7472
+                hide_name = True
+                size = 60, 20
+            ]
+
+            tag Goto79 {
+                value = "is_be_ref"
+                scope = local
+                kind = sp
+                direction = in
+            }
+            [
+                position = 9324, 7536
+                hide_name = True
+                size = 60, 20
+            ]
+
+            tag Goto80 {
+                value = "is_n_ref"
+                scope = local
+                kind = sp
+                direction = in
+            }
+            [
+                position = 9316, 7600
+                hide_name = True
+                size = 60, 20
+            ]
+
+            tag Goto81 {
+                value = "eta_a"
+                scope = local
+                kind = sp
+                direction = in
+            }
+            [
+                position = 9792, 7168
+                hide_name = True
+                size = 60, 20
+            ]
+
+            tag Goto82 {
+                value = "eta_b"
+                scope = local
+                kind = sp
+                direction = in
+            }
+            [
+                position = 9784, 7408
+                hide_name = True
+                size = 60, 20
+            ]
+
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
             junction Junction221 sp
             [
                 position = 6612, 7508
@@ -3109,6 +3695,19 @@ c= cos(theta +2.0/3.0*M_PI)*dq[0] - sin(theta+2.0/3.0*M_PI)*dq[1];
                 position = 7488, 7708
             ]
 
+<<<<<<< HEAD
+=======
+            junction Junction222 sp
+            [
+                position = 9704, 7208
+            ]
+
+            junction Junction223 sp
+            [
+                position = 9700, 7264
+            ]
+
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
             comment Comment4 START <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd"><html><head><meta name="qrichtext" content="1" /><meta charset="utf-8" /><style type="text/css">p, li { white-space: pre-wrap; }hr { height: 1px; border-width: 0; }li.unchecked::marker { content: "\2610"; }li.checked::marker { content: "\2612"; }</style></head><body style=" font-family:'Arial'; font-size:12pt; font-weight:400; font-style:normal;"><p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Three-phase virtual system</p></body></html> ENDCOMMENT 
             [
                 position = 6636, 7140
@@ -3209,9 +3808,13 @@ c= cos(theta +2.0/3.0*M_PI)*dq[0] - sin(theta+2.0/3.0*M_PI)*dq[1];
                 breakpoints = 8412, 7376
             ]
             connect "Bus Join12.out" current_ctrl.is_abc as Connection7598
+<<<<<<< HEAD
             connect "Bus Join14.in1" "C function dq to abc1.b" as Connection7601
             connect "Bus Join14.in2" "C function dq to abc1.c" as Connection7600
             connect "C function dq to abc1.a" "Bus Join14.in" as Connection7602
+=======
+            connect "Bus Join14.in2" "C function dq to abc1.c" as Connection7600
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
             connect Goto41 "Bus Join14.out" as Connection7603
             connect Goto73 current_ctrl.eta_n as Connection7604
             connect Goto49 "Bus Join11.out" as Connection7533
@@ -3227,7 +3830,10 @@ c= cos(theta +2.0/3.0*M_PI)*dq[0] - sin(theta+2.0/3.0*M_PI)*dq[1];
             connect Sum3.in From156 as Connection7607
             connect Sum3.in1 Constant6.out as Connection7608
             connect Sum3.out Gain3.in as Connection7609
+<<<<<<< HEAD
             connect Gain3.out "ePWM (Generic)3.In1" as Connection7610
+=======
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
             connect Sum2.in Constant4.out as Connection7577
             connect Delay1.out Sum2.in1 as Connection7579
             connect Delay1.in Junction9 as Connection7584
@@ -3236,6 +3842,7 @@ c= cos(theta +2.0/3.0*M_PI)*dq[0] - sin(theta+2.0/3.0*M_PI)*dq[1];
                 breakpoints = 7488, 7708
             ]
             connect "GPIO DO (Generic)2.In" Junction9 as Connection7586
+<<<<<<< HEAD
             connect "Bus Join11.in1" "SCI Receive1.var2" as Connection7611
             [
                 breakpoints = 7304, 7264
@@ -3247,6 +3854,10 @@ c= cos(theta +2.0/3.0*M_PI)*dq[0] - sin(theta+2.0/3.0*M_PI)*dq[1];
             connect From155 current_ctrl.reset_int as Connection7613
             connect Constant7.out current_ctrl.v_dc as Connection7614
             connect From76 "SCI Send1.var1" as Connection7615
+=======
+            connect From155 current_ctrl.reset_int as Connection7613
+            connect Constant7.out current_ctrl.v_dc as Connection7614
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
             connect Goto67 "Virtual 3ph3w.vs_c_albe" as Connection7618
             connect Goto66 "Virtual 3ph3w.is_c_albe" as Connection7619
             connect Goto65 "Virtual 3ph3w.vs_b_albe" as Connection7620
@@ -3260,9 +3871,44 @@ c= cos(theta +2.0/3.0*M_PI)*dq[0] - sin(theta+2.0/3.0*M_PI)*dq[1];
             [
                 breakpoints = 6592, 7508
             ]
+<<<<<<< HEAD
         }
         [
             position = 9320, 8264
+=======
+            connect From144 current_ctrl.is_n as Connection7628
+            connect From157 "RMS value1.in" as Connection7629
+            connect From158 "RMS value2.in" as Connection7630
+            connect From159 "RMS value3.in" as Connection7631
+            connect Goto76 "RMS value2.out" as Connection7632
+            connect Goto77 "RMS value3.out" as Connection7633
+            connect Goto75 "RMS value1.out" as Connection7634
+            connect From76 "SCI Send1.var4" as Connection7635
+            connect From85 "SCI Send1.var3" as Connection7636
+            connect From84 "SCI Send1.var2" as Connection7637
+            connect From83 "SCI Send1.var1" as Connection7638
+            connect current_ctrl.is_al_ref Goto78 as Connection7639
+            connect Goto80 current_ctrl.is_n_ref as Connection7640
+            connect Goto79 current_ctrl.is_be_ref as Connection7641
+            connect Gain3.out "ePWM (Generic)1.In4" as Connection7642
+            connect "C function dq to abc1.a" Junction222 as Connection7643
+            connect Junction222 "Bus Join14.in" as Connection7644
+            connect Goto81 Junction222 as Connection7645
+            connect "Bus Join14.in1" Junction223 as Connection7646
+            connect Junction223 "C function dq to abc1.b" as Connection7647
+            connect Goto82 Junction223 as Connection7648
+            connect "SCI Receive1.var1" "Bus Join11.in" as Connection7649
+            [
+                breakpoints = 7252, 7176; 7340, 7176
+            ]
+            connect "SCI Receive1.var2" "Bus Join11.in1" as Connection7650
+            connect Junction221 "Virtual 3ph3w.omega_rads_a" as Connection7651
+            connect "Virtual 3ph3w.omega_rads_b" Junction221 as Connection7652
+            connect "Virtual 3ph3w.omega_rads_c" Junction221 as Connection7653
+        }
+        [
+            position = 9356, 8260
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
             size = 512, 416
         ]
 
@@ -3367,7 +4013,11 @@ c= cos(theta +2.0/3.0*M_PI)*dq[0] - sin(theta+2.0/3.0*M_PI)*dq[1];
             component "core/Ground" gnd2 {
             }
             [
+<<<<<<< HEAD
                 position = 9548, 8140
+=======
+                position = 9672, 8156
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
             ]
 
             component "core/Resistor" R1 {
@@ -3422,6 +4072,7 @@ c= cos(theta +2.0/3.0*M_PI)*dq[0] - sin(theta+2.0/3.0*M_PI)*dq[1];
                 size = 64, 32
             ]
 
+<<<<<<< HEAD
             component "core/Capacitor" C1 {
                 capacitance = "2200e-6"
                 initial_voltage = "365"
@@ -3455,6 +4106,15 @@ c= cos(theta +2.0/3.0*M_PI)*dq[0] - sin(theta+2.0/3.0*M_PI)*dq[1];
             }
             [
                 position = 6660, 8268
+=======
+            component "core/Capacitor" C2 {
+                capacitance = "2200e-6"
+                initial_voltage = "730"
+                signal_access = "Inherit"
+            }
+            [
+                position = 6696, 8248
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
                 rotation = right
             ]
 
@@ -3464,6 +4124,7 @@ c= cos(theta +2.0/3.0*M_PI)*dq[0] - sin(theta+2.0/3.0*M_PI)*dq[1];
                 resistance = "Rn"
             }
             [
+<<<<<<< HEAD
                 position = 7844, 8588
                 size = 128, 100
             ]
@@ -3475,6 +4136,12 @@ c= cos(theta +2.0/3.0*M_PI)*dq[0] - sin(theta+2.0/3.0*M_PI)*dq[1];
                 size = 64, 32
             ]
 
+=======
+                position = 7784, 8516
+                size = 128, 100
+            ]
+
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
             component "core/Half Bridge" "IGBT Leg4" {
                 S_bot = "10"
                 S_top = "9"
@@ -3488,6 +4155,16 @@ c= cos(theta +2.0/3.0*M_PI)*dq[0] - sin(theta+2.0/3.0*M_PI)*dq[1];
                 size = 80, 192
             ]
 
+<<<<<<< HEAD
+=======
+            component "core/Current Measurement" Ing {
+            }
+            [
+                position = 8772, 8512
+                size = 64, 32
+            ]
+
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
             junction Junction1 pe
             [
                 position = 8220, 7940
@@ -3503,11 +4180,14 @@ c= cos(theta +2.0/3.0*M_PI)*dq[0] - sin(theta+2.0/3.0*M_PI)*dq[1];
                 position = 8412, 8132
             ]
 
+<<<<<<< HEAD
             junction Junction4 pe
             [
                 position = 8316, 8452
             ]
 
+=======
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
             junction Junction5 pe
             [
                 position = 9252, 7940
@@ -3538,6 +4218,7 @@ c= cos(theta +2.0/3.0*M_PI)*dq[0] - sin(theta+2.0/3.0*M_PI)*dq[1];
                 position = 6604, 7828
             ]
 
+<<<<<<< HEAD
             junction Junction18 pe
             [
                 position = 6660, 8172
@@ -3588,6 +4269,8 @@ c= cos(theta +2.0/3.0*M_PI)*dq[0] - sin(theta+2.0/3.0*M_PI)*dq[1];
                 position = 9376, 8436
             ]
 
+=======
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
             junction Junction37 pe
             [
                 position = 7060, 8684
@@ -3598,11 +4281,14 @@ c= cos(theta +2.0/3.0*M_PI)*dq[0] - sin(theta+2.0/3.0*M_PI)*dq[1];
                 position = 6744, 8684
             ]
 
+<<<<<<< HEAD
             junction Junction39 pe
             [
                 position = 6664, 8684
             ]
 
+=======
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
             junction Junction40 pe
             [
                 position = 6608, 8684
@@ -3613,6 +4299,59 @@ c= cos(theta +2.0/3.0*M_PI)*dq[0] - sin(theta+2.0/3.0*M_PI)*dq[1];
                 position = 7064, 7828
             ]
 
+<<<<<<< HEAD
+=======
+            junction Junction54 pe
+            [
+                position = 8316, 8520
+            ]
+
+            junction Junction55 pe
+            [
+                position = 8220, 8516
+            ]
+
+            junction Junction59 pe
+            [
+                position = 9308, 8512
+            ]
+
+            junction Junction60 pe
+            [
+                position = 9372, 8512
+            ]
+
+            junction Junction62 pe
+            [
+                position = 6984, 8684
+            ]
+
+            junction Junction63 pe
+            [
+                position = 6828, 8684
+            ]
+
+            junction Junction64 pe
+            [
+                position = 6692, 7828
+            ]
+
+            junction Junction65 pe
+            [
+                position = 9480, 8036
+            ]
+
+            junction Junction66 pe
+            [
+                position = 9252, 8516
+            ]
+
+            junction Junction67 pe
+            [
+                position = 8412, 8516
+            ]
+
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
             connect "Series RLC Branch1.P1_neg" Junction1 as Connection9
             connect Junction1 "Series RLC Branch2.P1_pos" as Connection10
             connect "Series RLC Branch3.P3_pos" Junction1 as Connection11
@@ -3628,7 +4367,10 @@ c= cos(theta +2.0/3.0*M_PI)*dq[0] - sin(theta+2.0/3.0*M_PI)*dq[1];
             ]
             connect Junction3 "Series RLC Branch2.P3_pos" as Connection16
             connect "Series RLC Branch3.P1_pos" Junction3 as Connection17
+<<<<<<< HEAD
             connect Junction4 "Series RLC Branch3.P2_neg" as Connection20
+=======
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
             connect Vs1.a_node Junction5 as Connection31
             connect Junction5 Iag.n_node as Connection32
             connect Va.p_node Junction5 as Connection33
@@ -3656,6 +4398,7 @@ c= cos(theta +2.0/3.0*M_PI)*dq[0] - sin(theta+2.0/3.0*M_PI)*dq[1];
             connect "IGBT Leg1.pos_out" Junction24 as Connection118
             connect R1.n_node Junction25 as Connection119
             connect v_h.p_node Junction25 as Connection121
+<<<<<<< HEAD
             connect R9.n_node Junction18 as Connection122
             connect Junction18 R10.p_node as Connection123
             connect C2.p_node Junction26 as Connection111
@@ -3666,12 +4409,15 @@ c= cos(theta +2.0/3.0*M_PI)*dq[0] - sin(theta+2.0/3.0*M_PI)*dq[1];
             connect R9.p_node Junction28 as Connection128
             connect Junction28 Junction27 as Connection129
             connect C1.p_node Junction28 as Connection130
+=======
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
             connect "Series RLC Branch2.P1_neg" Iag.p_node as Connection137
             connect "Series RLC Branch2.P2_neg" Ibg.p_node as Connection138
             connect "Series RLC Branch2.P3_neg" Icg.p_node as Connection139
             [
                 breakpoints = 9140, 8132
             ]
+<<<<<<< HEAD
             connect "Series RLC Branch3.P3_neg" Junction31 as Connection142
             connect Junction31 Junction4 as Connection143
             [
@@ -3704,6 +4450,12 @@ c= cos(theta +2.0/3.0*M_PI)*dq[0] - sin(theta+2.0/3.0*M_PI)*dq[1];
             connect R10.n_node Junction39 as Connection171
             connect v_dc.n_node Junction40 as Connection172
             connect Junction40 Junction39 as Connection173
+=======
+            connect Junction37 "IGBT Leg4.neg_out" as Connection164
+            connect "IGBT Leg3.neg_out" Junction37 as Connection165
+            connect C2.n_node Junction38 as Connection168
+            connect v_dc.n_node Junction40 as Connection172
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
             connect v_h.n_node Junction40 as Connection174
             connect Junction23 Junction41 as Connection175
             [
@@ -3715,6 +4467,46 @@ c= cos(theta +2.0/3.0*M_PI)*dq[0] - sin(theta+2.0/3.0*M_PI)*dq[1];
             ]
             connect "IGBT Leg4.pos_out" Junction41 as Connection177
             connect "IGBT Leg4.a_in" "Series RLC Branch4.P1_pos" as Connection178
+<<<<<<< HEAD
+=======
+            [
+                breakpoints = 7276, 8508; 7704, 8508
+            ]
+            connect "Series RLC Branch3.P2_neg" Junction54 as Connection235
+            connect "Series RLC Branch3.P3_neg" Junction55 as Connection251
+            connect Junction55 Junction54 as Connection252
+            connect "Series RLC Branch4.P1_neg" Junction55 as Connection253
+            connect Vb.n_node Junction59 as Connection265
+            connect Vc.n_node Junction60 as Connection268
+            connect Junction60 Junction59 as Connection269
+            connect Junction62 Junction37 as Connection275
+            connect "IGBT Leg2.neg_out" Junction62 as Connection276
+            connect Junction38 Junction63 as Connection277
+            connect Junction63 Junction62 as Connection278
+            connect "IGBT Leg1.neg_out" Junction63 as Connection279
+            [
+                breakpoints = 6828, 8676
+            ]
+            connect Junction38 Junction40 as Connection281
+            connect Junction25 Junction64 as Connection282
+            connect Junction64 Junction24 as Connection283
+            connect C2.p_node Junction64 as Connection284
+            connect Vs1.n_node Junction65 as Connection286
+            connect Junction65 Junction60 as Connection287
+            [
+                breakpoints = 9476, 8048
+            ]
+            connect gnd2.node Junction65 as Connection288
+            connect Va.n_node Junction66 as Connection291
+            connect Junction66 Junction59 as Connection292
+            [
+                breakpoints = 9252, 8516
+            ]
+            connect Ing.n_node Junction66 as Connection293
+            connect "Series RLC Branch3.P1_neg" Junction67 as Connection294
+            connect Junction67 Junction54 as Connection295
+            connect Ing.p_node Junction67 as Connection296
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
         }
         [
             position = 8704, 8264
@@ -3726,18 +4518,47 @@ c= cos(theta +2.0/3.0*M_PI)*dq[0] - sin(theta+2.0/3.0*M_PI)*dq[1];
             c2000ware_root_path = "C:\ti\c2000\C2000Ware_5_04_00_00"
             ccs_project_name = "albe_current_ctrl_acg"
             ccs_project_path = "c:\workspace\typhoon_use\auto_code_gen\vsc_use\updated"
+<<<<<<< HEAD
             ccs_root_path = "C:\ti\ccs1271"
             exp_subsys_name = "albe_current_ctrl"
         }
         [
             position = 9752, 8172
+=======
+            ccs_root_path = "C:\ti\ccs1230"
+            exp_subsys_name = "albe_current_ctrl"
+        }
+        [
+            position = 9744, 8068
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
             size = 64, 64
         ]
     }
 
     logically_deleted {
+<<<<<<< HEAD
         "albe_current_ctrl"
         "TI RCP Setup1"
+=======
+        "albe_current_ctrl.Virtual 3ph3w.Gain2"
+        "albe_current_ctrl.Virtual 3ph3w.Bus Join18"
+        "albe_current_ctrl.Virtual 3ph3w.Advanced Low-Pass Filter1"
+        "albe_current_ctrl.Virtual 3ph3w.Advanced Low-Pass Filter2"
+        "albe_current_ctrl.Virtual 3ph3w.Connection995"
+        "albe_current_ctrl.Virtual 3ph3w.Connection996"
+        "albe_current_ctrl.Virtual 3ph3w.Connection1093"
+        "albe_current_ctrl.Virtual 3ph3w.Connection1207"
+        "albe_current_ctrl.Virtual 3ph3w.Connection1208"
+        "albe_current_ctrl.current_ctrl.Sum10"
+        "albe_current_ctrl.current_ctrl.Bus Split2"
+        "albe_current_ctrl.current_ctrl.From136"
+        "albe_current_ctrl.current_ctrl.From140"
+        "albe_current_ctrl.current_ctrl.From145"
+        "albe_current_ctrl.current_ctrl.Connection928"
+        "albe_current_ctrl.current_ctrl.Connection929"
+        "albe_current_ctrl.current_ctrl.Connection930"
+        "albe_current_ctrl.current_ctrl.Connection933"
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
     }
 
     default {
@@ -3854,6 +4675,20 @@ c= cos(theta +2.0/3.0*M_PI)*dq[0] - sin(theta+2.0/3.0*M_PI)*dq[1];
             execution_rate = "inherit"
         }
 
+<<<<<<< HEAD
+=======
+        "core/RMS value" {
+            op_mode = "PLL based"
+            frequency = "50"
+            period_timeout = "0.5"
+            period_deadband = "0"
+            filter_en = "False"
+            lpf_cutoff = "500"
+            frequency_src = "Internal"
+            execution_rate = "inherit"
+        }
+
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
         "core/Resistor" {
             resistance = "1"
             param_set = ""

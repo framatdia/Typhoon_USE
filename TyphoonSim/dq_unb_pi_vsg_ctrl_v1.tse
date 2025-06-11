@@ -150,7 +150,11 @@ model "dq_unb_pi_vsg_ctrl_v1" {
                 step_time = "0.75"
             }
             [
+<<<<<<< HEAD
                 position = 6168, 7888
+=======
+                position = 5984, 8112
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
             ]
 
             component "core/Step" qref {
@@ -159,7 +163,11 @@ model "dq_unb_pi_vsg_ctrl_v1" {
                 step_time = "1.25"
             }
             [
+<<<<<<< HEAD
                 position = 6168, 7968
+=======
+                position = 5984, 8192
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
             ]
 
             component "core/Clock" Clock2 {
@@ -1512,7 +1520,11 @@ q = 2.0/3.0*(-sin(theta)*abc[0] - sin(theta - 2.0/3.0*M_PI)*abc[1]  - sin(theta 
                 step_time = "1.75"
             }
             [
+<<<<<<< HEAD
                 position = 6168, 8044
+=======
+                position = 5984, 8268
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
             ]
 
             component "core/Step" qref1 {
@@ -1521,7 +1533,11 @@ q = 2.0/3.0*(-sin(theta)*abc[0] - sin(theta - 2.0/3.0*M_PI)*abc[1]  - sin(theta 
                 step_time = "2.25"
             }
             [
+<<<<<<< HEAD
                 position = 6168, 8124
+=======
+                position = 5984, 8348
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
             ]
 
             component "core/Step" pref2 {
@@ -1530,7 +1546,11 @@ q = 2.0/3.0*(-sin(theta)*abc[0] - sin(theta - 2.0/3.0*M_PI)*abc[1]  - sin(theta 
                 step_time = "2.75"
             }
             [
+<<<<<<< HEAD
                 position = 6168, 8192
+=======
+                position = 5984, 8416
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
             ]
 
             component "core/Step" qref2 {
@@ -1539,7 +1559,11 @@ q = 2.0/3.0*(-sin(theta)*abc[0] - sin(theta - 2.0/3.0*M_PI)*abc[1]  - sin(theta 
                 step_time = "3.25"
             }
             [
+<<<<<<< HEAD
                 position = 6168, 8272
+=======
+                position = 5984, 8496
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
             ]
 
             component "core/Gain" Gain1 {
@@ -5020,6 +5044,16 @@ c= cos(theta +2.0/3.0*M_PI)*dq[0] - sin(theta+2.0/3.0*M_PI)*dq[1];
                 position = 5836, 7924
             ]
 
+<<<<<<< HEAD
+=======
+            component "core/SCADA Input" "SCADA Input1" {
+                unit = ""
+            }
+            [
+                position = 6052, 8064
+            ]
+
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
             port eta_abc {
                 position = right:1
                 kind = sp
@@ -5046,6 +5080,87 @@ c= cos(theta +2.0/3.0*M_PI)*dq[0] - sin(theta+2.0/3.0*M_PI)*dq[1];
                 position = 7780, 7808
             ]
 
+<<<<<<< HEAD
+=======
+            port p_m_a_ref {
+                position = auto:auto
+                kind = sp
+                direction =  out
+                sp_type {
+                    default = auto
+                    readonly = True
+                }
+            }
+            [
+                position = 6152, 7884
+            ]
+
+            port q_s_a_ref {
+                position = auto:auto
+                kind = sp
+                direction =  out
+                sp_type {
+                    default = auto
+                    readonly = True
+                }
+            }
+            [
+                position = 6132, 7976
+            ]
+
+            port p_m_b_ref {
+                position = auto:auto
+                kind = sp
+                direction =  out
+                sp_type {
+                    default = auto
+                    readonly = True
+                }
+            }
+            [
+                position = 6140, 8048
+            ]
+
+            port q_s_b_ref {
+                position = auto:auto
+                kind = sp
+                direction =  out
+                sp_type {
+                    default = auto
+                    readonly = True
+                }
+            }
+            [
+                position = 6156, 8120
+            ]
+
+            port p_m_c_ref {
+                position = auto:auto
+                kind = sp
+                direction =  out
+                sp_type {
+                    default = auto
+                    readonly = True
+                }
+            }
+            [
+                position = 6152, 8196
+            ]
+
+            port q_s_c_ref {
+                position = auto:auto
+                kind = sp
+                direction =  out
+                sp_type {
+                    default = auto
+                    readonly = True
+                }
+            }
+            [
+                position = 6148, 8272
+            ]
+
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
             tag Goto39 {
                 value = "p_m_a_ref"
                 scope = local
@@ -6057,12 +6172,15 @@ c= cos(theta +2.0/3.0*M_PI)*dq[0] - sin(theta+2.0/3.0*M_PI)*dq[1];
             connect Goto65 VSG_a.is_albe_ref as Connection917
             connect Goto67 VSG_a.p_s as Connection919
             connect Goto68 VSG_a.q_s as Connection920
+<<<<<<< HEAD
             connect qref.out Goto45 as Connection933
             connect Goto39 pref.out as Connection934
             connect qref1.out Goto78 as Connection935
             connect Goto77 pref1.out as Connection936
             connect qref2.out Goto80 as Connection937
             connect Goto79 pref2.out as Connection938
+=======
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
             connect "Bus Join10.out" current_ctrl.is_abc_ref as Connection948
             connect From137 "Bus Join11.in" as Connection949
             connect "Bus Join11.in1" From139 as Connection950
@@ -6190,6 +6308,15 @@ c= cos(theta +2.0/3.0*M_PI)*dq[0] - sin(theta+2.0/3.0*M_PI)*dq[1];
             ]
             connect "Signal switch3.out" Gain9.in as Connection1249
             connect Step3.out "Signal switch3.in2" as Connection1250
+<<<<<<< HEAD
+=======
+            connect p_m_a_ref Goto39 as Connection1251
+            connect q_s_a_ref Goto45 as Connection1252
+            connect p_m_b_ref Goto77 as Connection1253
+            connect p_m_c_ref Goto79 as Connection1254
+            connect q_s_b_ref Goto78 as Connection1255
+            connect q_s_c_ref Goto80 as Connection1256
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
         }
         [
             position = 8748, 8308
@@ -6648,7 +6775,11 @@ if (theta<0.0){
                 }
             }
             [
+<<<<<<< HEAD
                 position = 7012, 8472
+=======
+                position = 7008, 8472
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
             ]
 
             port eta_n {
@@ -7240,6 +7371,57 @@ if (theta<0.0){
             position = 9100, 8920
         ]
 
+<<<<<<< HEAD
+=======
+        component "core/SCADA Input" p_m_a_ref {
+            execution_rate = "Ts_Control"
+            unit = ""
+        }
+        [
+            position = 8472, 8072
+        ]
+
+        component "core/SCADA Input" q_s_a_ref {
+            execution_rate = "Ts_Control"
+            unit = ""
+        }
+        [
+            position = 8472, 8148
+        ]
+
+        component "core/SCADA Input" p_m_b_ref {
+            execution_rate = "Ts_Control"
+            unit = ""
+        }
+        [
+            position = 8464, 8224
+        ]
+
+        component "core/SCADA Input" q_s_b_ref {
+            execution_rate = "Ts_Control"
+            unit = ""
+        }
+        [
+            position = 8464, 8300
+        ]
+
+        component "core/SCADA Input" p_m_c_ref {
+            execution_rate = "Ts_Control"
+            unit = ""
+        }
+        [
+            position = 8464, 8380
+        ]
+
+        component "core/SCADA Input" q_s_c_ref {
+            execution_rate = "Ts_Control"
+            unit = ""
+        }
+        [
+            position = 8464, 8456
+        ]
+
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
         tag From50 {
             value = "p"
             scope = global
@@ -7526,12 +7708,27 @@ if (theta<0.0){
         connect From82 is_n.in as Connection725
         connect Controller.eta_abc Plant.eta_abc as Connection726
         [
+<<<<<<< HEAD
             breakpoints = 8892, 8136; 8092, 8136
         ]
         connect Controller.eta_n Plant.eta_n as Connection727
         [
             breakpoints = 8892, 8480; 8092, 8480
         ]
+=======
+            breakpoints = 8892, 8060; 8092, 8060
+        ]
+        connect Controller.eta_n Plant.eta_n as Connection727
+        [
+            breakpoints = 8892, 8512; 8092, 8512
+        ]
+        connect p_m_a_ref.out Controller.p_m_a_ref as Connection728
+        connect Controller.q_s_a_ref q_s_a_ref.out as Connection729
+        connect p_m_b_ref.out Controller.p_m_b_ref as Connection730
+        connect Controller.q_s_b_ref q_s_b_ref.out as Connection731
+        connect p_m_c_ref.out Controller.p_m_c_ref as Connection732
+        connect q_s_c_ref.out Controller.q_s_c_ref as Connection733
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
     }
 
     logically_deleted {
@@ -7539,6 +7736,11 @@ if (theta<0.0){
         "p"
         "q"
         "p_fil"
+<<<<<<< HEAD
+=======
+        "Controller.pref"
+        "Controller.qref"
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
         "Controller.VSG_a.is_al_ref"
         "Controller.VSG_a.e"
         "Controller.VSG_a.is_d"
@@ -7557,6 +7759,13 @@ if (theta<0.0){
         "Controller.VSG_a.Connection958"
         "Controller.VSG_a.Connection959"
         "Controller.VSG_a.Connection960"
+<<<<<<< HEAD
+=======
+        "Controller.pref1"
+        "Controller.qref1"
+        "Controller.pref2"
+        "Controller.qref2"
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
         "Controller.is_a_al"
         "Controller.Bus Split1"
         "Controller.is_b_al"
@@ -7762,6 +7971,23 @@ if (theta<0.0){
             param_set = ""
         }
 
+<<<<<<< HEAD
+=======
+        "core/SCADA Input" {
+            signal_access = "inherit"
+            addr = "0"
+            format = "real"
+            override_signal_name = "False"
+            signal_name = ""
+            signal_type = "real"
+            min = "-1e6"
+            max = "1e6"
+            def_value = "0"
+            unit = " "
+            execution_rate = "100e-6"
+        }
+
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
         "core/Scope" {
             signals_data = "{}"
             selected_signals = "[]"

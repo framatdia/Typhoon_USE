@@ -29,7 +29,11 @@
 //
 //*****************************************************************************
 
+<<<<<<< HEAD
 void (*TickFunctsArray[3])(void) = { TickFct_R0, TickFct_R1, TickFct_Idle};
+=======
+void (*TickFunctsArray[2])(void) = { TickFct_R0, TickFct_Idle};
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
 
 // GLOBAL VARIABLES
 
@@ -60,7 +64,10 @@ void main(void)
     EALLOW;
     
 	INIT_SP_EXPORT_R0();
+<<<<<<< HEAD
 	INIT_SP_EXPORT_R1();
+=======
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
 	
     EDIS;
     // Enable Global Interrupt (INTM) and realtime interrupt (DBGM)
@@ -80,12 +87,15 @@ void TickFct_R0(void) {
 
 }
         
+<<<<<<< HEAD
 void TickFct_R1(void) {
 
     STEP_SP_EXPORT_R1();         //execute subsystem step function
 
 }
         
+=======
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
 
 
 //*****************************************************************************

@@ -166,7 +166,11 @@ REM SPC0 Contactors initialization...
 
 REM SPC0 GDS compensation settings...
 rtds_write 0x080C0000 0x00000001
+<<<<<<< HEAD
 rtds_write 0x080C0001 0x0000000B
+=======
+rtds_write 0x080C0001 0x0000000A
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
 rtds_write 0x080C0004 0x3BEA0EA0
 rtds_write 0x080C0005 0xEA0F0000
 rtds_write 0x08100000 0x0000008C

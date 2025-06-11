@@ -82,6 +82,7 @@
     </pesb>
     <analog_variables>
         <cell>
+<<<<<<< HEAD
             <name>Plant.Series RLC Branch2.L3</name>
             <address>9</address>
             <type>current</type>
@@ -128,23 +129,38 @@
             <address>8</address>
             <type>current</type>
             <initial_condition>0.0</initial_condition>
+=======
+            <name>Plant.C2</name>
+            <address>0</address>
+            <type>voltage</type>
+            <initial_condition>730.0</initial_condition>
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
             <visible>True</visible>
         </cell>
         <cell>
             <name>Plant.Series RLC Branch1.L2</name>
+<<<<<<< HEAD
             <address>5</address>
+=======
+            <address>4</address>
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
             <type>current</type>
             <initial_condition>0.0</initial_condition>
             <visible>True</visible>
         </cell>
         <cell>
             <name>Plant.Series RLC Branch4.L1</name>
+<<<<<<< HEAD
             <address>10</address>
+=======
+            <address>9</address>
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
             <type>current</type>
             <initial_condition>0.0</initial_condition>
             <visible>True</visible>
         </cell>
         <cell>
+<<<<<<< HEAD
             <name>Plant.C1</name>
             <address>0</address>
             <type>voltage</type>
@@ -154,11 +170,105 @@
         <cell>
             <name>Plant.Series RLC Branch3.C3</name>
             <address>4</address>
+=======
+            <name>Plant.Series RLC Branch3.C3</name>
+            <address>3</address>
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
             <type>voltage</type>
             <initial_condition>0.0</initial_condition>
             <visible>True</visible>
         </cell>
         <cell>
+<<<<<<< HEAD
+=======
+            <name>Plant.Series RLC Branch2.L1</name>
+            <address>6</address>
+            <type>current</type>
+            <initial_condition>0.0</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>Plant.Series RLC Branch2.L2</name>
+            <address>7</address>
+            <type>current</type>
+            <initial_condition>0.0</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>Plant.Series RLC Branch1.L3</name>
+            <address>5</address>
+            <type>current</type>
+            <initial_condition>0.0</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>Plant.Series RLC Branch3.C1</name>
+            <address>1</address>
+            <type>voltage</type>
+            <initial_condition>0.0</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>Plant.Series RLC Branch3.C2</name>
+            <address>2</address>
+            <type>voltage</type>
+            <initial_condition>0.0</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>Plant.Series RLC Branch2.L3</name>
+            <address>8</address>
+            <type>current</type>
+            <initial_condition>0.0</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>Plant.IGBT Leg4.IGBT Leg global gds ovs.il</name>
+            <address>408</address>
+            <type>current</type>
+            <initial_condition>None</initial_condition>
+            <visible>False</visible>
+            <previous_names>
+            </previous_names>
+        </cell>
+        <cell>
+            <name>Plant.IGBT Leg4.IGBT Leg global gds ovs.v2</name>
+            <address>410</address>
+            <type>voltage</type>
+            <initial_condition>None</initial_condition>
+            <visible>False</visible>
+            <previous_names>
+            </previous_names>
+        </cell>
+        <cell>
+            <name>Plant.Vb</name>
+            <address>11</address>
+            <type>voltage</type>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+            <previous_names>
+            </previous_names>
+        </cell>
+        <cell>
+            <name>Plant.v_h</name>
+            <address>13</address>
+            <type>voltage</type>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+            <previous_names>
+            </previous_names>
+        </cell>
+        <cell>
+            <name>Plant.IGBT Leg1.IGBT Leg global gds ovs.il</name>
+            <address>384</address>
+            <type>current</type>
+            <initial_condition>None</initial_condition>
+            <visible>False</visible>
+            <previous_names>
+            </previous_names>
+        </cell>
+        <cell>
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
             <name>Plant.IGBT Leg1.IGBT Leg global gds ovs.v2</name>
             <address>386</address>
             <type>voltage</type>
@@ -177,6 +287,7 @@
             </previous_names>
         </cell>
         <cell>
+<<<<<<< HEAD
             <name>Plant.Vb</name>
             <address>12</address>
             <type>voltage</type>
@@ -214,6 +325,9 @@
         </cell>
         <cell>
             <name>Plant.Ibg</name>
+=======
+            <name>Plant.Icg</name>
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
             <address>16</address>
             <type>current</type>
             <initial_condition>None</initial_condition>
@@ -222,6 +336,7 @@
             </previous_names>
         </cell>
         <cell>
+<<<<<<< HEAD
             <name>Plant.v_h</name>
             <address>14</address>
             <type>voltage</type>
@@ -258,6 +373,8 @@
             </previous_names>
         </cell>
         <cell>
+=======
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
             <name>Plant.IGBT Leg2.IGBT Leg global gds ovs.v2</name>
             <address>394</address>
             <type>voltage</type>
@@ -267,8 +384,40 @@
             </previous_names>
         </cell>
         <cell>
+<<<<<<< HEAD
             <name>Plant.IGBT Leg2.IGBT Leg global gds ovs.il</name>
             <address>392</address>
+=======
+            <name>Plant.IGBT Leg2.IGBT Leg global gds ovs.v1</name>
+            <address>393</address>
+            <type>voltage</type>
+            <initial_condition>None</initial_condition>
+            <visible>False</visible>
+            <previous_names>
+            </previous_names>
+        </cell>
+        <cell>
+            <name>Plant.Ing</name>
+            <address>17</address>
+            <type>current</type>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+            <previous_names>
+            </previous_names>
+        </cell>
+        <cell>
+            <name>Plant.Va</name>
+            <address>10</address>
+            <type>voltage</type>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+            <previous_names>
+            </previous_names>
+        </cell>
+        <cell>
+            <name>Plant.IGBT Leg3.IGBT Leg global gds ovs.il</name>
+            <address>400</address>
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
             <type>current</type>
             <initial_condition>None</initial_condition>
             <visible>False</visible>
@@ -285,25 +434,43 @@
             </previous_names>
         </cell>
         <cell>
+<<<<<<< HEAD
             <name>Plant.IGBT Leg1.IGBT Leg global gds ovs.il</name>
             <address>384</address>
             <type>current</type>
+=======
+            <name>Plant.IGBT Leg3.IGBT Leg global gds ovs.v1</name>
+            <address>401</address>
+            <type>voltage</type>
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
             <initial_condition>None</initial_condition>
             <visible>False</visible>
             <previous_names>
             </previous_names>
         </cell>
         <cell>
+<<<<<<< HEAD
             <name>Plant.Icg</name>
             <address>17</address>
             <type>current</type>
             <initial_condition>None</initial_condition>
             <visible>True</visible>
+=======
+            <name>Plant.IGBT Leg4.IGBT Leg global gds ovs.v1</name>
+            <address>409</address>
+            <type>voltage</type>
+            <initial_condition>None</initial_condition>
+            <visible>False</visible>
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
             <previous_names>
             </previous_names>
         </cell>
         <cell>
+<<<<<<< HEAD
             <name>Plant.Iag</name>
+=======
+            <name>Plant.Ibg</name>
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
             <address>15</address>
             <type>current</type>
             <initial_condition>None</initial_condition>
@@ -313,7 +480,11 @@
         </cell>
         <cell>
             <name>Plant.Vc</name>
+<<<<<<< HEAD
             <address>13</address>
+=======
+            <address>12</address>
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
             <type>voltage</type>
             <initial_condition>None</initial_condition>
             <visible>True</visible>
@@ -321,8 +492,13 @@
             </previous_names>
         </cell>
         <cell>
+<<<<<<< HEAD
             <name>Plant.IGBT Leg4.IGBT Leg global gds ovs.il</name>
             <address>408</address>
+=======
+            <name>Plant.IGBT Leg2.IGBT Leg global gds ovs.il</name>
+            <address>392</address>
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
             <type>current</type>
             <initial_condition>None</initial_condition>
             <visible>False</visible>
@@ -330,11 +506,19 @@
             </previous_names>
         </cell>
         <cell>
+<<<<<<< HEAD
             <name>Plant.IGBT Leg3.IGBT Leg global gds ovs.v1</name>
             <address>401</address>
             <type>voltage</type>
             <initial_condition>None</initial_condition>
             <visible>False</visible>
+=======
+            <name>Plant.Iag</name>
+            <address>14</address>
+            <type>current</type>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
             <previous_names>
             </previous_names>
         </cell>
@@ -695,14 +879,24 @@
             <address>129</address>
             </cell>
         <cell>
+<<<<<<< HEAD
             <name>Plant.IGBT Leg2.S_bot</name>
             <address>131</address>
             </cell>
         <cell>
+=======
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
             <name>Plant.IGBT Leg2.S_top</name>
             <address>130</address>
             </cell>
         <cell>
+<<<<<<< HEAD
+=======
+            <name>Plant.IGBT Leg2.S_bot</name>
+            <address>131</address>
+            </cell>
+        <cell>
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
             <name>Plant.IGBT Leg3.S_top</name>
             <address>132</address>
             </cell>
@@ -733,6 +927,7 @@
                     </previous_names>
             </cell>
         <cell>
+<<<<<<< HEAD
             <name>Plant.IGBT Leg2.S2</name>
             <address>131</address>
                 <previous_names>
@@ -740,6 +935,8 @@
                     </previous_names>
             </cell>
         <cell>
+=======
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
             <name>Plant.IGBT Leg2.S1</name>
             <address>130</address>
                 <previous_names>
@@ -747,6 +944,16 @@
                     </previous_names>
             </cell>
         <cell>
+<<<<<<< HEAD
+=======
+            <name>Plant.IGBT Leg2.S2</name>
+            <address>131</address>
+                <previous_names>
+                        <previous_name>Plant.IGBT Leg2.S_bot</previous_name>
+                    </previous_names>
+            </cell>
+        <cell>
+>>>>>>> aea9860927cf4b779f5bda26fb65a58d9e991a5c
             <name>Plant.IGBT Leg3.S1</name>
             <address>132</address>
                 <previous_names>
