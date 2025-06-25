@@ -1,10 +1,10 @@
 version = 4.2
 
 //
-// Saved by sw version: 2024.2 BETA3
+// Saved by sw version: 2025.1 SP1
 //
 
-model "dq_vsg_ctrl" {
+model "dq_pi_vsg_ctrl_v1" {
     configuration {
         hil_device = "VHIL+"
         hil_configuration_id = 1
@@ -47,6 +47,7 @@ model "dq_vsg_ctrl" {
         cce_type_mapping_real = "double"
         cce_type_mapping_uint = "unsigned int"
         cce_type_mapping_int = "int"
+        cce_term_var_location = "local"
         cce_directory = ""
         cce_custom_type_int = ""
         cce_custom_type_uint = ""
@@ -57,13 +58,15 @@ model "dq_vsg_ctrl" {
         export_resource_list = ""
         export_dependency_list = ""
         excluded_resource_list = ""
+        excluded_component_from_locking_list = ""
         export_out_file = ""
         export_lock_top_level = True
         export_encrypt_library = True
         export_encrypt_resources = True
-        dae_solver = "BDF"
+        solver_type = "DAE"
+        integration_method = "BDF"
         max_sim_step = 1e-4
-        simulation_time = 5.0
+        simulation_time = 3
         abs_tol = 1e-3
         rel_tol = 1e-3
         init_sim_step = 1e-6
@@ -75,7 +78,7 @@ model "dq_vsg_ctrl" {
 
     component Subsystem Root {
         component "core/Scope" Powers {
-            selected_signals = "[\"p\", \"q\", \"p_fil\", \"q_fil\"]"
+            selected_signals = "[\'p\', \'q\', \'p_fil\', \'q_fil\']"
             signals_data = "{\"signals\": {\"p\": {\"viewports\": [1], \"type\": \"analog\", \"color\": {\"1\": \"#00CC00\"}, \"display\": {\"1\": \"solid\"}}, \"p_fil\": {\"viewports\": [1], \"type\": \"analog\", \"color\": {\"1\": \"#0099FF\"}, \"display\": {\"1\": \"solid\"}}, \"q\": {\"viewports\": [2], \"type\": \"analog\", \"color\": {\"2\": \"#00CC00\"}, \"display\": {\"2\": \"solid\"}}, \"q_fil\": {\"viewports\": [2], \"type\": \"analog\", \"color\": {\"2\": \"#FF0000\"}, \"display\": {\"2\": \"solid\"}}}, \"viewports\": {\"1\": {\"log_scale_x\": false, \"log_scale_y\": false, \"y_axis_db\": false}, \"2\": {\"log_scale_x\": false, \"log_scale_y\": false, \"y_axis_db\": false}, \"3\": {\"log_scale_x\": false, \"log_scale_y\": false, \"y_axis_db\": false}, \"4\": {\"log_scale_x\": false, \"log_scale_y\": false, \"y_axis_db\": false}}, \"plot_settings\": {\"layout\": \"Vertical\", \"background_color\": \"white\", \"legend_visible\": true}}"
         }
         [
@@ -307,7 +310,7 @@ c= cos(theta +2.0/3.0*M_PI)*dq[0] - sin(theta+2.0/3.0*M_PI)*dq[1];
             component "core/Step" pref {
                 execution_rate = "Ts_Control"
                 final_value = "0.2"
-                step_time = "1.0"
+                step_time = "0.5"
             }
             [
                 position = 7572, 7324
@@ -316,7 +319,6 @@ c= cos(theta +2.0/3.0*M_PI)*dq[0] - sin(theta+2.0/3.0*M_PI)*dq[1];
             component "core/Step" qref {
                 execution_rate = "Ts_Control"
                 final_value = "-0.1"
-                step_time = "2.0"
             }
             [
                 position = 7572, 7404
@@ -455,7 +457,7 @@ x_isq = x_isq + Ts_Control*2*M_PI*1/(tau_vsg)*(is_dq_ref[1] - x_isq);
             ]
 
             component "core/Scope" omega_theta_vsg {
-                selected_signals = "[\"Controller.omega_vsg\", \"Controller.theta_vsg\"]"
+                selected_signals = "[\'Controller.omega_vsg\', \'Controller.theta_vsg\']"
                 signals_data = "{\"signals\": {\"Controller.omega_vsg\": {\"viewports\": [1], \"type\": \"analog\", \"color\": {\"1\": \"#FF0000\"}, \"display\": {\"1\": \"solid\"}}, \"Controller.theta_vsg\": {\"viewports\": [2], \"type\": \"analog\", \"color\": {\"2\": \"#FF0000\"}, \"display\": {\"2\": \"solid\"}}}, \"viewports\": {\"1\": {\"log_scale_x\": false, \"log_scale_y\": false, \"y_axis_db\": false}, \"2\": {\"log_scale_x\": false, \"log_scale_y\": false, \"y_axis_db\": false}, \"3\": {\"log_scale_x\": false, \"log_scale_y\": false, \"y_axis_db\": false}, \"4\": {\"log_scale_x\": false, \"log_scale_y\": false, \"y_axis_db\": false}}, \"plot_settings\": {\"layout\": \"Vertical\", \"background_color\": \"white\", \"legend_visible\": true}}"
             }
             [
@@ -1205,19 +1207,16 @@ x_isq = x_isq + Ts_Control*2*M_PI*1/(tau_vsg)*(is_dq_ref[1] - x_isq);
             comment Comment6 START <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd"><html><head><meta name="qrichtext" content="1" /><style type="text/css">p, li { white-space: pre-wrap; }</style></head><body style=" font-family:'Arial'; font-size:12pt; font-weight:400; font-style:normal;"><p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">dq PI controller with feedforward voltages and cross-coupling terms cancellation</p></body></html> ENDCOMMENT 
             [
                 position = 8116, 7132
-                background_color = #70ffff00
             ]
 
             comment Comment7 START <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd"><html><head><meta name="qrichtext" content="1" /><style type="text/css">p, li { white-space: pre-wrap; }</style></head><body style=" font-family:'Arial'; font-size:12pt; font-weight:400; font-style:normal;"><p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">dq to abc transformation</p></body></html> ENDCOMMENT 
             [
                 position = 9080, 7136
-                background_color = #70ffff00
             ]
 
             comment Comment8 START <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd"><html><head><meta name="qrichtext" content="1" /><style type="text/css">p, li { white-space: pre-wrap; }</style></head><body style=" font-family:'Arial'; font-size:12pt; font-weight:400; font-style:normal;"><p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Grid-Forming Virtual Synchronous Generator</p></body></html> ENDCOMMENT 
             [
                 position = 7532, 7140
-                background_color = #70ffff00
             ]
 
             connect From69 "C function PI current controller.omega_pll" as Connection525
@@ -1629,14 +1628,14 @@ delta_t = 0.0;
 vga =326.5*sin(omega*t);
 vgb =326.5*sin(omega*t - 2.0*M_PI/3.0);
 vgc = 326.5*sin(omega*t + 2.0*M_PI/3.0);
-if (t<3.0){
+if (t<1.5){
     omega = 2.0*M_PI*50.0;
 }
-if (t>=3.0){
-    delta_t = t-3.0;
+if (t>=1.5){
+    delta_t = t-1.5;
     omega = 2.0*M_PI*50.0 - 2.0*M_PI*0.5*delta_t;
 }
-if (t>=4.0){
+if (t>=2.5){
     omega = 2.0*M_PI*49.5;
 }
 
@@ -1962,7 +1961,6 @@ if (theta<0.0){
             comment Comment4 START <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd"><html><head><meta name="qrichtext" content="1" /><style type="text/css">p, li { white-space: pre-wrap; }</style></head><body style=" font-family:'Arial'; font-size:12pt; font-weight:400; font-style:normal;"><p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">LCL filter</p></body></html> ENDCOMMENT 
             [
                 position = 8348, 7816
-                background_color = #70ffff00
             ]
 
             comment Comment5 START <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd"><html><head><meta name="qrichtext" content="1" /><style type="text/css">p, li { white-space: pre-wrap; }</style></head><body style=" font-family:'Arial'; font-size:12pt; font-weight:400; font-style:normal;"><p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-size:16pt;">Grid</span>   </p></body></html> ENDCOMMENT 
@@ -2318,7 +2316,6 @@ if (theta<0.0){
         comment Comment8 START <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd"><html><head><meta name="qrichtext" content="1" /><style type="text/css">p, li { white-space: pre-wrap; }</style></head><body style=" font-family:'Arial'; font-size:12pt; font-weight:400; font-style:normal;"><p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-size:16pt;">This file contains a grid-forming based on a PI Virtual Synchronous Generator. This controller and its validation was proposed by:</span></p><p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-size:16pt;">-Juan Manuel Mauricio, Associate Professor of the Department of Electrical Engineering at the University of Sevilla, Spain</span></p><p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-size:16pt;">-Georgios C. Kryonidis, Postdoctoral Researcher of the School of Electrical and Computer Engineering at the Aristotle Universiy of Thesaloniki, Greece</span></p><p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-size:16pt;">-Manuel Barragan-Villarejo, Associate Professor of the Department of Electrical Engineering at the University of Sevilla, Spain</span></p><p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-size:16pt;">-Kyriaki-Nefeli Malamaki, Postdoctoral Researcher of the School of Electrical and Computer Engineering at the Aristotle Universiy of Thesaloniki, Greece</span></p><p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-size:16pt;">-Jose Maria Maza-Ortega, Full Professor of the Department of Electrical Engineering at the University of Sevilla, Spain</span></p><p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-size:16pt;">-Charis S. Demoulias, Full Professor of the School of Electrical and Computer Engineering at the Aristotle Universiy of Thesaloniki, Greece</span></p><p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:16pt;"><br /></p><p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-size:16pt;">The proposed grid-forming PI-VSG can be found in the following papers:</span></p><p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="LPlnk187793"></a><a href="https://www.sciencedirect.com/science/article/abs/pii/S0378779623004960"><span style=" font-family:'Aptos','Aptos_EmbeddedFont','Aptos_MSFontService','Calibri','Helvetica','sans-serif'; text-decoration: underline; color:#0000ff;">h</span></a><span style=" font-family:'Aptos','Aptos_EmbeddedFont','Aptos_MSFontService','Calibri','Helvetica','sans-serif'; text-decoration: underline; color:#0000ff;">ttps://www.sciencedirect.com/science/article/abs/pii/S0378779623004960</span></p><p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="LPlnk353700"></a><a href="https://www.sciencedirect.com/science/article/abs/pii/S0142061522001144"><span style=" font-family:'Aptos','Aptos_EmbeddedFont','Aptos_MSFontService','Calibri','Helvetica','sans-serif'; text-decoration: underline; color:#0000ff;">h</span></a><span style=" font-family:'Aptos','Aptos_EmbeddedFont','Aptos_MSFontService','Calibri','Helvetica','sans-serif'; text-decoration: underline; color:#0000ff;">ttps://www.sciencedirect.com/science/article/abs/pii/S0142061522001144</span></p></body></html> ENDCOMMENT 
         [
             position = 7892, 7768
-            background_color = #70ffff00
         ]
 
         connect p.in From50 as Connection451
@@ -2450,6 +2447,7 @@ if (theta<0.0){
             type = "signal generator"
             param_set = "1phase"
             parent_label = ""
+            dtsm_switch_name = ""
             addr = "0"
             spc_nb = "0"
             execution_rate = "100e-6"
@@ -2579,15 +2577,20 @@ if (theta<0.0){
 
         "core/Triple Pole Single Throw Contactor" {
             signal_access = "inherit"
+            switches_option = "False"
+            resistance = "1.0"
             ctrl_src = "Digital input"
             Sa = "1"
             Sa_logic = "active high"
             enable_fb_out = "False"
             fb_out_type = "real"
             execution_rate = "inherit"
+            dtsm_switch_name = ""
             initial_state = "off"
             on_delay = "0"
             off_delay = "0"
+            switching = "zero current"
+            hide_int_meas = "False"
         }
 
         "core/Voltage Measurement" {
@@ -2656,7 +2659,7 @@ if (theta<0.0){
         Kp_p = 0.01 # active power proportinal gain
         Ki_p = 1.0/(2.0*H) #proportional gain active power control loop
         Kp_q = 0.1
-        Ki_q = 1.0
+        Ki_q = 10.0
         Xv = 0.1
         Rv = 0.0
         e_o = 1.0
