@@ -1559,7 +1559,7 @@ q_fil = q_fil + Ts_Control*2*M_PI*fc*(q - q_fil);
 
             tag Goto22 {
                 value = "vs_a"
-                scope = local
+                scope = global
                 kind = sp
                 direction = in
             }
@@ -1572,7 +1572,7 @@ q_fil = q_fil + Ts_Control*2*M_PI*fc*(q - q_fil);
 
             tag Goto23 {
                 value = "vs_b"
-                scope = local
+                scope = global
                 kind = sp
                 direction = in
             }
@@ -1585,7 +1585,7 @@ q_fil = q_fil + Ts_Control*2*M_PI*fc*(q - q_fil);
 
             tag Goto24 {
                 value = "vs_c"
-                scope = local
+                scope = global
                 kind = sp
                 direction = in
             }
@@ -1598,7 +1598,7 @@ q_fil = q_fil + Ts_Control*2*M_PI*fc*(q - q_fil);
 
             tag Goto25 {
                 value = "is_c"
-                scope = local
+                scope = global
                 kind = sp
                 direction = in
             }
@@ -1611,7 +1611,7 @@ q_fil = q_fil + Ts_Control*2*M_PI*fc*(q - q_fil);
 
             tag Goto26 {
                 value = "is_b"
-                scope = local
+                scope = global
                 kind = sp
                 direction = in
             }
@@ -1624,7 +1624,7 @@ q_fil = q_fil + Ts_Control*2*M_PI*fc*(q - q_fil);
 
             tag Goto27 {
                 value = "is_a"
-                scope = local
+                scope = global
                 kind = sp
                 direction = in
             }
@@ -1649,7 +1649,7 @@ q_fil = q_fil + Ts_Control*2*M_PI*fc*(q - q_fil);
 
             tag Goto43 {
                 value = "it_a"
-                scope = local
+                scope = global
                 kind = sp
                 direction = in
             }
@@ -1662,7 +1662,7 @@ q_fil = q_fil + Ts_Control*2*M_PI*fc*(q - q_fil);
 
             tag Goto44 {
                 value = "it_b"
-                scope = local
+                scope = global
                 kind = sp
                 direction = in
             }
@@ -1675,7 +1675,7 @@ q_fil = q_fil + Ts_Control*2*M_PI*fc*(q - q_fil);
 
             tag Goto45 {
                 value = "it_c"
-                scope = local
+                scope = global
                 kind = sp
                 direction = in
             }
@@ -1688,7 +1688,7 @@ q_fil = q_fil + Ts_Control*2*M_PI*fc*(q - q_fil);
 
             tag Goto46 {
                 value = "vt_a"
-                scope = local
+                scope = global
                 kind = sp
                 direction = in
             }
@@ -1701,7 +1701,7 @@ q_fil = q_fil + Ts_Control*2*M_PI*fc*(q - q_fil);
 
             tag Goto47 {
                 value = "vt_b"
-                scope = local
+                scope = global
                 kind = sp
                 direction = in
             }
@@ -1714,7 +1714,7 @@ q_fil = q_fil + Ts_Control*2*M_PI*fc*(q - q_fil);
 
             tag Goto48 {
                 value = "vt_c"
-                scope = local
+                scope = global
                 kind = sp
                 direction = in
             }
@@ -2169,7 +2169,7 @@ q_fil = q_fil + Ts_Control*2*M_PI*fc*(q - q_fil);
 
         tag From75 {
             value = "is_a"
-            scope = local
+            scope = global
             kind = sp
             direction = out
         }
@@ -2181,7 +2181,7 @@ q_fil = q_fil + Ts_Control*2*M_PI*fc*(q - q_fil);
 
         tag From76 {
             value = "is_b"
-            scope = local
+            scope = global
             kind = sp
             direction = out
         }
@@ -2217,7 +2217,7 @@ q_fil = q_fil + Ts_Control*2*M_PI*fc*(q - q_fil);
 
         tag From45 {
             value = "vs_b"
-            scope = local
+            scope = global
             kind = sp
             direction = out
         }
@@ -2229,7 +2229,7 @@ q_fil = q_fil + Ts_Control*2*M_PI*fc*(q - q_fil);
 
         tag From46 {
             value = "vs_c"
-            scope = local
+            scope = global
             kind = sp
             direction = out
         }
@@ -2241,7 +2241,7 @@ q_fil = q_fil + Ts_Control*2*M_PI*fc*(q - q_fil);
 
         tag From47 {
             value = "is_a"
-            scope = local
+            scope = global
             kind = sp
             direction = out
         }
@@ -2255,7 +2255,7 @@ q_fil = q_fil + Ts_Control*2*M_PI*fc*(q - q_fil);
 
         tag From48 {
             value = "is_b"
-            scope = local
+            scope = global
             kind = sp
             direction = out
         }
@@ -2343,7 +2343,7 @@ q_fil = q_fil + Ts_Control*2*M_PI*fc*(q - q_fil);
 
         tag From79 {
             value = "it_a"
-            scope = local
+            scope = global
             kind = sp
             direction = out
         }
@@ -2355,7 +2355,7 @@ q_fil = q_fil + Ts_Control*2*M_PI*fc*(q - q_fil);
 
         tag From80 {
             value = "it_b"
-            scope = local
+            scope = global
             kind = sp
             direction = out
         }
@@ -2367,7 +2367,7 @@ q_fil = q_fil + Ts_Control*2*M_PI*fc*(q - q_fil);
 
         tag From81 {
             value = "it_c"
-            scope = local
+            scope = global
             kind = sp
             direction = out
         }
@@ -2379,7 +2379,7 @@ q_fil = q_fil + Ts_Control*2*M_PI*fc*(q - q_fil);
 
         tag From82 {
             value = "vt_a"
-            scope = local
+            scope = global
             kind = sp
             direction = out
         }
@@ -2391,7 +2391,7 @@ q_fil = q_fil + Ts_Control*2*M_PI*fc*(q - q_fil);
 
         tag From83 {
             value = "vt_b"
-            scope = local
+            scope = global
             kind = sp
             direction = out
         }
@@ -2403,7 +2403,7 @@ q_fil = q_fil + Ts_Control*2*M_PI*fc*(q - q_fil);
 
         tag From84 {
             value = "vt_c"
-            scope = local
+            scope = global
             kind = sp
             direction = out
         }
