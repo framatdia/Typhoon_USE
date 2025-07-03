@@ -4,7 +4,7 @@ version = 4.2
 // Saved by sw version: 2025.1
 //
 
-model "Schematic_F28335" {
+model "schematic_f28335" {
     configuration {
         hil_device = "HIL101"
         hil_configuration_id = 1
@@ -425,7 +425,7 @@ model "Schematic_F28335" {
             position = 8592, 8652
         ]
 
-        component "core/SCADA Input" V_h_ref {
+        component "core/SCADA Input" Vdc_ref {
             execution_rate = "10e-3"
             signal_access = "Inherit"
             unit = ""
@@ -524,7 +524,6 @@ model "Schematic_F28335" {
             identifier_type = "CAN 2.0 A (11 bit identifier)"
             identifier_value = "2"
             name = "Can message"
-            signal_names_dict = "{\'signal0\': {\'rename\': \'signal0\', \'delete\': False}, \'signal1\': {\'rename\': \'signal1\', \'delete\': False}, \'signal2\': {\'rename\': \'signal2\', \'delete\': False}, \'signal3\': {\'rename\': \'signal3\', \'delete\': False}}"
             signals = "[{\'name\': \'signal0\', \'start_bit\': \'0\', \'length\': \'16\', \'byte_order\': \'Little Endian\', \'data_type\': \'int\', \'mux_type\': \'None\', \'mux_val\': \'\', \'scale\': \'\', \'offset\': \'\', \'min\': \'\', \'max\': \'\', \'unit\': \'\', \'name_old\': \'signal0\', \'name_changed\': \'False\'}, {\'name\': \'signal1\', \'start_bit\': \'16\', \'length\': \'16\', \'byte_order\': \'Little Endian\', \'data_type\': \'int\', \'mux_type\': \'None\', \'mux_val\': \'\', \'scale\': \'\', \'offset\': \'\', \'min\': \'\', \'max\': \'\', \'unit\': \'\', \'name_old\': \'signal1\', \'name_changed\': \'False\'}, {\'name\': \'signal2\', \'start_bit\': \'32\', \'length\': \'16\', \'byte_order\': \'Little Endian\', \'data_type\': \'int\', \'mux_type\': \'None\', \'mux_val\': \'\', \'scale\': \'\', \'offset\': \'\', \'min\': \'\', \'max\': \'\', \'unit\': \'\', \'name_old\': \'signal2\', \'name_changed\': \'False\'}, {\'name\': \'signal3\', \'start_bit\': \'48\', \'length\': \'16\', \'byte_order\': \'Little Endian\', \'data_type\': \'int\', \'mux_type\': \'None\', \'mux_val\': \'\', \'scale\': \'\', \'offset\': \'\', \'min\': \'\', \'max\': \'\', \'unit\': \'\', \'name_old\': \'signal3\', \'name_changed\': \'False\'}]"
             transmit_period = "250.0"
             transmit_type = "{\'On event\': False, \'On timer\': True, \'On request\': False}"
@@ -767,7 +766,6 @@ model "Schematic_F28335" {
             identifier_type = "CAN 2.0 A (11 bit identifier)"
             identifier_value = "13"
             name = "Can message"
-            signal_names_dict = "{\'signal0\': {\'rename\': \'signal0\', \'delete\': False}, \'signal1\': {\'rename\': \'signal1\', \'delete\': False}, \'signal2\': {\'rename\': \'signal2\', \'delete\': False}, \'signal3\': {\'rename\': \'signal3\', \'delete\': False}}"
             signals = "[{\'name\': \'signal0\', \'start_bit\': \'0\', \'length\': \'16\', \'byte_order\': \'Little Endian\', \'data_type\': \'int\', \'mux_type\': \'None\', \'mux_val\': \'\', \'scale\': \'\', \'offset\': \'\', \'min\': \'\', \'max\': \'\', \'unit\': \'\', \'name_old\': \'signal0\', \'name_changed\': \'False\'}, {\'name\': \'signal1\', \'start_bit\': \'16\', \'length\': \'16\', \'byte_order\': \'Little Endian\', \'data_type\': \'int\', \'mux_type\': \'None\', \'mux_val\': \'\', \'scale\': \'\', \'offset\': \'\', \'min\': \'\', \'max\': \'\', \'unit\': \'\', \'name_old\': \'signal1\', \'name_changed\': \'False\'}, {\'name\': \'signal2\', \'start_bit\': \'32\', \'length\': \'16\', \'byte_order\': \'Little Endian\', \'data_type\': \'int\', \'mux_type\': \'None\', \'mux_val\': \'\', \'scale\': \'\', \'offset\': \'\', \'min\': \'\', \'max\': \'\', \'unit\': \'\', \'name_old\': \'signal2\', \'name_changed\': \'False\'}, {\'name\': \'signal3\', \'start_bit\': \'48\', \'length\': \'16\', \'byte_order\': \'Little Endian\', \'data_type\': \'int\', \'mux_type\': \'None\', \'mux_val\': \'\', \'scale\': \'\', \'offset\': \'\', \'min\': \'\', \'max\': \'\', \'unit\': \'\', \'name_old\': \'signal3\', \'name_changed\': \'False\'}]"
         }
         [
@@ -849,7 +847,7 @@ model "Schematic_F28335" {
             size = 160, 256
         ]
 
-        component "core/SCADA Input" P_pu_ref {
+        component "core/SCADA Input" pref {
             execution_rate = "10e-3"
             max = "20000"
             min = "-20000"
@@ -860,7 +858,7 @@ model "Schematic_F28335" {
             position = 6944, 8660
         ]
 
-        component "core/SCADA Input" Q_pu_ref {
+        component "core/SCADA Input" qref {
             execution_rate = "10e-3"
             max = "20000"
             min = "-20000"
@@ -904,7 +902,6 @@ model "Schematic_F28335" {
             identifier_type = "CAN 2.0 A (11 bit identifier)"
             identifier_value = "15"
             name = "Can message"
-            signal_names_dict = "{\'signal2\': {\'rename\': \'signal2\', \'delete\': False}}"
             signals = "[{\'name\': \'signal2\', \'start_bit\': \'0\', \'length\': \'16\', \'byte_order\': \'Little Endian\', \'data_type\': \'uint\', \'mux_type\': \'None\', \'mux_val\': \'\', \'scale\': \'\', \'offset\': \'\', \'min\': \'\', \'max\': \'\', \'unit\': \'\', \'name_old\': \'signal2\', \'name_changed\': \'False\'}]"
         }
         [
@@ -2336,7 +2333,7 @@ model "Schematic_F28335" {
         connect Ki_dc.out Gain32.in as Connection506
         connect Gain32.out "CAN Bus Send4.signal3" as Connection507
         connect H.out "CAN Bus Send3.signal2" as Connection516
-        connect V_h_ref.out Junction72 as Connection552
+        connect Vdc_ref.out Junction72 as Connection552
         connect Junction72 Gain2.in as Connection553
         connect Vh_ref.in Junction72 as Connection554
         connect "Analog Input1.out" AI_1.in as Connection559
@@ -2407,11 +2404,11 @@ model "Schematic_F28335" {
         connect "Data Type Conversion1.in" Junction82 as Connection880
         connect q_ref.in Junction83 as Connection881
         connect "Data Type Conversion2.in" Junction83 as Connection883
-        connect P_pu_ref.out Junction82 as Connection884
+        connect pref.out Junction82 as Connection884
         [
             breakpoints = 7024, 8660
         ]
-        connect Q_pu_ref.out Junction83 as Connection885
+        connect qref.out Junction83 as Connection885
         [
             breakpoints = 7024, 8708
         ]

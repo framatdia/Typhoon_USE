@@ -331,20 +331,18 @@ double _k_i_i__out;
 double _k_i_p__out;
 double _ki_dc__out;
 double _kp_dc__out;
-double _p_pu_ref__out;
 X_Int32 _pa_ref__out;
 double _pb_ref__out;
 double _pc_ref__out;
-double _q_pu_ref__out;
 double _qa_ref__out;
 double _qb_ref__out;
 double _qc_ref__out;
 double _unit_delay1__out;
 double _unit_delay2__out;
-double _v_h_ref__out;
 double _va_va1__out;
 double _vb_va1__out;
 double _vc_va1__out;
+double _vdc_ref__out;
 double _eta_dc__out;
 double _etas__out;
 double _hilos__out;
@@ -352,6 +350,8 @@ double _i_d_ref__out;
 double _i_q_ref__out;
 double _interruptor_statcom__out;
 double _interruptor_red__out;
+double _pref__out;
+double _qref__out;
 X_UnInt32 _startac__out;
 X_UnInt32 _startfsm__out;
 double _can_bus_receive1_struct__out;
@@ -381,12 +381,9 @@ double _gain30__out;
 double _gain29__out;
 double _gain32__out;
 double _gain31__out;
-X_Int32 _data_type_conversion1__out;
-X_Int32 _data_type_conversion2__out;
 double _can_bus_send5_struct__out[4];
 double _gain35__out;
 double _gain37__out;
-double _gain2__out;
 double _product1__out;
 double _rms_value4__out;
 X_UnInt32 _rms_value4__zc;
@@ -399,10 +396,13 @@ double _rms_value6__out;
 X_UnInt32 _rms_value6__zc;
 double _sum3__out;
 double _sum4__out;
+double _gain2__out;
 double _gain6__out;
 double _gain5__out;
 double _gain7__out;
 double _gain8__out;
+X_Int32 _data_type_conversion1__out;
+X_Int32 _data_type_conversion2__out;
 X_UnInt32 _can_bus_send2_struct__out[2];
 double _can_bus_receive1_signal0_switch_signal_switch1__out;
 double _can_bus_receive1_signal1_switch_signal_switch1__out;
@@ -422,13 +422,13 @@ double _can_bus_receive5_signal1_switch_signal_switch1__out;
 double _can_bus_receive5_signal2_switch_signal_switch1__out;
 double _can_bus_receive5_signal3_switch_signal_switch1__out;
 double _can_bus_send4_struct__out[4];
-double _can_bus_send3_struct__out[5];
-double _can_bus_send_struct__out[3];
 double _product6__out;
 double _sum1__out;
 double _product4__out;
 double _product5__out;
+double _can_bus_send_struct__out[3];
 double _can_bus_send1_struct__out[4];
+double _can_bus_send3_struct__out[5];
 double _gain9__out;
 double _gain10__out;
 double _gain12__out;
@@ -594,9 +594,6 @@ void ReInit_user_sp_cpu0_dev0() {
     _rms_value3__out_state = 0x0;
     _rms_value3__filtered_value = 0x0;
     _rms_value3__db_timer = 0x0;
-    HIL_OutAO(0x401b, 0.0f);
-    HIL_OutAO(0x401d, 0.0f);
-    HIL_OutAO(0x400e, 0.0f);
     _rms_value4__square_sum = 0x0;
     _rms_value4__sample_cnt = 0x0;
     _rms_value4__period_cnt = 0x0;
@@ -630,11 +627,14 @@ void ReInit_user_sp_cpu0_dev0() {
     _rms_value6__out_state = 0x0;
     _rms_value6__filtered_value = 0x0;
     _rms_value6__db_timer = 0x0;
+    HIL_OutAO(0x400e, 0.0f);
     HIL_OutAO(0x4028, 0.0f);
     HIL_OutAO(0x4007, 0.0f);
     HIL_OutAO(0x4008, 0.0f);
     HIL_OutAO(0x400c, 0.0f);
     HIL_OutAO(0x400b, 0.0f);
+    HIL_OutAO(0x401b, 0.0f);
+    HIL_OutAO(0x401d, 0.0f);
     HIL_OutAO(0x401e, 0.0f);
     HIL_OutAO(0x401f, 0.0f);
     HIL_OutAO(0x4012, 0.0f);
@@ -1296,38 +1296,38 @@ void TimerCounterHandler_1_user_sp_cpu0_dev0() {
     _ki_dc__out = XIo_InFloat(0x2f800010);
     // Generated from the component: Kp_dc
     _kp_dc__out = XIo_InFloat(0x2f800014);
-    // Generated from the component: P_pu_ref
-    _p_pu_ref__out = XIo_InFloat(0x2f800018);
     // Generated from the component: Pa_ref
-    _pa_ref__out = XIo_InInt32(0x2f80001c);
+    _pa_ref__out = XIo_InInt32(0x2f800018);
     // Generated from the component: Pb_ref
-    _pb_ref__out = XIo_InFloat(0x2f800020);
+    _pb_ref__out = XIo_InFloat(0x2f80001c);
     // Generated from the component: Pc_ref
-    _pc_ref__out = XIo_InFloat(0x2f800024);
-    // Generated from the component: Q_pu_ref
-    _q_pu_ref__out = XIo_InFloat(0x2f800028);
+    _pc_ref__out = XIo_InFloat(0x2f800020);
     // Generated from the component: Qa_ref
-    _qa_ref__out = XIo_InFloat(0x2f80002c);
+    _qa_ref__out = XIo_InFloat(0x2f800024);
     // Generated from the component: Qb_ref
-    _qb_ref__out = XIo_InFloat(0x2f800030);
+    _qb_ref__out = XIo_InFloat(0x2f800028);
     // Generated from the component: Qc_ref
-    _qc_ref__out = XIo_InFloat(0x2f800034);
-    // Generated from the component: V_h_ref
-    _v_h_ref__out = XIo_InFloat(0x2f800038);
+    _qc_ref__out = XIo_InFloat(0x2f80002c);
+    // Generated from the component: Vdc_ref
+    _vdc_ref__out = XIo_InFloat(0x2f800030);
     // Generated from the component: eta_dc
-    _eta_dc__out = XIo_InFloat(0x2f80003c);
+    _eta_dc__out = XIo_InFloat(0x2f800034);
     // Generated from the component: etas
-    _etas__out = XIo_InFloat(0x2f800040);
+    _etas__out = XIo_InFloat(0x2f800038);
     // Generated from the component: hilos
-    _hilos__out = XIo_InFloat(0x2f800044);
+    _hilos__out = XIo_InFloat(0x2f80003c);
     // Generated from the component: i_d_ref
-    _i_d_ref__out = XIo_InFloat(0x2f800048);
+    _i_d_ref__out = XIo_InFloat(0x2f800040);
     // Generated from the component: i_q_ref
-    _i_q_ref__out = XIo_InFloat(0x2f80004c);
+    _i_q_ref__out = XIo_InFloat(0x2f800044);
     // Generated from the component: interruptor_STATCOM
-    _interruptor_statcom__out = XIo_InFloat(0x2f800050);
+    _interruptor_statcom__out = XIo_InFloat(0x2f800048);
     // Generated from the component: interruptor_red
-    _interruptor_red__out = XIo_InFloat(0x2f800054);
+    _interruptor_red__out = XIo_InFloat(0x2f80004c);
+    // Generated from the component: pref
+    _pref__out = XIo_InFloat(0x2f800050);
+    // Generated from the component: qref
+    _qref__out = XIo_InFloat(0x2f800054);
     // Generated from the component: startAC
     _startac__out = XIo_InInt32(0x2f800058);
     // Generated from the component: startFSM
@@ -1342,14 +1342,6 @@ void TimerCounterHandler_1_user_sp_cpu0_dev0() {
     _gain32__out = 100.0 * _ki_dc__out;
     // Generated from the component: Gain31
     _gain31__out = 100.0 * _kp_dc__out;
-    // Generated from the component: Data Type Conversion1
-    _data_type_conversion1__out = (X_Int32)_p_pu_ref__out;
-    // Generated from the component: p_ref
-    HIL_OutAO(0x401b, (float)_p_pu_ref__out);
-    // Generated from the component: Data Type Conversion2
-    _data_type_conversion2__out = (X_Int32)_q_pu_ref__out;
-    // Generated from the component: q_ref
-    HIL_OutAO(0x401d, (float)_q_pu_ref__out);
     // Generated from the component: CAN Bus Send5.Struct
     // Component not supported for this platform. Outputs are zeroed.
     _can_bus_send5_struct__out[0] = 0;
@@ -1357,9 +1349,9 @@ void TimerCounterHandler_1_user_sp_cpu0_dev0() {
     _can_bus_send5_struct__out[2] = 0;
     _can_bus_send5_struct__out[3] = 0;
     // Generated from the component: Gain2
-    _gain2__out = 1.0 * _v_h_ref__out;
+    _gain2__out = 1.0 * _vdc_ref__out;
     // Generated from the component: Vh_ref
-    HIL_OutAO(0x400e, (float)_v_h_ref__out);
+    HIL_OutAO(0x400e, (float)_vdc_ref__out);
     // Generated from the component: Gain6
     _gain6__out = 1000.0 * _eta_dc__out;
     // Generated from the component: Gain5
@@ -1392,6 +1384,14 @@ void TimerCounterHandler_1_user_sp_cpu0_dev0() {
     else {
         HIL_OutInt32(0x8640480, 0x1);
     }
+    // Generated from the component: Data Type Conversion1
+    _data_type_conversion1__out = (X_Int32)_pref__out;
+    // Generated from the component: p_ref
+    HIL_OutAO(0x401b, (float)_pref__out);
+    // Generated from the component: Data Type Conversion2
+    _data_type_conversion2__out = (X_Int32)_qref__out;
+    // Generated from the component: q_ref
+    HIL_OutAO(0x401d, (float)_qref__out);
     // Generated from the component: start_ac
     HIL_OutAO(0x401e, (float)_startac__out);
     // Generated from the component: CAN Bus Send2.Struct
@@ -1406,13 +1406,6 @@ void TimerCounterHandler_1_user_sp_cpu0_dev0() {
     _can_bus_send4_struct__out[1] = 0;
     _can_bus_send4_struct__out[2] = 0;
     _can_bus_send4_struct__out[3] = 0;
-    // Generated from the component: CAN Bus Send3.Struct
-    // Component not supported for this platform. Outputs are zeroed.
-    _can_bus_send3_struct__out[0] = 0;
-    _can_bus_send3_struct__out[1] = 0;
-    _can_bus_send3_struct__out[2] = 0;
-    _can_bus_send3_struct__out[3] = 0;
-    _can_bus_send3_struct__out[4] = 0;
     // Generated from the component: CAN Bus Send5.sys_out
     // Component not supported for this platform. Outputs are zeroed.
     // Generated from the component: CAN Bus Send.Struct
@@ -1426,15 +1419,22 @@ void TimerCounterHandler_1_user_sp_cpu0_dev0() {
     _can_bus_send1_struct__out[1] = 0;
     _can_bus_send1_struct__out[2] = 0;
     _can_bus_send1_struct__out[3] = 0;
+    // Generated from the component: CAN Bus Send3.Struct
+    // Component not supported for this platform. Outputs are zeroed.
+    _can_bus_send3_struct__out[0] = 0;
+    _can_bus_send3_struct__out[1] = 0;
+    _can_bus_send3_struct__out[2] = 0;
+    _can_bus_send3_struct__out[3] = 0;
+    _can_bus_send3_struct__out[4] = 0;
     // Generated from the component: CAN Bus Send2.sys_out
     // Component not supported for this platform. Outputs are zeroed.
     // Generated from the component: CAN Bus Send4.sys_out
     // Component not supported for this platform. Outputs are zeroed.
-    // Generated from the component: CAN Bus Send3.sys_out
-    // Component not supported for this platform. Outputs are zeroed.
     // Generated from the component: CAN Bus Send.sys_out
     // Component not supported for this platform. Outputs are zeroed.
     // Generated from the component: CAN Bus Send1.sys_out
+    // Component not supported for this platform. Outputs are zeroed.
+    // Generated from the component: CAN Bus Send3.sys_out
     // Component not supported for this platform. Outputs are zeroed.
 //@cmp.out.block.end
     //////////////////////////////////////////////////////////////////////////

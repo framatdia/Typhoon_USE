@@ -66,20 +66,6 @@
     </pesb>
     <analog_variables>
         <cell>
-            <name>Series RLC Branch1.L2</name>
-            <address>2</address>
-            <type>current</type>
-            <initial_condition>0.0</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>C2</name>
-            <address>1</address>
-            <type>voltage</type>
-            <initial_condition>365.0</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
             <name>Series RLC Branch1.L3</name>
             <address>3</address>
             <type>current</type>
@@ -94,62 +80,22 @@
             <visible>True</visible>
         </cell>
         <cell>
-            <name>v_h</name>
-            <address>4</address>
-            <type>voltage</type>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-            <previous_names>
-            </previous_names>
-        </cell>
-        <cell>
-            <name>IGBT Leg2.IGBT Leg global gds ovs.v2</name>
-            <address>394</address>
-            <type>voltage</type>
-            <initial_condition>None</initial_condition>
-            <visible>False</visible>
-            <previous_names>
-            </previous_names>
-        </cell>
-        <cell>
-            <name>IGBT Leg3.IGBT Leg global gds ovs.il</name>
-            <address>400</address>
+            <name>Series RLC Branch1.L2</name>
+            <address>2</address>
             <type>current</type>
-            <initial_condition>None</initial_condition>
-            <visible>False</visible>
-            <previous_names>
-            </previous_names>
+            <initial_condition>0.0</initial_condition>
+            <visible>True</visible>
         </cell>
         <cell>
-            <name>IGBT Leg1.IGBT Leg global gds ovs.v2</name>
-            <address>386</address>
+            <name>C2</name>
+            <address>1</address>
             <type>voltage</type>
-            <initial_condition>None</initial_condition>
-            <visible>False</visible>
-            <previous_names>
-            </previous_names>
+            <initial_condition>365.0</initial_condition>
+            <visible>True</visible>
         </cell>
         <cell>
-            <name>IGBT Leg3.IGBT Leg global gds ovs.v2</name>
-            <address>402</address>
-            <type>voltage</type>
-            <initial_condition>None</initial_condition>
-            <visible>False</visible>
-            <previous_names>
-            </previous_names>
-        </cell>
-        <cell>
-            <name>IGBT Leg1.IGBT Leg global gds ovs.v1</name>
-            <address>385</address>
-            <type>voltage</type>
-            <initial_condition>None</initial_condition>
-            <visible>False</visible>
-            <previous_names>
-            </previous_names>
-        </cell>
-        <cell>
-            <name>IGBT Leg2.IGBT Leg global gds ovs.il</name>
-            <address>392</address>
+            <name>IGBT Leg1.IGBT Leg global gds ovs.il</name>
+            <address>384</address>
             <type>current</type>
             <initial_condition>None</initial_condition>
             <visible>False</visible>
@@ -166,20 +112,11 @@
             </previous_names>
         </cell>
         <cell>
-            <name>Core Coupling 1.cpl2.I_msr</name>
-            <address>453</address>
+            <name>IGBT Leg3.IGBT Leg global gds ovs.il</name>
+            <address>400</address>
             <type>current</type>
             <initial_condition>None</initial_condition>
-            <visible>True</visible>
-            <previous_names>
-            </previous_names>
-        </cell>
-        <cell>
-            <name>Core Coupling 1.cpl1.I_msr</name>
-            <address>452</address>
-            <type>current</type>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
+            <visible>False</visible>
             <previous_names>
             </previous_names>
         </cell>
@@ -202,9 +139,72 @@
             </previous_names>
         </cell>
         <cell>
-            <name>IGBT Leg1.IGBT Leg global gds ovs.il</name>
-            <address>384</address>
+            <name>v_h</name>
+            <address>4</address>
+            <type>voltage</type>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+            <previous_names>
+            </previous_names>
+        </cell>
+        <cell>
+            <name>IGBT Leg1.IGBT Leg global gds ovs.v1</name>
+            <address>385</address>
+            <type>voltage</type>
+            <initial_condition>None</initial_condition>
+            <visible>False</visible>
+            <previous_names>
+            </previous_names>
+        </cell>
+        <cell>
+            <name>Core Coupling 1.cpl1.I_msr</name>
+            <address>452</address>
             <type>current</type>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+            <previous_names>
+            </previous_names>
+        </cell>
+        <cell>
+            <name>Core Coupling 1.cpl2.I_msr</name>
+            <address>453</address>
+            <type>current</type>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+            <previous_names>
+            </previous_names>
+        </cell>
+        <cell>
+            <name>IGBT Leg2.IGBT Leg global gds ovs.il</name>
+            <address>392</address>
+            <type>current</type>
+            <initial_condition>None</initial_condition>
+            <visible>False</visible>
+            <previous_names>
+            </previous_names>
+        </cell>
+        <cell>
+            <name>IGBT Leg3.IGBT Leg global gds ovs.v2</name>
+            <address>402</address>
+            <type>voltage</type>
+            <initial_condition>None</initial_condition>
+            <visible>False</visible>
+            <previous_names>
+            </previous_names>
+        </cell>
+        <cell>
+            <name>IGBT Leg1.IGBT Leg global gds ovs.v2</name>
+            <address>386</address>
+            <type>voltage</type>
+            <initial_condition>None</initial_condition>
+            <visible>False</visible>
+            <previous_names>
+            </previous_names>
+        </cell>
+        <cell>
+            <name>IGBT Leg2.IGBT Leg global gds ovs.v2</name>
+            <address>394</address>
+            <type>voltage</type>
             <initial_condition>None</initial_condition>
             <visible>False</visible>
             <previous_names>
@@ -225,29 +225,8 @@
             <visible>True</visible>
         </cell>
         <cell>
-            <name>Series RLC Branch2.L2</name>
-            <address>516</address>
-            <type>current</type>
-            <initial_condition>0.0</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
             <name>Series RLC Branch4.L2</name>
             <address>519</address>
-            <type>current</type>
-            <initial_condition>0.0</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>Series RLC Branch4.L3</name>
-            <address>520</address>
-            <type>current</type>
-            <initial_condition>0.0</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>Series RLC Branch4.L1</name>
-            <address>518</address>
             <type>current</type>
             <initial_condition>0.0</initial_condition>
             <visible>True</visible>
@@ -267,6 +246,34 @@
             <visible>True</visible>
         </cell>
         <cell>
+            <name>Series RLC Branch4.L1</name>
+            <address>518</address>
+            <type>current</type>
+            <initial_condition>0.0</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>Series RLC Branch4.L3</name>
+            <address>520</address>
+            <type>current</type>
+            <initial_condition>0.0</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>Series RLC Branch3.C1</name>
+            <address>512</address>
+            <type>voltage</type>
+            <initial_condition>0.0</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>Series RLC Branch2.L2</name>
+            <address>516</address>
+            <type>current</type>
+            <initial_condition>0.0</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
             <name>Series RLC Branch2.L1</name>
             <address>515</address>
             <type>current</type>
@@ -281,16 +288,9 @@
             <visible>True</visible>
         </cell>
         <cell>
-            <name>Series RLC Branch3.C1</name>
-            <address>512</address>
-            <type>voltage</type>
-            <initial_condition>0.0</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>Core Coupling 1.cpl1.V_msr</name>
-            <address>960</address>
-            <type>voltage</type>
+            <name>Icg</name>
+            <address>526</address>
+            <type>current</type>
             <initial_condition>None</initial_condition>
             <visible>True</visible>
             <previous_names>
@@ -306,35 +306,8 @@
             </previous_names>
         </cell>
         <cell>
-            <name>Icg</name>
-            <address>526</address>
-            <type>current</type>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-            <previous_names>
-            </previous_names>
-        </cell>
-        <cell>
-            <name>Vb</name>
-            <address>522</address>
-            <type>voltage</type>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-            <previous_names>
-            </previous_names>
-        </cell>
-        <cell>
-            <name>Va</name>
-            <address>521</address>
-            <type>voltage</type>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-            <previous_names>
-            </previous_names>
-        </cell>
-        <cell>
-            <name>Vc</name>
-            <address>523</address>
+            <name>Core Coupling 1.cpl2.V_msr</name>
+            <address>961</address>
             <type>voltage</type>
             <initial_condition>None</initial_condition>
             <visible>True</visible>
@@ -351,8 +324,35 @@
             </previous_names>
         </cell>
         <cell>
-            <name>Core Coupling 1.cpl2.V_msr</name>
-            <address>961</address>
+            <name>Va</name>
+            <address>521</address>
+            <type>voltage</type>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+            <previous_names>
+            </previous_names>
+        </cell>
+        <cell>
+            <name>Vb</name>
+            <address>522</address>
+            <type>voltage</type>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+            <previous_names>
+            </previous_names>
+        </cell>
+        <cell>
+            <name>Core Coupling 1.cpl1.V_msr</name>
+            <address>960</address>
+            <type>voltage</type>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+            <previous_names>
+            </previous_names>
+        </cell>
+        <cell>
+            <name>Vc</name>
+            <address>523</address>
             <type>voltage</type>
             <initial_condition>None</initial_condition>
             <visible>True</visible>
@@ -701,20 +701,20 @@
             <address>159</address>
             </cell>
         <cell>
-            <name>IGBT Leg1.S_top</name>
-            <address>157</address>
-            </cell>
-        <cell>
             <name>IGBT Leg1.S_bot</name>
             <address>151</address>
             </cell>
         <cell>
-            <name>IGBT Leg2.S_top</name>
-            <address>156</address>
+            <name>IGBT Leg1.S_top</name>
+            <address>157</address>
             </cell>
         <cell>
             <name>IGBT Leg2.S_bot</name>
             <address>150</address>
+            </cell>
+        <cell>
+            <name>IGBT Leg2.S_top</name>
+            <address>156</address>
             </cell>
         <cell>
             <name>IGBT Leg3.S_top</name>
@@ -725,17 +725,17 @@
             <address>153</address>
             </cell>
         <cell>
-            <name>IGBT Leg1.S1</name>
-            <address>157</address>
-                <previous_names>
-                        <previous_name>IGBT Leg1.S_top</previous_name>
-                    </previous_names>
-            </cell>
-        <cell>
             <name>IGBT Leg1.S2</name>
             <address>151</address>
                 <previous_names>
                         <previous_name>IGBT Leg1.S_bot</previous_name>
+                    </previous_names>
+            </cell>
+        <cell>
+            <name>IGBT Leg1.S1</name>
+            <address>157</address>
+                <previous_names>
+                        <previous_name>IGBT Leg1.S_top</previous_name>
                     </previous_names>
             </cell>
         <cell>
@@ -747,13 +747,6 @@
             <address>148</address>
             </cell>
         <cell>
-            <name>IGBT Leg2.S1</name>
-            <address>156</address>
-                <previous_names>
-                        <previous_name>IGBT Leg2.S_top</previous_name>
-                    </previous_names>
-            </cell>
-        <cell>
             <name>IGBT Leg2.S2</name>
             <address>150</address>
                 <previous_names>
@@ -761,8 +754,11 @@
                     </previous_names>
             </cell>
         <cell>
-            <name>IGBT Leg3.Sen</name>
-            <address>148</address>
+            <name>IGBT Leg2.S1</name>
+            <address>156</address>
+                <previous_names>
+                        <previous_name>IGBT Leg2.S_top</previous_name>
+                    </previous_names>
             </cell>
         <cell>
             <name>IGBT Leg3.S1</name>
@@ -777,6 +773,10 @@
                 <previous_names>
                         <previous_name>IGBT Leg3.S_bot</previous_name>
                     </previous_names>
+            </cell>
+        <cell>
+            <name>IGBT Leg3.Sen</name>
+            <address>148</address>
             </cell>
         <cell>
             <name>S2.Sa</name>
@@ -1081,9 +1081,142 @@
 
     <analog_variables>
         <cell>
+            <name>inrms</name>
+            <type>generic</type>
+            <address>16408</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>V_h</name>
+            <type>generic</type>
+            <address>16397</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>p</name>
+            <type>generic</type>
+            <address>16410</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>I_d_ref</name>
+            <type>generic</type>
+            <address>16391</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>icrms1</name>
+            <type>generic</type>
+            <address>16406</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>CAN2Status</name>
+            <type>generic</type>
+            <address>16388</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>vd</name>
+            <type>generic</type>
+            <address>16422</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>f_vsg</name>
+            <type>generic</type>
+            <address>16400</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>vbrms1</name>
+            <type>generic</type>
+            <address>16419</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>p_ref</name>
+            <type>generic</type>
+            <address>16411</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>P3f</name>
+            <type>generic</type>
+            <address>16393</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>Q3f</name>
+            <type>generic</type>
+            <address>16394</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>q_ref</name>
+            <type>generic</type>
+            <address>16413</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>iarms</name>
+            <type>generic</type>
+            <address>16401</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>AI_11</name>
+            <type>generic</type>
+            <address>16385</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>iarms1</name>
+            <type>generic</type>
+            <address>16402</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>vq</name>
+            <type>generic</type>
+            <address>16423</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>iq</name>
+            <type>generic</type>
+            <address>16409</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
             <name>CTRL</name>
             <type>generic</type>
             <address>16389</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>icrms</name>
+            <type>generic</type>
+            <address>16405</address>
             <initial_condition>None</initial_condition>
             <visible>True</visible>
         </cell>
@@ -1109,93 +1242,9 @@
             <visible>True</visible>
         </cell>
         <cell>
-            <name>CAN2Status</name>
-            <type>generic</type>
-            <address>16388</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>vbrms1</name>
-            <type>generic</type>
-            <address>16419</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>varms</name>
-            <type>generic</type>
-            <address>16416</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>iq</name>
-            <type>generic</type>
-            <address>16409</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>start_ac</name>
-            <type>generic</type>
-            <address>16414</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>iarms</name>
-            <type>generic</type>
-            <address>16401</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>vcrms</name>
-            <type>generic</type>
-            <address>16420</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>p_ref</name>
-            <type>generic</type>
-            <address>16411</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>f_vsg</name>
-            <type>generic</type>
-            <address>16400</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
             <name>STATCOM</name>
             <type>generic</type>
             <address>16396</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>start_fsm</name>
-            <type>generic</type>
-            <address>16415</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>iarms1</name>
-            <type>generic</type>
-            <address>16402</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>Fault_type</name>
-            <type>generic</type>
-            <address>16390</address>
             <initial_condition>None</initial_condition>
             <visible>True</visible>
         </cell>
@@ -1207,65 +1256,16 @@
             <visible>True</visible>
         </cell>
         <cell>
-            <name>V_h</name>
+            <name>vcrms1</name>
             <type>generic</type>
-            <address>16397</address>
+            <address>16421</address>
             <initial_condition>None</initial_condition>
             <visible>True</visible>
         </cell>
         <cell>
-            <name>I_q_ref</name>
+            <name>CAN1Status</name>
             <type>generic</type>
-            <address>16392</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>RED</name>
-            <type>generic</type>
-            <address>16395</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>I_d_ref</name>
-            <type>generic</type>
-            <address>16391</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>AI_12</name>
-            <type>generic</type>
-            <address>16386</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>vq</name>
-            <type>generic</type>
-            <address>16423</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>q_ref</name>
-            <type>generic</type>
-            <address>16413</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>P3f</name>
-            <type>generic</type>
-            <address>16393</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>vd</name>
-            <type>generic</type>
-            <address>16422</address>
+            <address>16387</address>
             <initial_condition>None</initial_condition>
             <visible>True</visible>
         </cell>
@@ -1277,9 +1277,16 @@
             <visible>True</visible>
         </cell>
         <cell>
-            <name>icrms1</name>
+            <name>AI_12</name>
             <type>generic</type>
-            <address>16406</address>
+            <address>16386</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>varms</name>
+            <type>generic</type>
+            <address>16416</address>
             <initial_condition>None</initial_condition>
             <visible>True</visible>
         </cell>
@@ -1298,27 +1305,6 @@
             <visible>True</visible>
         </cell>
         <cell>
-            <name>CAN1Status</name>
-            <type>generic</type>
-            <address>16387</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>icrms</name>
-            <type>generic</type>
-            <address>16405</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>Q3f</name>
-            <type>generic</type>
-            <address>16394</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
             <name>ibrms1</name>
             <type>generic</type>
             <address>16404</address>
@@ -1326,30 +1312,16 @@
             <visible>True</visible>
         </cell>
         <cell>
-            <name>p</name>
+            <name>Fault_type</name>
             <type>generic</type>
-            <address>16410</address>
+            <address>16390</address>
             <initial_condition>None</initial_condition>
             <visible>True</visible>
         </cell>
         <cell>
-            <name>vcrms1</name>
+            <name>vcrms</name>
             <type>generic</type>
-            <address>16421</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>inrms</name>
-            <type>generic</type>
-            <address>16408</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>varms1</name>
-            <type>generic</type>
-            <address>16417</address>
+            <address>16420</address>
             <initial_condition>None</initial_condition>
             <visible>True</visible>
         </cell>
@@ -1361,9 +1333,37 @@
             <visible>True</visible>
         </cell>
         <cell>
-            <name>AI_11</name>
+            <name>start_ac</name>
             <type>generic</type>
-            <address>16385</address>
+            <address>16414</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>RED</name>
+            <type>generic</type>
+            <address>16395</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>start_fsm</name>
+            <type>generic</type>
+            <address>16415</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>varms1</name>
+            <type>generic</type>
+            <address>16417</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>I_q_ref</name>
+            <type>generic</type>
+            <address>16392</address>
             <initial_condition>None</initial_condition>
             <visible>True</visible>
         </cell>
@@ -1470,24 +1470,8 @@
             <visible>True</visible>
         </tunable_param>
         <tunable_param>
-            <name>P_pu_ref</name>
-            <addr>[796917784]</addr>
-            <min>-20000.0</min>
-            <max>20000.0</max>
-            <def_value>0.0</def_value>
-            <unit></unit>
-            <widget_type>float</widget_type>
-            <format>real</format>
-            <size>1</size>
-            <param_type>scada input</param_type>
-            <cpu_type>user_sp_cpu</cpu_type>
-            <cpu_idx>0</cpu_idx>
-            <execution_rate>0.01</execution_rate>
-            <visible>True</visible>
-        </tunable_param>
-        <tunable_param>
             <name>Pa_ref</name>
-            <addr>[796917788]</addr>
+            <addr>[796917784]</addr>
             <min>-20000.0</min>
             <max>20000.0</max>
             <def_value>0.0</def_value>
@@ -1503,7 +1487,7 @@
         </tunable_param>
         <tunable_param>
             <name>Pb_ref</name>
-            <addr>[796917792]</addr>
+            <addr>[796917788]</addr>
             <min>-20000.0</min>
             <max>20000.0</max>
             <def_value>0.0</def_value>
@@ -1519,7 +1503,7 @@
         </tunable_param>
         <tunable_param>
             <name>Pc_ref</name>
-            <addr>[796917796]</addr>
+            <addr>[796917792]</addr>
             <min>-20000.0</min>
             <max>20000.0</max>
             <def_value>0.0</def_value>
@@ -1534,24 +1518,8 @@
             <visible>True</visible>
         </tunable_param>
         <tunable_param>
-            <name>Q_pu_ref</name>
-            <addr>[796917800]</addr>
-            <min>-20000.0</min>
-            <max>20000.0</max>
-            <def_value>0.0</def_value>
-            <unit></unit>
-            <widget_type>float</widget_type>
-            <format>real</format>
-            <size>1</size>
-            <param_type>scada input</param_type>
-            <cpu_type>user_sp_cpu</cpu_type>
-            <cpu_idx>0</cpu_idx>
-            <execution_rate>0.01</execution_rate>
-            <visible>True</visible>
-        </tunable_param>
-        <tunable_param>
             <name>Qa_ref</name>
-            <addr>[796917804]</addr>
+            <addr>[796917796]</addr>
             <min>-20000.0</min>
             <max>20000.0</max>
             <def_value>0.0</def_value>
@@ -1567,7 +1535,7 @@
         </tunable_param>
         <tunable_param>
             <name>Qb_ref</name>
-            <addr>[796917808]</addr>
+            <addr>[796917800]</addr>
             <min>-20000.0</min>
             <max>20000.0</max>
             <def_value>0.0</def_value>
@@ -1583,7 +1551,7 @@
         </tunable_param>
         <tunable_param>
             <name>Qc_ref</name>
-            <addr>[796917812]</addr>
+            <addr>[796917804]</addr>
             <min>-20000.0</min>
             <max>20000.0</max>
             <def_value>0.0</def_value>
@@ -1598,8 +1566,8 @@
             <visible>True</visible>
         </tunable_param>
         <tunable_param>
-            <name>V_h_ref</name>
-            <addr>[796917816]</addr>
+            <name>Vdc_ref</name>
+            <addr>[796917808]</addr>
             <min>-1000000.0</min>
             <max>1000000.0</max>
             <def_value>0.0</def_value>
@@ -1615,7 +1583,7 @@
         </tunable_param>
         <tunable_param>
             <name>eta_dc</name>
-            <addr>[796917820]</addr>
+            <addr>[796917812]</addr>
             <min>-1000000.0</min>
             <max>1000000.0</max>
             <def_value>0.0</def_value>
@@ -1631,7 +1599,7 @@
         </tunable_param>
         <tunable_param>
             <name>etas</name>
-            <addr>[796917824]</addr>
+            <addr>[796917816]</addr>
             <min>-1000000.0</min>
             <max>1000000.0</max>
             <def_value>0.0</def_value>
@@ -1647,7 +1615,7 @@
         </tunable_param>
         <tunable_param>
             <name>hilos</name>
-            <addr>[796917828]</addr>
+            <addr>[796917820]</addr>
             <min>0.0</min>
             <max>100.0</max>
             <def_value>0.0</def_value>
@@ -1663,7 +1631,7 @@
         </tunable_param>
         <tunable_param>
             <name>i_d_ref</name>
-            <addr>[796917832]</addr>
+            <addr>[796917824]</addr>
             <min>-1000000.0</min>
             <max>1000000.0</max>
             <def_value>0.0</def_value>
@@ -1679,7 +1647,7 @@
         </tunable_param>
         <tunable_param>
             <name>i_q_ref</name>
-            <addr>[796917836]</addr>
+            <addr>[796917828]</addr>
             <min>-1000000.0</min>
             <max>1000000.0</max>
             <def_value>0.0</def_value>
@@ -1695,7 +1663,7 @@
         </tunable_param>
         <tunable_param>
             <name>interruptor_STATCOM</name>
-            <addr>[796917840]</addr>
+            <addr>[796917832]</addr>
             <min>0.0</min>
             <max>1.0</max>
             <def_value>1.0</def_value>
@@ -1711,10 +1679,42 @@
         </tunable_param>
         <tunable_param>
             <name>interruptor_red</name>
-            <addr>[796917844]</addr>
+            <addr>[796917836]</addr>
             <min>0.0</min>
             <max>1.0</max>
             <def_value>1.0</def_value>
+            <unit></unit>
+            <widget_type>float</widget_type>
+            <format>real</format>
+            <size>1</size>
+            <param_type>scada input</param_type>
+            <cpu_type>user_sp_cpu</cpu_type>
+            <cpu_idx>0</cpu_idx>
+            <execution_rate>0.01</execution_rate>
+            <visible>True</visible>
+        </tunable_param>
+        <tunable_param>
+            <name>pref</name>
+            <addr>[796917840]</addr>
+            <min>-20000.0</min>
+            <max>20000.0</max>
+            <def_value>0.0</def_value>
+            <unit></unit>
+            <widget_type>float</widget_type>
+            <format>real</format>
+            <size>1</size>
+            <param_type>scada input</param_type>
+            <cpu_type>user_sp_cpu</cpu_type>
+            <cpu_idx>0</cpu_idx>
+            <execution_rate>0.01</execution_rate>
+            <visible>True</visible>
+        </tunable_param>
+        <tunable_param>
+            <name>qref</name>
+            <addr>[796917844]</addr>
+            <min>-20000.0</min>
+            <max>20000.0</max>
+            <def_value>0.0</def_value>
             <unit></unit>
             <widget_type>float</widget_type>
             <format>real</format>

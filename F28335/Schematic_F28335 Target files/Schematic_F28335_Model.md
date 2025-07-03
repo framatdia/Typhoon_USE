@@ -1,4 +1,4 @@
-Model Schematic_F28335
+Model schematic_f28335
 
 
 REM *****************************************:
