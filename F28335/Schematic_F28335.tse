@@ -1,10 +1,10 @@
 version = 4.2
 
 //
-// Saved by sw version: 2025.1 SP1
+// Saved by sw version: 2025.1
 //
 
-model "summer_school" {
+model "Schematic_F28335" {
     configuration {
         hil_device = "HIL101"
         hil_configuration_id = 1
@@ -91,7 +91,7 @@ model "summer_school" {
             branch_type = "RL"
             inductance = "2.5e-3"
             num_phases = "Three-Phase"
-            resistance = "0.16"
+            resistance = "0.1"
         }
         [
             position = 7692, 9688
@@ -102,7 +102,7 @@ model "summer_school" {
             branch_type = "RL"
             inductance = "2.5e-3"
             num_phases = "Three-Phase"
-            resistance = "0.16"
+            resistance = "0.1"
         }
         [
             position = 8404, 9688
@@ -309,7 +309,7 @@ model "summer_school" {
             branch_type = "RL"
             inductance = "0.00002"
             num_phases = "Three-Phase"
-            resistance = "0.15"
+            resistance = "0.015"
         }
         [
             position = 8868, 9688
@@ -465,7 +465,6 @@ model "summer_school" {
             identifier_type = "CAN 2.0 A (11 bit identifier)"
             identifier_value = "5"
             name = "Can message"
-            signal_names_dict = "{\'signal0\': {\'rename\': \'signal0\', \'delete\': False}, \'signal1\': {\'rename\': \'signal1\', \'delete\': False}, \'signal2\': {\'rename\': \'signal2\', \'delete\': False}}"
             signals = "[{\'name\': \'signal0\', \'start_bit\': \'0\', \'length\': \'16\', \'byte_order\': \'Little Endian\', \'data_type\': \'int\', \'mux_type\': \'None\', \'mux_val\': \'\', \'scale\': \'\', \'offset\': \'\', \'min\': \'\', \'max\': \'\', \'unit\': \'\', \'name_old\': \'signal0\', \'name_changed\': \'False\'}, {\'name\': \'signal1\', \'start_bit\': \'32\', \'length\': \'16\', \'byte_order\': \'Little Endian\', \'data_type\': \'int\', \'mux_type\': \'None\', \'mux_val\': \'\', \'scale\': \'\', \'offset\': \'\', \'min\': \'\', \'max\': \'\', \'unit\': \'\', \'name_old\': \'signal1\', \'name_changed\': \'False\'}, {\'name\': \'signal2\', \'start_bit\': \'48\', \'length\': \'16\', \'byte_order\': \'Little Endian\', \'data_type\': \'int\', \'mux_type\': \'None\', \'mux_val\': \'\', \'scale\': \'\', \'offset\': \'\', \'min\': \'\', \'max\': \'\', \'unit\': \'\', \'name_old\': \'signal2\', \'name_changed\': \'False\'}]"
             transmit_period = "250.0"
             transmit_type = "{\'On event\': False, \'On timer\': True, \'On request\': False}"
@@ -506,7 +505,6 @@ model "summer_school" {
             identifier_type = "CAN 2.0 A (11 bit identifier)"
             identifier_value = "10"
             name = "Can message"
-            signal_names_dict = "{\'signal0\': {\'rename\': \'signal0\', \'delete\': False}, \'signal1\': {\'rename\': \'signal1\', \'delete\': False}, \'signal2\': {\'rename\': \'signal2\', \'delete\': False}, \'signal3\': {\'rename\': \'signal3\', \'delete\': False}, \'signal4\': {\'rename\': False, \'delete\': True}, \'signal5\': {\'rename\': False, \'delete\': True}}"
             signals = "[{\'name\': \'signal0\', \'start_bit\': \'0\', \'length\': \'16\', \'byte_order\': \'Little Endian\', \'data_type\': \'int\', \'mux_type\': \'None\', \'mux_val\': \'\', \'scale\': \'\', \'offset\': \'\', \'min\': \'\', \'max\': \'\', \'unit\': \'\', \'name_old\': \'signal0\', \'name_changed\': \'False\'}, {\'name\': \'signal1\', \'start_bit\': \'16\', \'length\': \'16\', \'byte_order\': \'Little Endian\', \'data_type\': \'int\', \'mux_type\': \'None\', \'mux_val\': \'\', \'scale\': \'\', \'offset\': \'\', \'min\': \'\', \'max\': \'\', \'unit\': \'\', \'name_old\': \'signal1\', \'name_changed\': \'False\'}, {\'name\': \'signal2\', \'start_bit\': \'32\', \'length\': \'16\', \'byte_order\': \'Little Endian\', \'data_type\': \'int\', \'mux_type\': \'None\', \'mux_val\': \'\', \'scale\': \'\', \'offset\': \'\', \'min\': \'\', \'max\': \'\', \'unit\': \'\', \'name_old\': \'signal2\', \'name_changed\': \'False\'}, {\'name\': \'signal3\', \'start_bit\': \'48\', \'length\': \'16\', \'byte_order\': \'Little Endian\', \'data_type\': \'int\', \'mux_type\': \'None\', \'mux_val\': \'\', \'scale\': \'\', \'offset\': \'\', \'min\': \'\', \'max\': \'\', \'unit\': \'\', \'name_old\': \'signal3\', \'name_changed\': \'False\'}]"
         }
         [
@@ -552,7 +550,6 @@ model "summer_school" {
             identifier_type = "CAN 2.0 A (11 bit identifier)"
             identifier_value = "11"
             name = "Can message"
-            signal_names_dict = "{\'signal0\': {\'rename\': \'signal0\', \'delete\': False}, \'signal1\': {\'rename\': \'signal1\', \'delete\': False}, \'signal2\': {\'rename\': \'signal2\', \'delete\': False}, \'signal3\': {\'rename\': \'signal3\', \'delete\': False}}"
             signals = "[{\'name\': \'signal0\', \'start_bit\': \'0\', \'length\': \'16\', \'byte_order\': \'Little Endian\', \'data_type\': \'int\', \'mux_type\': \'None\', \'mux_val\': \'\', \'scale\': \'\', \'offset\': \'\', \'min\': \'\', \'max\': \'\', \'unit\': \'\', \'name_old\': \'signal0\', \'name_changed\': \'False\'}, {\'name\': \'signal1\', \'start_bit\': \'16\', \'length\': \'16\', \'byte_order\': \'Little Endian\', \'data_type\': \'int\', \'mux_type\': \'None\', \'mux_val\': \'\', \'scale\': \'\', \'offset\': \'\', \'min\': \'\', \'max\': \'\', \'unit\': \'\', \'name_old\': \'signal1\', \'name_changed\': \'False\'}, {\'name\': \'signal2\', \'start_bit\': \'32\', \'length\': \'16\', \'byte_order\': \'Little Endian\', \'data_type\': \'int\', \'mux_type\': \'None\', \'mux_val\': \'\', \'scale\': \'\', \'offset\': \'\', \'min\': \'\', \'max\': \'\', \'unit\': \'\', \'name_old\': \'signal2\', \'name_changed\': \'False\'}, {\'name\': \'signal3\', \'start_bit\': \'48\', \'length\': \'16\', \'byte_order\': \'Little Endian\', \'data_type\': \'int\', \'mux_type\': \'None\', \'mux_val\': \'\', \'scale\': \'\', \'offset\': \'\', \'min\': \'\', \'max\': \'\', \'unit\': \'\', \'name_old\': \'signal3\', \'name_changed\': \'False\'}]"
         }
         [
@@ -602,7 +599,6 @@ model "summer_school" {
             identifier_type = "CAN 2.0 A (11 bit identifier)"
             identifier_value = "1"
             name = "Can message"
-            signal_names_dict = "{\'signal0\': {\'rename\': \'signal0\', \'delete\': False}, \'signal1\': {\'rename\': \'signal1\', \'delete\': False}}"
             signals = "[{\'name\': \'signal0\', \'start_bit\': \'0\', \'length\': \'1\', \'byte_order\': \'Little Endian\', \'data_type\': \'uint\', \'mux_type\': \'None\', \'mux_val\': \'\', \'scale\': \'\', \'offset\': \'\', \'min\': \'\', \'max\': \'\', \'unit\': \'\', \'name_old\': \'signal0\', \'name_changed\': \'False\'}, {\'name\': \'signal1\', \'start_bit\': \'1\', \'length\': \'1\', \'byte_order\': \'Little Endian\', \'data_type\': \'uint\', \'mux_type\': \'None\', \'mux_val\': \'\', \'scale\': \'\', \'offset\': \'\', \'min\': \'\', \'max\': \'\', \'unit\': \'\', \'name_old\': \'signal1\', \'name_changed\': \'False\'}]"
             transmit_period = "250.0"
             transmit_type = "{\'On event\': False, \'On timer\': True, \'On request\': False}"
@@ -775,67 +771,67 @@ model "summer_school" {
             signals = "[{\'name\': \'signal0\', \'start_bit\': \'0\', \'length\': \'16\', \'byte_order\': \'Little Endian\', \'data_type\': \'int\', \'mux_type\': \'None\', \'mux_val\': \'\', \'scale\': \'\', \'offset\': \'\', \'min\': \'\', \'max\': \'\', \'unit\': \'\', \'name_old\': \'signal0\', \'name_changed\': \'False\'}, {\'name\': \'signal1\', \'start_bit\': \'16\', \'length\': \'16\', \'byte_order\': \'Little Endian\', \'data_type\': \'int\', \'mux_type\': \'None\', \'mux_val\': \'\', \'scale\': \'\', \'offset\': \'\', \'min\': \'\', \'max\': \'\', \'unit\': \'\', \'name_old\': \'signal1\', \'name_changed\': \'False\'}, {\'name\': \'signal2\', \'start_bit\': \'32\', \'length\': \'16\', \'byte_order\': \'Little Endian\', \'data_type\': \'int\', \'mux_type\': \'None\', \'mux_val\': \'\', \'scale\': \'\', \'offset\': \'\', \'min\': \'\', \'max\': \'\', \'unit\': \'\', \'name_old\': \'signal2\', \'name_changed\': \'False\'}, {\'name\': \'signal3\', \'start_bit\': \'48\', \'length\': \'16\', \'byte_order\': \'Little Endian\', \'data_type\': \'int\', \'mux_type\': \'None\', \'mux_val\': \'\', \'scale\': \'\', \'offset\': \'\', \'min\': \'\', \'max\': \'\', \'unit\': \'\', \'name_old\': \'signal3\', \'name_changed\': \'False\'}]"
         }
         [
-            position = 8864, 9004
+            position = 8796, 9004
             size = 216, 168
         ]
 
         component "core/Termination" Termination3 {
         }
         [
-            position = 8936, 8876
+            position = 8868, 8876
         ]
 
         component "core/Probe" iarms {
         }
         [
-            position = 9132, 8944
+            position = 9216, 8944
         ]
 
         component "core/Probe" ibrms {
         }
         [
-            position = 9088, 8984
+            position = 9172, 8984
         ]
 
         component "core/Probe" icrms {
         }
         [
-            position = 9132, 9024
+            position = 9216, 9024
         ]
 
         component "core/Probe" inrms {
             signal_access = "Public"
         }
         [
-            position = 9088, 9064
+            position = 9172, 9064
         ]
 
         component "core/Gain" Gain17 {
             gain = "0.2"
         }
         [
-            position = 9060, 8944
+            position = 8992, 8944
         ]
 
         component "core/Gain" Gain18 {
             gain = "0.2"
         }
         [
-            position = 9020, 8984
+            position = 8952, 8984
         ]
 
         component "core/Gain" Gain19 {
             gain = "0.2"
         }
         [
-            position = 9060, 9024
+            position = 8992, 9024
         ]
 
         component "core/Gain" Gain20 {
             gain = "0.2"
         }
         [
-            position = 9020, 9064
+            position = 8952, 9064
         ]
 
         component "core/CAN Bus Send" "CAN Bus Send3" {
@@ -844,8 +840,7 @@ model "summer_school" {
             identifier_type = "CAN 2.0 A (11 bit identifier)"
             identifier_value = "4"
             name = "Can message"
-            signal_names_dict = "{\'signal0\': {\'rename\': \'signal0\', \'delete\': False}, \'signal1\': {\'rename\': \'signal1\', \'delete\': False}, \'signal2\': {\'rename\': \'signal2\', \'delete\': False}, \'signal3\': {\'rename\': \'signal3\', \'delete\': False}, \'signal4\': {\'rename\': \'signal4\', \'delete\': False}}"
-            signals = "[{\'name\': \'signal0\', \'start_bit\': \'0\', \'length\': \'16\', \'byte_order\': \'Little Endian\', \'data_type\': \'uint\', \'mux_type\': \'None\', \'mux_val\': \'\', \'scale\': \'\', \'offset\': \'\', \'min\': \'\', \'max\': \'\', \'unit\': \'\', \'name_old\': \'signal0\', \'name_changed\': \'False\'}, {\'name\': \'signal1\', \'start_bit\': \'16\', \'length\': \'16\', \'byte_order\': \'Little Endian\', \'data_type\': \'uint\', \'mux_type\': \'None\', \'mux_val\': \'\', \'scale\': \'\', \'offset\': \'\', \'min\': \'\', \'max\': \'\', \'unit\': \'\', \'name_old\': \'signal1\', \'name_changed\': \'False\'}, {\'name\': \'signal2\', \'start_bit\': \'32\', \'length\': \'16\', \'byte_order\': \'Little Endian\', \'data_type\': \'uint\', \'mux_type\': \'None\', \'mux_val\': \'\', \'scale\': \'\', \'offset\': \'\', \'min\': \'\', \'max\': \'\', \'unit\': \'\', \'name_old\': \'signal2\', \'name_changed\': \'False\'}, {\'name\': \'signal3\', \'start_bit\': \'48\', \'length\': \'8\', \'byte_order\': \'Little Endian\', \'data_type\': \'uint\', \'mux_type\': \'None\', \'mux_val\': \'\', \'scale\': \'\', \'offset\': \'\', \'min\': \'\', \'max\': \'\', \'unit\': \'\', \'name_old\': \'signal3\', \'name_changed\': \'False\'}, {\'name\': \'signal4\', \'start_bit\': \'56\', \'length\': \'8\', \'byte_order\': \'Little Endian\', \'data_type\': \'uint\', \'mux_type\': \'None\', \'mux_val\': \'\', \'scale\': \'\', \'offset\': \'\', \'min\': \'\', \'max\': \'\', \'unit\': \'\', \'name_old\': \'signal4\', \'name_changed\': \'False\'}]"
+            signals = "[{\'name\': \'signal0\', \'start_bit\': \'0\', \'length\': \'16\', \'byte_order\': \'Little Endian\', \'data_type\': \'int\', \'mux_type\': \'None\', \'mux_val\': \'\', \'scale\': \'\', \'offset\': \'\', \'min\': \'\', \'max\': \'\', \'unit\': \'\', \'name_old\': \'signal0\', \'name_changed\': \'False\'}, {\'name\': \'signal1\', \'start_bit\': \'16\', \'length\': \'16\', \'byte_order\': \'Little Endian\', \'data_type\': \'int\', \'mux_type\': \'None\', \'mux_val\': \'\', \'scale\': \'\', \'offset\': \'\', \'min\': \'\', \'max\': \'\', \'unit\': \'\', \'name_old\': \'signal1\', \'name_changed\': \'False\'}, {\'name\': \'signal2\', \'start_bit\': \'32\', \'length\': \'16\', \'byte_order\': \'Little Endian\', \'data_type\': \'uint\', \'mux_type\': \'None\', \'mux_val\': \'\', \'scale\': \'\', \'offset\': \'\', \'min\': \'\', \'max\': \'\', \'unit\': \'\', \'name_old\': \'signal2\', \'name_changed\': \'False\'}, {\'name\': \'signal3\', \'start_bit\': \'48\', \'length\': \'8\', \'byte_order\': \'Little Endian\', \'data_type\': \'uint\', \'mux_type\': \'None\', \'mux_val\': \'\', \'scale\': \'\', \'offset\': \'\', \'min\': \'\', \'max\': \'\', \'unit\': \'\', \'name_old\': \'signal3\', \'name_changed\': \'False\'}, {\'name\': \'signal4\', \'start_bit\': \'56\', \'length\': \'8\', \'byte_order\': \'Little Endian\', \'data_type\': \'uint\', \'mux_type\': \'None\', \'mux_val\': \'\', \'scale\': \'\', \'offset\': \'\', \'min\': \'\', \'max\': \'\', \'unit\': \'\', \'name_old\': \'signal4\', \'name_changed\': \'False\'}]"
             transmit_period = "250.0"
             transmit_type = "{\'On event\': False, \'On timer\': True, \'On request\': False}"
         }
@@ -856,8 +851,8 @@ model "summer_school" {
 
         component "core/SCADA Input" P_pu_ref {
             execution_rate = "10e-3"
-            max = "100"
-            min = "0"
+            max = "20000"
+            min = "-20000"
             signal_access = "Inherit"
             unit = ""
         }
@@ -867,27 +862,13 @@ model "summer_school" {
 
         component "core/SCADA Input" Q_pu_ref {
             execution_rate = "10e-3"
-            max = "100"
-            min = "0"
+            max = "20000"
+            min = "-20000"
             signal_access = "Inherit"
             unit = ""
         }
         [
             position = 6944, 8708
-        ]
-
-        component "core/Gain" Gain21 {
-            gain = "1000"
-        }
-        [
-            position = 7064, 8660
-        ]
-
-        component "core/Gain" Gain22 {
-            gain = "1000"
-        }
-        [
-            position = 7064, 8708
         ]
 
         component "core/Data Type Conversion" "Data Type Conversion1" {
@@ -921,46 +902,33 @@ model "summer_school" {
             execution_rate = "0.0001"
             file_label = "Import DBC file"
             identifier_type = "CAN 2.0 A (11 bit identifier)"
-            identifier_value = "105"
+            identifier_value = "15"
             name = "Can message"
+            signal_names_dict = "{\'signal2\': {\'rename\': \'signal2\', \'delete\': False}}"
             signals = "[{\'name\': \'signal2\', \'start_bit\': \'0\', \'length\': \'16\', \'byte_order\': \'Little Endian\', \'data_type\': \'uint\', \'mux_type\': \'None\', \'mux_val\': \'\', \'scale\': \'\', \'offset\': \'\', \'min\': \'\', \'max\': \'\', \'unit\': \'\', \'name_old\': \'signal2\', \'name_changed\': \'False\'}]"
         }
         [
-            position = 9304, 9004
+            position = 9352, 9016
             size = 216, 168
         ]
 
         component "core/Probe" f_vsg {
         }
         [
-            position = 9540, 9004
+            position = 9588, 9016
         ]
 
         component "core/Termination" Termination4 {
         }
         [
-            position = 9380, 8880
+            position = 9428, 8892
         ]
 
         component "core/Gain" Gain24 {
             gain = "0.1591549431"
         }
         [
-            position = 9472, 9004
-        ]
-
-        component "core/Gain" Gain27 {
-            gain = "0.01"
-        }
-        [
-            position = 7116, 8660
-        ]
-
-        component "core/Gain" Gain28 {
-            gain = "0.01"
-        }
-        [
-            position = 7112, 8708
+            position = 9520, 9016
         ]
 
         component "core/SCADA Input" interruptor_red {
@@ -1164,7 +1132,6 @@ model "summer_school" {
             identifier_type = "CAN 2.0 A (11 bit identifier)"
             identifier_value = "6"
             name = "Can message"
-            signal_names_dict = "{\'signal0\': {\'rename\': \'signal0\', \'delete\': False}, \'signal1\': {\'rename\': \'signal1\', \'delete\': False}, \'signal2\': {\'rename\': \'signal2\', \'delete\': False}, \'signal3\': {\'rename\': \'signal3\', \'delete\': False}}"
             signals = "[{\'name\': \'signal0\', \'start_bit\': \'0\', \'length\': \'16\', \'byte_order\': \'Little Endian\', \'data_type\': \'int\', \'mux_type\': \'None\', \'mux_val\': \'\', \'scale\': \'\', \'offset\': \'\', \'min\': \'\', \'max\': \'\', \'unit\': \'\', \'name_old\': \'signal0\', \'name_changed\': \'False\'}, {\'name\': \'signal1\', \'start_bit\': \'16\', \'length\': \'16\', \'byte_order\': \'Little Endian\', \'data_type\': \'int\', \'mux_type\': \'None\', \'mux_val\': \'\', \'scale\': \'\', \'offset\': \'\', \'min\': \'\', \'max\': \'\', \'unit\': \'\', \'name_old\': \'signal1\', \'name_changed\': \'False\'}, {\'name\': \'signal2\', \'start_bit\': \'32\', \'length\': \'16\', \'byte_order\': \'Little Endian\', \'data_type\': \'int\', \'mux_type\': \'None\', \'mux_val\': \'\', \'scale\': \'\', \'offset\': \'\', \'min\': \'\', \'max\': \'\', \'unit\': \'\', \'name_old\': \'signal2\', \'name_changed\': \'False\'}, {\'name\': \'signal3\', \'start_bit\': \'48\', \'length\': \'16\', \'byte_order\': \'Little Endian\', \'data_type\': \'int\', \'mux_type\': \'None\', \'mux_val\': \'\', \'scale\': \'\', \'offset\': \'\', \'min\': \'\', \'max\': \'\', \'unit\': \'\', \'name_old\': \'signal3\', \'name_changed\': \'False\'}]"
             transmit_period = "250.0"
             transmit_type = "{\'On event\': False, \'On timer\': True, \'On request\': False}"
@@ -1311,21 +1278,6 @@ model "summer_school" {
             position = 7244, 8912
         ]
 
-        component "core/Gain" Gain33 {
-            gain = "200"
-        }
-        [
-            position = 6980, 8608
-            rotation = down
-        ]
-
-        component "core/Probe" P_ref_20k {
-        }
-        [
-            position = 6900, 8608
-            rotation = down
-        ]
-
         component "core/Sum" Sum6 {
         }
         [
@@ -1382,21 +1334,6 @@ model "summer_school" {
             rotation = down
         ]
 
-        component "core/Gain" Gain38 {
-            gain = "200"
-        }
-        [
-            position = 6980, 8772
-            rotation = down
-        ]
-
-        component "core/Probe" Q_ref_20k {
-        }
-        [
-            position = 6900, 8772
-            rotation = down
-        ]
-
         component "core/CAN Bus Receive" "CAN Bus Receive5" {
             data_length = "8"
             execution_rate = "0.0001"
@@ -1404,7 +1341,6 @@ model "summer_school" {
             identifier_type = "CAN 2.0 A (11 bit identifier)"
             identifier_value = "12"
             name = "Can message"
-            signal_names_dict = "{\'signal0\': {\'rename\': \'signal0\', \'delete\': False}, \'signal1\': {\'rename\': \'signal1\', \'delete\': False}, \'signal2\': {\'rename\': \'signal2\', \'delete\': False}, \'signal3\': {\'rename\': \'signal3\', \'delete\': False}}"
             signals = "[{\'name\': \'signal0\', \'start_bit\': \'0\', \'length\': \'16\', \'byte_order\': \'Little Endian\', \'data_type\': \'int\', \'mux_type\': \'None\', \'mux_val\': \'\', \'scale\': \'\', \'offset\': \'\', \'min\': \'\', \'max\': \'\', \'unit\': \'\', \'name_old\': \'signal0\', \'name_changed\': \'False\'}, {\'name\': \'signal1\', \'start_bit\': \'16\', \'length\': \'16\', \'byte_order\': \'Little Endian\', \'data_type\': \'int\', \'mux_type\': \'None\', \'mux_val\': \'\', \'scale\': \'\', \'offset\': \'\', \'min\': \'\', \'max\': \'\', \'unit\': \'\', \'name_old\': \'signal1\', \'name_changed\': \'False\'}, {\'name\': \'signal2\', \'start_bit\': \'32\', \'length\': \'16\', \'byte_order\': \'Little Endian\', \'data_type\': \'int\', \'mux_type\': \'None\', \'mux_val\': \'\', \'scale\': \'\', \'offset\': \'\', \'min\': \'\', \'max\': \'\', \'unit\': \'\', \'name_old\': \'signal2\', \'name_changed\': \'False\'}, {\'name\': \'signal3\', \'start_bit\': \'48\', \'length\': \'16\', \'byte_order\': \'Little Endian\', \'data_type\': \'int\', \'mux_type\': \'None\', \'mux_val\': \'\', \'scale\': \'\', \'offset\': \'\', \'min\': \'\', \'max\': \'\', \'unit\': \'\', \'name_old\': \'signal3\', \'name_changed\': \'False\'}]"
         }
         [
@@ -1421,19 +1357,19 @@ model "summer_school" {
         component "core/Probe" varms {
         }
         [
-            position = 9128, 8640
+            position = 9224, 8640
         ]
 
         component "core/Probe" vbrms {
         }
         [
-            position = 9084, 8680
+            position = 9180, 8680
         ]
 
         component "core/Probe" vcrms {
         }
         [
-            position = 9128, 8720
+            position = 9224, 8720
         ]
 
         component "core/Probe" CTRL {
@@ -1468,6 +1404,139 @@ model "summer_school" {
         }
         [
             position = 9016, 8760
+        ]
+
+        component "core/Probe" iarms1 {
+        }
+        [
+            position = 7036, 10436
+        ]
+
+        component "core/Probe" ibrms1 {
+        }
+        [
+            position = 7036, 10508
+        ]
+
+        component "core/Probe" icrms1 {
+        }
+        [
+            position = 7036, 10584
+        ]
+
+        component "core/RMS value" "RMS value1" {
+            filter_en = "True"
+            lpf_cutoff = "1000"
+        }
+        [
+            position = 6976, 10436
+        ]
+
+        component "core/RMS value" "RMS value3" {
+            filter_en = "True"
+            lpf_cutoff = "1000"
+        }
+        [
+            position = 6976, 10584
+        ]
+
+        component "core/Probe" varms1 {
+        }
+        [
+            position = 7036, 10684
+        ]
+
+        component "core/Probe" vbrms1 {
+        }
+        [
+            position = 7036, 10756
+        ]
+
+        component "core/Probe" vcrms1 {
+        }
+        [
+            position = 7036, 10832
+        ]
+
+        component "core/RMS value" "RMS value4" {
+            filter_en = "True"
+            lpf_cutoff = "1000"
+        }
+        [
+            position = 6976, 10684
+        ]
+
+        component "core/RMS value" "RMS value6" {
+            filter_en = "True"
+            lpf_cutoff = "1000"
+        }
+        [
+            position = 6976, 10832
+        ]
+
+        component "core/RMS value" "RMS value7" {
+            filter_en = "True"
+            lpf_cutoff = "1000"
+        }
+        [
+            position = 6972, 10508
+        ]
+
+        component "core/RMS value" "RMS value8" {
+            filter_en = "True"
+            lpf_cutoff = "1000"
+        }
+        [
+            position = 6972, 10756
+        ]
+
+        component "core/Mathematical function" "Mathematical function1" {
+            mathematical_fn = "sqrt"
+        }
+        [
+            position = 9132, 8640
+        ]
+
+        component "core/Mathematical function" "Mathematical function2" {
+            mathematical_fn = "sqrt"
+        }
+        [
+            position = 9068, 8680
+        ]
+
+        component "core/Mathematical function" "Mathematical function3" {
+            mathematical_fn = "sqrt"
+        }
+        [
+            position = 9132, 8720
+        ]
+
+        component "core/Mathematical function" "Mathematical function4" {
+            mathematical_fn = "sqrt"
+        }
+        [
+            position = 9112, 8944
+        ]
+
+        component "core/Mathematical function" "Mathematical function5" {
+            mathematical_fn = "sqrt"
+        }
+        [
+            position = 9048, 8984
+        ]
+
+        component "core/Mathematical function" "Mathematical function6" {
+            mathematical_fn = "sqrt"
+        }
+        [
+            position = 9112, 9024
+        ]
+
+        component "core/Mathematical function" "Mathematical function7" {
+            mathematical_fn = "sqrt"
+        }
+        [
+            position = 9048, 9064
         ]
 
         tag Goto1 {
@@ -1631,8 +1700,8 @@ model "summer_school" {
             direction = out
         }
         [
-            position = 7540, 10600
-            size = 172, 20
+            position = 7484, 10600
+            size = 60, 20
         ]
 
         tag From10 {
@@ -1665,6 +1734,72 @@ model "summer_school" {
         }
         [
             position = 7588, 10816
+            size = 60, 20
+        ]
+
+        tag From85 {
+            value = "Va"
+            scope = local
+            kind = sp
+            direction = out
+        }
+        [
+            position = 6884, 10684
+            size = 60, 20
+        ]
+
+        tag From86 {
+            value = "Vb"
+            scope = local
+            kind = sp
+            direction = out
+        }
+        [
+            position = 6884, 10756
+            size = 60, 20
+        ]
+
+        tag From87 {
+            value = "Vc"
+            scope = local
+            kind = sp
+            direction = out
+        }
+        [
+            position = 6884, 10832
+            size = 60, 20
+        ]
+
+        tag From88 {
+            value = "Ia"
+            scope = local
+            kind = sp
+            direction = out
+        }
+        [
+            position = 6876, 10436
+            size = 60, 20
+        ]
+
+        tag From89 {
+            value = "Ib"
+            scope = local
+            kind = sp
+            direction = out
+        }
+        [
+            position = 6876, 10508
+            size = 60, 20
+        ]
+
+        tag From90 {
+            value = "Ic"
+            scope = local
+            kind = sp
+            direction = out
+        }
+        [
+            position = 6880, 10584
             size = 60, 20
         ]
 
@@ -1868,11 +2003,6 @@ model "summer_school" {
             position = 6556, 10168
         ]
 
-        junction Junction70 sp
-        [
-            position = 7024, 8660
-        ]
-
         junction Junction72 sp
         [
             position = 7548, 8352
@@ -1888,21 +2018,6 @@ model "summer_school" {
             position = 8080, 10760
         ]
 
-        junction Junction77 sp
-        [
-            position = 7012, 8708
-        ]
-
-        junction Junction78 sp
-        [
-            position = 7024, 8708
-        ]
-
-        junction Junction79 sp
-        [
-            position = 7012, 8660
-        ]
-
         junction Junction80 sp
         [
             position = 7208, 8852
@@ -1913,8 +2028,18 @@ model "summer_school" {
             position = 7084, 8804
         ]
 
+        junction Junction82 sp
+        [
+            position = 7024, 8660
+        ]
+
+        junction Junction83 sp
+        [
+            position = 7024, 8712
+        ]
+
         scheme_area Area1 {
-            title = <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd"><html><head><meta name="qrichtext" content="1" /><style type="text/css">p, li { white-space: pre-wrap; }</style></head><body style=" font-family:'Tahoma'; font-size:14pt; font-weight:0; font-style:normal;"><p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Cálculo de potencia</p></body></html>
+            title = <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd"><html><head><meta name="qrichtext" content="1" /><meta charset="utf-8" /><style type="text/css">p, li { white-space: pre-wrap; }hr { height: 1px; border-width: 0; }li.unchecked::marker { content: "\2610"; }li.checked::marker { content: "\2612"; }</style></head><body style=" font-family:'Tahoma'; font-size:14pt; font-weight:100; font-style:normal;"><p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-weight:1;">Power computation</span></p></body></html>
         }
         [
             position = 7732, 10640
@@ -1933,7 +2058,7 @@ model "summer_school" {
         ]
 
         scheme_area Area3 {
-            title = <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd"><html><head><meta name="qrichtext" content="1" /><style type="text/css">p, li { white-space: pre-wrap; }</style></head><body style=" font-family:'Tahoma'; font-size:14pt; font-weight:0; font-style:normal;"><p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">BUS Send</p></body></html>
+            title = <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd"><html><head><meta name="qrichtext" content="1" /><meta charset="utf-8" /><style type="text/css">p, li { white-space: pre-wrap; }hr { height: 1px; border-width: 0; }li.unchecked::marker { content: "\2610"; }li.checked::marker { content: "\2612"; }</style></head><body style=" font-family:'Tahoma'; font-size:14pt; font-weight:100; font-style:normal;"><p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-weight:1;">CAN Send</span></p></body></html>
         }
         [
             position = 7388, 8692
@@ -1951,7 +2076,7 @@ model "summer_school" {
         ]
 
         scheme_area Area5 {
-            title = <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd"><html><head><meta name="qrichtext" content="1" /><style type="text/css">p, li { white-space: pre-wrap; }</style></head><body style=" font-family:'Tahoma'; font-size:14pt; font-weight:0; font-style:normal;"><p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Esquemático</p></body></html>
+            title = <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd"><html><head><meta name="qrichtext" content="1" /><meta charset="utf-8" /><style type="text/css">p, li { white-space: pre-wrap; }hr { height: 1px; border-width: 0; }li.unchecked::marker { content: "\2610"; }li.checked::marker { content: "\2612"; }</style></head><body style=" font-family:'Tahoma'; font-size:14pt; font-weight:100; font-style:normal;"><p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-weight:1;">Power plant</span></p></body></html>
         }
         [
             position = 7892, 9776
@@ -2124,10 +2249,6 @@ model "summer_school" {
         connect Junction44 Gain8.in as Connection277
         connect I_q_ref.in Junction44 as Connection278
         connect "CAN Bus Receive3.rcv_cnt" Termination3.in as Connection279
-        connect iarms.in Gain17.out as Connection280
-        connect ibrms.in Gain18.out as Connection281
-        connect Gain19.out icrms.in as Connection282
-        connect Gain20.out inrms.in as Connection283
         connect Gain20.in "CAN Bus Receive3.signal3" as Connection284
         connect "CAN Bus Receive3.signal2" Gain19.in as Connection285
         connect "CAN Bus Receive3.signal1" Gain18.in as Connection286
@@ -2143,8 +2264,6 @@ model "summer_school" {
         connect f_vsg.in Gain24.out as Connection311
         connect Gain24.in "CAN Bus Receive4.signal2" as Connection312
         connect Gain2.out "CAN Bus Send.signal0" as Connection316
-        connect Gain27.out "Data Type Conversion1.in" as Connection331
-        connect Gain22.out Gain28.in as Connection332
         connect S1.ctrl_in Junction47 as Connection338
         connect Junction47 interruptor_red.out as Connection339
         connect RED.in Junction47 as Connection340
@@ -2217,15 +2336,12 @@ model "summer_school" {
         connect Ki_dc.out Gain32.in as Connection506
         connect Gain32.out "CAN Bus Send4.signal3" as Connection507
         connect H.out "CAN Bus Send3.signal2" as Connection516
-        connect Gain21.in Junction70 as Connection545
-        connect p_ref.in Junction70 as Connection547
         connect V_h_ref.out Junction72 as Connection552
         connect Junction72 Gain2.in as Connection553
         connect Vh_ref.in Junction72 as Connection554
         connect "Analog Input1.out" AI_1.in as Connection559
         connect "Analog Input11.out" AI_11.in as Connection560
         connect "Analog Input12.out" AI_12.in as Connection561
-        connect Gain33.out P_ref_20k.in as Connection568
         connect Gain34.out Sum6.in as Connection570
         connect "Unit Delay1.out" Gain35.in as Connection571
         connect Gain35.out Sum6.in1 as Connection576
@@ -2240,16 +2356,6 @@ model "summer_school" {
         connect "Unit Delay2.in" Junction76 as Connection590
         connect Junction76 Sum7.out as Connection591
         connect q.in Junction76 as Connection592
-        connect Junction77 Q_pu_ref.out as Connection594
-        connect Gain38.in Junction77 as Connection595
-        connect Q_ref_20k.in Gain38.out as Connection596
-        connect Gain28.out "Data Type Conversion2.in" as Connection597
-        connect Gain22.in Junction78 as Connection599
-        connect Junction78 Junction77 as Connection600
-        connect q_ref.in Junction78 as Connection601
-        connect Junction70 Junction79 as Connection603
-        connect Junction79 P_pu_ref.out as Connection604
-        connect Gain33.in Junction79 as Connection605
         connect "Data Type Conversion2.out" "CAN Bus Send3.signal1" as Connection606
         connect "CAN Bus Send3.signal4" Junction80 as Connection608
         connect Junction80 hilos.out as Connection609
@@ -2257,11 +2363,7 @@ model "summer_school" {
         connect Control.out Junction81 as Connection612
         connect Junction81 "CAN Bus Send3.signal3" as Connection613
         connect ctrl.in Junction81 as Connection614
-        connect Gain21.out Gain27.in as Connection615
         connect "CAN Bus Receive5.rcv_cnt" Termination5.in as Connection616
-        connect varms.in Gain39.out as Connection617
-        connect vbrms.in Gain40.out as Connection618
-        connect Gain41.out vcrms.in as Connection619
         connect Gain42.out CTRL.in as Connection620
         connect Gain42.in "CAN Bus Receive5.signal3" as Connection621
         connect "CAN Bus Receive5.signal2" Gain41.in as Connection622
@@ -2275,6 +2377,44 @@ model "summer_school" {
         connect "CAN Bus Send5.signal3" Qc_ref.out as Connection630
         connect "CAN Bus Send.signal1" Pa_ref.out as Connection631
         connect "CAN Bus Send.signal2" Qa_ref.out as Connection632
+        connect "RMS value1.out" iarms1.in as Connection800
+        connect "RMS value3.out" icrms1.in as Connection802
+        connect "RMS value4.out" varms1.in as Connection838
+        connect "RMS value6.out" vcrms1.in as Connection840
+        connect "RMS value7.out" ibrms1.in as Connection854
+        connect "RMS value8.out" vbrms1.in as Connection855
+        connect From85 "RMS value4.in" as Connection856
+        connect From86 "RMS value8.in" as Connection857
+        connect From88 "RMS value1.in" as Connection858
+        connect From89 "RMS value7.in" as Connection859
+        connect From90 "RMS value3.in" as Connection860
+        connect From87 "RMS value6.in" as Connection861
+        connect varms.in "Mathematical function1.out" as Connection862
+        connect "Mathematical function1.in" Gain39.out as Connection863
+        connect vbrms.in "Mathematical function2.out" as Connection864
+        connect "Mathematical function2.in" Gain40.out as Connection865
+        connect Gain41.out "Mathematical function3.in" as Connection866
+        connect "Mathematical function3.out" vcrms.in as Connection867
+        connect ibrms.in "Mathematical function5.out" as Connection868
+        connect "Mathematical function5.in" Gain18.out as Connection869
+        connect iarms.in "Mathematical function4.out" as Connection870
+        connect "Mathematical function4.in" Gain17.out as Connection871
+        connect Gain19.out "Mathematical function6.in" as Connection872
+        connect "Mathematical function6.out" icrms.in as Connection873
+        connect Gain20.out "Mathematical function7.in" as Connection874
+        connect "Mathematical function7.out" inrms.in as Connection875
+        connect p_ref.in Junction82 as Connection878
+        connect "Data Type Conversion1.in" Junction82 as Connection880
+        connect q_ref.in Junction83 as Connection881
+        connect "Data Type Conversion2.in" Junction83 as Connection883
+        connect P_pu_ref.out Junction82 as Connection884
+        [
+            breakpoints = 7024, 8660
+        ]
+        connect Q_pu_ref.out Junction83 as Connection885
+        [
+            breakpoints = 7024, 8708
+        ]
     }
 
     default {
@@ -2335,6 +2475,11 @@ model "summer_school" {
             execution_rate = "inherit"
         }
 
+        "core/Mathematical function" {
+            mathematical_fn = "exponential"
+            execution_rate = "inherit"
+        }
+
         "core/Output Settings" {
             analog_outputs = "[]"
             digital_outputs = "[]"
@@ -2355,6 +2500,17 @@ model "summer_school" {
 
         "core/Product" {
             signs = "2"
+            execution_rate = "inherit"
+        }
+
+        "core/RMS value" {
+            op_mode = "PLL based"
+            frequency = "50"
+            period_timeout = "0.5"
+            period_deadband = "0"
+            filter_en = "False"
+            lpf_cutoff = "500"
+            frequency_src = "Internal"
             execution_rate = "inherit"
         }
 
